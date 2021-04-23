@@ -34,6 +34,7 @@ To add a script:
 | [Twitch Hide Channel Leaderboard](#THCL)   | [install][raw-THCL] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
+| [Crates.io Description In Title](#CDIT)   | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
 <!-- | [Github PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
 <!-- | [Brute Force Medium Workaround](#BFMW)     | [install][raw-BFMW] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:31 | 2021:04:05 | -->
@@ -136,6 +137,15 @@ This "fixes" the excessively large bottom gradient area that sometimes appears o
 [[Install]][raw-FYPBG]
 
 ---
+
+### Crates.io Description In Title <a name="CDIT"></a>
+
+Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. <br>
+Convenient for bookmarking and tab-saving extensions, as pages are typically stored according to their titles.
+
+[[Install]][raw-CDIT]
+
+---
 <!--
 
 ### Github PR Obvious Fork Compare Button <a name="GPOFCB"></a>
@@ -187,6 +197,7 @@ Please report any issues within this repository's [issue section](https://github
 [raw-CGTN]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/centered_gmail_toast_notifications.user.js
 [raw-GPOFCB]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_pr_fork_compare_button.user.js
 [raw-FYPBG]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/fix_youtube_player_bottom_gradient.user.js
+[raw-CDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
 [raw-CCMNT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_meta_near_top.user.js
 [raw-BFMW]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/brute_force_medium_workaround.user.js
 
