@@ -19,7 +19,7 @@
 // @exclude-match http*://github.com/team*
 // @exclude-match http*://github.com/enterprise*
 // @exclude-match http*://github.com/customer-stories*
-// @version       1.4
+// @version       1.5
 // @author        StaticPH
 // @description   Adds a navigation tab for faster access to the 'Network' page of a repository.
 // @license       MIT
@@ -41,17 +41,15 @@
 
 	/* Honestly, I feel like creating the HTML directly is less of a hassle than creating all the elements with JavaScript */
 	function createBigNetworkTabHTML(){
-		return 	'<li class="d-flex">\n' +
-				'	<a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="i2_1network-tab" data-ga-click="Repository, Navigation click, Network tab" data-selected-links="repo_network /' + here + '/network" href="/' + here + '/network">\n' +
-				'		<svg class="octicon octicon-forked UnderlineNav-octicon d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 10 16" width="10" aria-hidden="true">\n' +
-				'			<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/>\n' +
-				'		</svg>\n' +
-				'		<span data-content="Network">\n' +
-				// '			::before\n' +
-				'			Network\n' +
-				'		</span">\n' +
-				'	</a>\n' +
-				'</li>';
+		return 	'<a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="i2_1network-tab" data-ga-click="Repository, Navigation click, Network tab" data-selected-links="repo_network /' + here + '/network" href="/' + here + '/network">\n' +
+				'	<svg class="octicon octicon-forked UnderlineNav-octicon d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 10 16" width="10" aria-hidden="true">\n' +
+				'		<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/>\n' +
+				'	</svg>\n' +
+				'	<span data-content="Network">\n' +
+				// '		::before\n' +
+				'		Network\n' +
+				'	</span">\n' +
+				'</a>\n';
 				//TODO: intelligently determine if the <a> link element should have 'style="visibility:hidden;"' to start with?
 	}
 
@@ -82,13 +80,16 @@
 
 	setTimeout(function wait(){
 		const repoPullsTab = querySelectorAllContaining('repo_pulls');
+		const dropdownRetryLimit = 5;
+		let dropdownRetries = 0;
+		
 		// Wait until the page loads in enough to have the Pull Request tab in the repository header, so that it can be used as a point of reference for element insertion
 		if (repoPullsTab){
 			console.debug('Adding big Network tab.');
-			repoPullsTab[0].parentNode.insertAdjacentHTML('afterend', createBigNetworkTabHTML());
+			repoPullsTab[0].insertAdjacentHTML('afterend', createBigNetworkTabHTML());
 
 			try{
-				repoPullsTab[1].parentNode.insertAdjacentHTML('afterend', createSmallNetworkTabHTML());
+				repoPullsTab[1].insertAdjacentHTML('afterend', createSmallNetworkTabHTML());
 				console.debug('Added small Network tab.');
 			}
 			catch{};// ignore failure
@@ -108,16 +109,20 @@
 					console.debug('Adding Network tab item to dropdown.');
 					pullsDropdownItem.insertAdjacentHTML('afterend', createNetworkTabInDropdownHTML());
 				}
+				else if (dropdownRetries >= dropdownRetryLimit){
+					console.log(`Number of attempts to add Network tab to dropdown exceed limit (${dropdownRetryLimit}). Giving up.`);
+				}
 				else{
-					console.log("Waiting 300ms for page to load further before attempting insertion of dropdown-item");
-					setTimeout(wait, 300);
+					console.log(`Waiting ${(dropdownRetries * 500) + 500}ms for page to load further before attempting insertion of dropdown-item`);
+					dropdownRetries++;
+					setTimeout(waitmore, (dropdownRetries * 500) + 500);
 				}
 			});
 
 			if (location.pathname.endsWith(here + '/network') || location.pathname.endsWith(here + '/network/')){
 				let networkTab = document.querySelector('[data-tab-item="i2_1network-tab"]');
 				let insightsTab = document.querySelector('[data-tab-item="i7insights-tab"]');
-				
+
 				if (insightsTab /*&& insightsTab.hasAttribute('aria-current')*/){
 					insightsTab.removeAttribute('aria-current');
 					insightsTab.classList.remove('selected');
