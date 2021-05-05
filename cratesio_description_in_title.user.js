@@ -11,7 +11,7 @@
 // @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
 // @homepageURL https://github.com/StaticPH/UserScripts
 // @supportURL  https://github.com/StaticPH/UserScripts/issues
-// @icon        
+// @icon        https://crates.io/favicon.ico
 // @grant       none
 // @run-at      document-idle
 // ==/UserScript==

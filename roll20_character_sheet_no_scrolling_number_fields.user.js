@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Roll20 Character Sheet No Scrolling Number Fields
 // @namespace   https://github.com/StaticPH
-// @match       http*://app.roll20.net/editor/
-// @match       http*://app.roll20.net/editor/popout
+// @match       https://app.roll20.net/editor/
+// @match       https://app.roll20.net/editor/popout
 // @version     1.0
 // @author      StaticPH
 // @description This should disable changing the value of any numeric fields on Roll20 character sheets by scrolling

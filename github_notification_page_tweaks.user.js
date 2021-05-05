@@ -5,7 +5,7 @@
 // @version       1.1
 // @author        StaticPH
 // @description   Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?
-// @description   I don't know, and I dislike having to open a dropdown to mark something as just "read", so I did something about it.
+// @description   I don't know, and I dislike having to open a dropdown just to mark something as "read", so I did something about it.
 // @license       MIT
 // @updateURL     https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
 // @downloadURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
@@ -76,3 +76,7 @@
 //document.querySelector('div.js-notifications-mark-selected-actions form[data-status="archived"] > button[title="Done"].d-flex')
 //	for each, append to data-hotkey ",delete" ???
 //	btn..setAttribute('data-hotkey', btn.getAttribute('data-hotkey') + ',delete')
+
+/* TODO: "select unread"
+	document.querySelector('li.notification-unread input.js-notification-bulk-action-check-item[type="checkbox"]').checked=true;	// toggles checkbox state for first unread notification, but doesn't seem to update the total selection set, as the appropriate action buttons fail to appear. Can't seem to find any events that would normally be responsible for this.
+*/

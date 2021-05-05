@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Prettier preformatted code for lib.rs
 // @namespace     https://github.com/StaticPH
-// @include       https://lib.rs/crates/*
+// @match         https://lib.rs/crates/*
 // @version       1.0
 // @author        StaticPH
 // @description   Makes <pre><code> blocks on lib.rs look more like they do on crates.io; lib.rs is so much faster thanks to reduced JS use, but it's not as pretty.

@@ -1,24 +1,24 @@
 // ==UserScript==
 // @name          Github Repo Network Tab
 // @namespace     https://github.com/StaticPH
-// @match         http*://github.com/*/*
-// @exclude-match http*://github.com/marketplace*
-// @exclude-match http*://github.com/trending*
-// @exclude-match http*://github.com/explore*
-// @exclude-match http*://github.com/site*
-// @exclude-match http*://github.com/security*
-// @exclude-match http*://github.com/contact*
-// @exclude-match http*://github.com/pricing*
-// @exclude-match http*://github.com/about*
-// @exclude-match http*://github.com/notifications*
-// @exclude-match http*://github.com/new*
-// @exclude-match http*://github.com/organizations*
-// @exclude-match http*://github.com/settings/*
-// @exclude-match http*://github.com/search*
-// @exclude-match http*://github.com/features*
-// @exclude-match http*://github.com/team*
-// @exclude-match http*://github.com/enterprise*
-// @exclude-match http*://github.com/customer-stories*
+// @match         https://github.com/*/*
+// @exclude-match https://github.com/marketplace*
+// @exclude-match https://github.com/trending*
+// @exclude-match https://github.com/explore*
+// @exclude-match https://github.com/site*
+// @exclude-match https://github.com/security*
+// @exclude-match https://github.com/contact*
+// @exclude-match https://github.com/pricing*
+// @exclude-match https://github.com/about*
+// @exclude-match https://github.com/notifications*
+// @exclude-match https://github.com/new*
+// @exclude-match https://github.com/organizations*
+// @exclude-match https://github.com/settings/*
+// @exclude-match https://github.com/search*
+// @exclude-match https://github.com/features*
+// @exclude-match https://github.com/team*
+// @exclude-match https://github.com/enterprise*
+// @exclude-match https://github.com/customer-stories*
 // @version       1.5
 // @author        StaticPH
 // @description   Adds a navigation tab for faster access to the 'Network' page of a repository.

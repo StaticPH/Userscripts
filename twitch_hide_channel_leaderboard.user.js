@@ -2,15 +2,16 @@
 // @name          Hide Twitch Channel Leaderboard
 // @namespace     https://github.com/StaticPH
 // @match         https://www.twitch.tv/*
+// @match         https://www.twitch.tv/moderator/*
+// @match         https://www.twitch.tv/popout/*
 // @match         https://www.twitch.tv/videos/*
-// @exclude-match https://www.twitch.tv/*/*
 // @exclude-match https://www.twitch.tv/videos
 // @exclude-match https://www.twitch.tv/directory*
 // @exclude-match https://www.twitch.tv/p/*
 // @exclude-match https://www.twitch.tv/downloads*
 // @exclude-match https://www.twitch.tv/jobs*
 // @exclude-match https://www.twitch.tv/turbo*
-// @version       1.0
+// @version       1.1
 // @author        StaticPH
 // @description   Hides the stupid channel leaderboard on Twitch.tv
 // @icon          https://brand.twitch.tv/assets/logos/svg/glitch/purple.svg
@@ -32,4 +33,3 @@ GM_addStyle ( `
 `
 );
 // document.querySelector('div.channel-leaderboard.tw-z-default').hidden=true;
-
