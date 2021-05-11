@@ -2,23 +2,21 @@
 // @name          Github Repo Network Tab
 // @namespace     https://github.com/StaticPH
 // @match         https://github.com/*/*
-// @exclude-match https://github.com/marketplace*
-// @exclude-match https://github.com/trending*
-// @exclude-match https://github.com/explore*
-// @exclude-match https://github.com/site*
-// @exclude-match https://github.com/security*
-// @exclude-match https://github.com/contact*
-// @exclude-match https://github.com/pricing*
 // @exclude-match https://github.com/about*
-// @exclude-match https://github.com/notifications*
-// @exclude-match https://github.com/new*
-// @exclude-match https://github.com/organizations*
-// @exclude-match https://github.com/settings/*
-// @exclude-match https://github.com/search*
-// @exclude-match https://github.com/features*
-// @exclude-match https://github.com/team*
-// @exclude-match https://github.com/enterprise*
+// @exclude-match https://github.com/contact*
 // @exclude-match https://github.com/customer-stories*
+// @exclude-match https://github.com/enterprise*
+// @exclude-match https://github.com/explore*
+// @exclude-match https://github.com/features*
+// @exclude-match https://github.com/marketplace*
+// @exclude-match https://github.com/new*
+// @exclude-match https://github.com/notifications*
+// @exclude-match https://github.com/pricing*
+// @exclude-match https://github.com/search*
+// @exclude-match https://github.com/security*
+// @exclude-match https://github.com/settings/*
+// @exclude-match https://github.com/team*
+// @exclude-match https://github.com/trending*
 // @version       1.5
 // @author        StaticPH
 // @description   Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -41,7 +39,8 @@
 
 	/* Honestly, I feel like creating the HTML directly is less of a hassle than creating all the elements with JavaScript */
 	function createBigNetworkTabHTML(){
-		return 	'<a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="i2_1network-tab" data-ga-click="Repository, Navigation click, Network tab" data-selected-links="repo_network /' + here + '/network" href="/' + here + '/network">\n' +
+		// Exclude analytical "data-ga-click" and "data-selected-links" attributes
+		return 	'<a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="i2_1network-tab" href="/' + here + '/network">\n' +
 				'	<svg class="octicon octicon-forked UnderlineNav-octicon d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 10 16" width="10" aria-hidden="true">\n' +
 				'		<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/>\n' +
 				'	</svg>\n' +
@@ -56,16 +55,17 @@
 	/* Used when the window size is small enough that the repository header gets combined with the site header */
 	function createSmallNetworkTabHTML(){
 		// This function may not be useful following one of the github ui refreshes since it was first implemented; Leaving it here for now.
-		return	'<a class="js-selected-navigation-item reponav-item" data-selected-links="repo_network /' + here + '/network" href="/' + here + '/network">\n' +
+		// Exclude analytical "data-ga-click" and "data-selected-links" attributes
+		return	'<a class="js-selected-navigation-item reponav-item" href="/' + here + '/network">\n' +
 				'	Network\n' +
 				'</a>';
 	}
 
 	//TODO: Intelligendly determine if the list element should be hidden when first added
 	function createNetworkTabInDropdownHTML(){
+		// Exclude analytical "data-ga-click" and "data-selected-links" attributes
 		return	'<li data-menu-item="i2_1network-tab">\n' +
-				// '	<a role="menu-item" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_network /' + here + '/network" href="/' + here + '/network">\n' +
-				'	<a role="menu-item" class="js-selected-navigation-item dropdown-item" data-selected-links=" /' + here + '/network" href="/' + here + '/network">\n' +
+				'	<a role="menu-item" class="js-selected-navigation-item dropdown-item" href="/' + here + '/network">\n' +
 				'		Network\n' +
 				'	</a>\n' +
 				'<li>';
@@ -82,7 +82,7 @@
 		const repoPullsTab = querySelectorAllContaining('repo_pulls');
 		const dropdownRetryLimit = 5;
 		let dropdownRetries = 0;
-		
+
 		// Wait until the page loads in enough to have the Pull Request tab in the repository header, so that it can be used as a point of reference for element insertion
 		if (repoPullsTab){
 			console.debug('Adding big Network tab.');
