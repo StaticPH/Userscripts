@@ -32,9 +32,13 @@ To add a script:
 | [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
 | [Twitch Hide Channel Leaderboard](#THCL)   | [install][raw-THCL] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
+| [Twitch Transparent Video Stats](#TTVS)   | [install][raw-TTVS] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2021:05:19 |
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
 | [Crates.io Description In Title](#CDIT)   | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
+| [GitLab Description In Title](#GLDIT)   | [install][raw-GLDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:05:22 |
+| [Bypass Blogspots Blogger IFrame](#BBBI)   | [install][raw-BBBI] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:06:02 |
+
 <!-- | [Github PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
 <!-- | [Brute Force Medium Workaround](#BFMW)     | [install][raw-BFMW] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:31 | 2021:04:05 | -->
@@ -120,6 +124,14 @@ Extensions like FrankerFaceZ may already have this functionality.
 
 ---
 
+### Twitch Transparent Video Stats <a name="TTVS"></a>
+
+Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much. <br>
+
+[[Install]][raw-TTVS]
+
+---
+
 ### Centered Gmail Toast Notifications <a name="CGTN"></a>
 
 Do you hate that Gmail shows a toast notification that blocks functional regions of the UI after you do something to any email? Me too! <br>
@@ -146,6 +158,24 @@ Convenient for bookmarking and tab-saving extensions, as pages are typically sto
 [[Install]][raw-CDIT]
 
 ---
+
+### GitLab Description In Title <a name="GLDIT"></a>
+
+Attempts to improve the page titles on GitLab by including the contents of the page's description, if one is provided. <br>
+This also replaces instances of Unicode character 0x00B7, "Middle Dot", in the title, as I've found that particular character
+has strangely led some editors to erroneously read and write the text in undesired encodings, such as GB2312, instead of UTF-8.
+
+[[Install]][raw-GLDIT]
+
+---
+
+### Bypass Blogspot's Blogger IFrame <a name="BBBI"></a>
+
+Unhide the page body and hide obstructive injected iframes on some Blogspot pages, which use those methods for reasons like discouraging ad blocking. <br>
+
+[[Install]][raw-BBBI]
+
+---
 <!--
 
 ### Github PR Obvious Fork Compare Button <a name="GPOFCB"></a>
@@ -159,7 +189,7 @@ The default look gives the impression that it's a link to documentation, and for
 
 ### Crates.io Common Meta Near Top <a name="CCMNT"></a>
 
-When I visit a crate's page on crates.io, the first things I want to see are the crate name, short description, 
+When I visit a crate's page on crates.io, the first things I want to see are the crate name, short description,
 associated categories and keywords, the time since the most recent release, and a link to the crate's source code if it is public. <br>
 I don't know if I'm the only one, but in my mind, it only makes sense for those to be in the same place.
 
@@ -194,10 +224,15 @@ Please report any issues within this repository's [issue section](https://github
 [raw-PLPC]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/prettier_librs_preformatted_code.user.js
 [raw-RNNF]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/roll20_character_sheet_no_scrolling_number_fields.user.js
 [raw-THCL]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_hide_channel_leaderboard.user.js
+[raw-TTVS]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_transparent_video_stats.user.js
 [raw-CGTN]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/centered_gmail_toast_notifications.user.js
-[raw-GPOFCB]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_pr_fork_compare_button.user.js
 [raw-FYPBG]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/fix_youtube_player_bottom_gradient.user.js
 [raw-CDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
+[raw-GDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
+[raw-BBBI]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/bypass_blogspots_blogger_iframe.user.js
+
+
+[raw-GPOFCB]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_pr_fork_compare_button.user.js
 [raw-CCMNT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_meta_near_top.user.js
 [raw-BFMW]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/brute_force_medium_workaround.user.js
 

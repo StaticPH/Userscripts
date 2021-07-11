@@ -11,6 +11,7 @@
 // @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/fix_youtube_player_bottom_gradient.user.js
 // @homepageURL https://github.com/StaticPH/UserScripts
 // @supportURL  https://github.com/StaticPH/UserScripts/issues
+// @icon        https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png
 // @grant       GM.addStyle
 // @grant       GM_addStyle
 // @run-at      document-idle
@@ -22,7 +23,7 @@
 // 		div.ytp-gradient-bottom { display:none; }
 // /* 		div.ytp-gradient-bottom { z-index:0; } */
 // 	`);
-	
+
 	setTimeout(function wait(){
 		const playerBottomGradient = document.getElementById('movie_player').querySelector('.ytp-gradient-bottom');
 		if (playerBottomGradient){
@@ -36,5 +37,5 @@
 		}
 		return;
 	});
-	
+
 })();
