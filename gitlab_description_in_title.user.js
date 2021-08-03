@@ -4,6 +4,8 @@
 // @match         *://gitlab.com/*/*
 // @match         *://gitlab.org/*/*
 // @match         *://git.synz.io/*/*
+// @match         *://gitlab.*.org/*/*
+// @match         *://salsa.debian.org/*/*
 // @version       1.1
 // @author        StaticPH
 // @description   Try to add the description to the page title on Gitlab repositories.

@@ -51,10 +51,10 @@
 	};
 
 	function hasMovedButtons(){
-		return document.querySelector('div.js-notification-action > form[data-status="unread"] > button.d-flex.btn.btn-sm') && 
+		return document.querySelector('div.js-notification-action > form[data-status="unread"] > button.d-flex.btn.btn-sm') &&
 			   document.querySelector('div.js-notification-action > form[data-status="read"] > button.d-flex.btn.btn-sm');
 	}
-	
+
 	setTimeout(function wait(){
 		const loadedMarkSelectedButtons = document.querySelector('div.js-notifications-mark-selected-actions > details.dropdown.details-overlay > details-menu');
 		const loadedMarkAllButtons = document.querySelector('div.js-notifications-mark-all-actions > details.dropdown.details-overlay > details-menu');
@@ -76,6 +76,7 @@
 //document.querySelector('div.js-notifications-mark-selected-actions form[data-status="archived"] > button[title="Done"].d-flex')
 //	for each, append to data-hotkey ",delete" ???
 //	btn..setAttribute('data-hotkey', btn.getAttribute('data-hotkey') + ',delete')
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#the_input_pseudo-classes may be of help
 
 /* TODO: "select unread"
 	document.querySelector('li.notification-unread input.js-notification-bulk-action-check-item[type="checkbox"]').checked=true;	// toggles checkbox state for first unread notification, but doesn't seem to update the total selection set, as the appropriate action buttons fail to appear. Can't seem to find any events that would normally be responsible for this.
