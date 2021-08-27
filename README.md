@@ -36,7 +36,7 @@ To add a script:
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
 | [Crates.io Description In Title](#CDIT)   | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
-| [GitLab Description In Title](#GLDIT)   | [install][raw-GLDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:05:22 |
+| [GitLab Description In Title](#GDIT)   | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:05:22 |
 | [Bypass Blogspots Blogger IFrame](#BBBI)   | [install][raw-BBBI] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:06:02 |
 
 <!-- | [Github PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
@@ -159,13 +159,13 @@ Convenient for bookmarking and tab-saving extensions, as pages are typically sto
 
 ---
 
-### GitLab Description In Title <a name="GLDIT"></a>
+### GitLab Description In Title <a name="GDIT"></a>
 
 Attempts to improve the page titles on GitLab by including the contents of the page's description, if one is provided. <br>
 This also replaces instances of Unicode character 0x00B7, "Middle Dot", in the title, as I've found that particular character
 has strangely led some editors to erroneously read and write the text in undesired encodings, such as GB2312, instead of UTF-8.
 
-[[Install]][raw-GLDIT]
+[[Install]][raw-GDIT]
 
 ---
 
