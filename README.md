@@ -27,17 +27,22 @@ To add a script:
 |--------------------------------------------|:-------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
 | [Hide YouTube Overlay Ads](#HYOA)          | [install][raw-HYOA] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
 | [Github Repo Network Tab](#GRNT)           | [install][raw-GRNT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2020:03:30 |
-| [Bigger Github Network Graph](#BGNG)       | [install][raw-BGNG] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2020:04:12 |
-| [Github Notification Page Tweaks](#GNPT)   | [install][raw-GNPT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:03:30 |
+| [Bigger Github Network Graph](#BGNG)       | [install][raw-BGNG] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
+| [Github Notification Page Tweaks](#GNPT)   | [install][raw-GNPT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
 | [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
 | [Twitch Hide Channel Leaderboard](#THCL)   | [install][raw-THCL] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
-| [Twitch Transparent Video Stats](#TTVS)   | [install][raw-TTVS] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2021:05:19 |
+| [Twitch Transparent Video Stats](#TTVS)    | [install][raw-TTVS] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2021:05:19 |
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
-| [Crates.io Description In Title](#CDIT)   | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
-| [GitLab Description In Title](#GDIT)   | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:05:22 |
+| [Crates.io Description In Title](#CDIT)    | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
+| [GitLab Description In Title](#GDIT)       | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
 | [Bypass Blogspots Blogger IFrame](#BBBI)   | [install][raw-BBBI] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:06:02 |
+| [Foxaholic Fixes](#FoxF)                   | [install][raw-FoxF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
+| [Wider Google Form Fields](#WGFF)          | [install][raw-WGFF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2021:09:30 |
+| [Mitigate Target _blank Risk](#MTBR)       | [install][raw-MTBR] | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:10:28 |
+| [MSYS2 Package Description in Title](#MDIT)   | [install][raw-MDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:11 | 2021:05:11 |
+| [Lib.rs Description in Title](#LDIT)       | [install][raw-LDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:11 | 2021:05:11 |
 
 <!-- | [Github PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -230,6 +235,11 @@ Please report any issues within this repository's [issue section](https://github
 [raw-CDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
 [raw-GDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
 [raw-BBBI]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/bypass_blogspots_blogger_iframe.user.js
+[raw-Foxf]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/foxaholic_fixes.user.js
+[raw-WGFF]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/wider_google_form_fields.user.js
+[raw-MTBR]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/mitigate_target_blank_risk.user.js
+[raw-MDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/msys2_package_description_in_title.user.js.user.js
+[raw-LDIT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/librs_description_in_title.user.js.user.js
 
 
 [raw-GPOFCB]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_pr_fork_compare_button.user.js
