@@ -11,6 +11,7 @@
 // @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/bigger_github_network_graph.user.js
 // @homepageURL https://github.com/StaticPH/UserScripts
 // @supportURL  https://github.com/StaticPH/UserScripts/issues
+// @icon         https://github.githubassets.com/pinned-octocat.svg
 // @grant       GM.addStyle
 // @grant       GM_addStyle
 // ==/UserScript==
