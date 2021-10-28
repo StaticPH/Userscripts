@@ -23,7 +23,8 @@
 		'https://discord.gg',
 		'https://twitch.tv',
 		'https://jtvnw.net',
-		'https://ttvnw.net'
+		'https://ttvnw.net',
+		'https://jshint.com'
 	];
 
 	function addFromCustomAllowList(){
