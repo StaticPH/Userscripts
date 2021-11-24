@@ -102,7 +102,7 @@
 //				// navigating to another (or the current) tab under whatever condition causes the former (but fixes itself if the page is refreshed).
 //				// This is immensely bothersome, but I have no idea how to fix it short of just checking every few seconds and adding it if not found.
 //			}, 400);
-// TODO: MutationObservers don't exactly lend themselves to watching for the creation of a spefic element that doesn't already exist at some point in time. Find an alternative.
+// TODO: MutationObservers don't exactly lend themselves to watching for the creation of a specific element that doesn't already exist at some point in time. Find an alternative.
 
 			setTimeout(function waitmore(){
 				const pullsDropdownItem = document.querySelector('details-menu li[data-menu-item="i2pull-requests-tab"]');
