@@ -4,6 +4,7 @@
 // @match       http*://github.com/*/*/network
 // include     /^https?:\/\/github\.com\/.*\/.*\/network/
 // @version     1.0
+// @createdAt   4/12/2020
 // @author      StaticPH
 // @description Makes the timeline on the Network page of Github repositories utilize more of that available whitespace on the sides. Still can't seem to make it use everything on the right though...
 // @license     MIT

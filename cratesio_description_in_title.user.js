@@ -7,6 +7,7 @@
 // @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/(reverse_)?dependencies(\/|\?page=[0-9]+)?$/
 // @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/[0-9.]+\/dependencies(\/|\?page=[0-9]+)?$/
 // @version     1.1
+// @createdAt   3/16/2021
 // @author      StaticPH
 // @description Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. Indicates subpage when not on the Readme.
 // @description Convenient for bookmarking and tab-saving extensions, as crate's pages on crates.io don't have particularly informative titles by default.

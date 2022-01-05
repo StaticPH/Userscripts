@@ -35,10 +35,10 @@ To add a script:
 | [Github Repo Network Tab](#GRNT)           | [install][raw-GRNT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2021:11:23 |
 | [Bigger Github Network Graph](#BGNG)       | [install][raw-BGNG] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
 | [Github Notification Page Tweaks](#GNPT)   | [install][raw-GNPT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
-| [Github Sticky Editor Header](#GSEH)     | [install][raw-GSEH] | N/A                 | :heavy_check_mark:      | MIT     | 2020:11:24 | 2021:11:24 |
+| [Github Sticky Editor Header](#GSEH)     | [install][raw-GSEH] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
 | [GitLab Description In Title](#GDIT)       | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
 | [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
-| [Lib.rs Description in Title](#LDIT)       | [install][raw-LDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:11 | 2021:05:11 |
+| [Lib.rs Description in Title](#LDIT)       | [install][raw-LDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Crates.io Description In Title](#CDIT)    | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:23 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
@@ -47,7 +47,7 @@ To add a script:
 | [Wider Google Form Fields](#WGFF)          | [install][raw-WGFF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2021:09:30 |
 | [Correct Google Form Correctness](#GFCC)   | [install][raw-GFCC] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
 | [Mitigate Target \_blank Risk](#MTBR)       | [install][raw-MTBR] | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
-| [MSYS2 Package Description in Title](#MDIT)   | [install][raw-MDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:11 | 2021:05:11 |
+| [MSYS2 Package Description in Title](#MDIT)   | [install][raw-MDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:4:28 | 2021:05:11 |
 
 <!-- | [Github PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->

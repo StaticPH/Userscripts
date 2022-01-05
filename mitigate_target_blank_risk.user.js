@@ -3,6 +3,7 @@
 // @namespace   https://github.com/StaticPH
 // @match       *://*/*
 // @version     1.1
+// @createdAt   8/27/2021
 // @author      StaticPH
 // @description This script appends `rel="noopener noreferrer"` to every link that has `target="_blank"`, as it prevents a major security risk.
 // @license     MIT

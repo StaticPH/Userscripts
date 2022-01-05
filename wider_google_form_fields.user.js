@@ -3,7 +3,7 @@
 // @namespace   https://github.com/StaticPH
 // @match       https://docs.google.com/forms/*
 // @version     1.0
-// @createdAt   10/6/2021, 1:34:35 PM
+// @createdAt   9/30/2021, 1:34:35 PM
 // @author      StaticPH
 // @description Widens the input fields in google forms from 50% to 100% of the question element (minus padding)
 // @license     MIT

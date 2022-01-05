@@ -4,6 +4,7 @@
 // @include     /^https?://(www\.)?youtube\.com/watch/.*/
 // @include     /^https?:\/\/(www\.)?youtube\.com\/watch\?v=.*/
 // @version     1.0
+// @createdAt   2/26/2021
 // @author      StaticPH
 // @description This "fixes" the excessively large bottom gradient area that sometimes appears on the youtube video player when the mouse cursor is within the player frame. Only observed in Vivaldi so far.
 // @license     MIT

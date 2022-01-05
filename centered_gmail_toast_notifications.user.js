@@ -3,6 +3,7 @@
 // @namespace   https://github.com/StaticPH
 // @match       https://mail.google.com/mail/*
 // @version     1.0
+// @createdAt   6/19/2020
 // @author      StaticPH
 // @description Do you hate that Gmail shows a toast notification that blocks functional regions of the UI after you do something to any email? Me too! 
 // @description This little change should help mitigate the problem.

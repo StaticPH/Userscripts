@@ -6,6 +6,7 @@
 // @match       *://blogger.com/*
 // @match       *://*.blogger.com/*
 // @version     1.0
+// @createdAt   6/2/2021
 // @author      StaticPH
 // @description Unhide the page body and hide obstructing iframes on some blogspot pages, which use those methods for reasons like discouraging ad blocking.
 // @license     MIT

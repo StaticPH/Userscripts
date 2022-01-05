@@ -4,6 +4,7 @@
 // @include     /^https?://(www\.)?youtube\.com/watch/.*/
 // @include     /^https?:\/\/(www\.)?youtube\.com\/watch\?v=.*/
 // @version     1.0
+// @createdAt   4/4/2020
 // @author      StaticPH
 // @description Hides away pesky overlay ads from your YouTube videos
 // @license     MIT

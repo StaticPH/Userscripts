@@ -4,6 +4,7 @@
 // @match       https://app.roll20.net/editor/
 // @match       https://app.roll20.net/editor/popout
 // @version     1.0
+// @createdAt   1/23/2021
 // @author      StaticPH
 // @description This should disable changing the value of any numeric fields on Roll20 character sheets by scrolling
 // @license     MIT

@@ -3,6 +3,7 @@
 // @namespace     https://github.com/StaticPH
 // @include       https://lib.rs/crates/*
 // @version       1.0
+// @createdAt     4/28/2021
 // @author        StaticPH
 // @description   Replace the unhelpful part of the tab title on a crate's lib.rs page with the short description of the crate, if one is provided.
 // @license       MIT

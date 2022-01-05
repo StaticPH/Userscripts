@@ -12,6 +12,7 @@
 // @exclude-match https://www.twitch.tv/jobs*
 // @exclude-match https://www.twitch.tv/turbo*
 // @version       1.1
+// @createdAt     6/19/2020
 // @author        StaticPH
 // @description   Hides the stupid channel leaderboard on Twitch.tv
 // @icon          https://brand.twitch.tv/assets/logos/svg/glitch/purple.svg

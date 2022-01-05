@@ -3,6 +3,7 @@
 // @namespace     https://github.com/StaticPH
 // @match         https://github.com/notifications*
 // @version       1.1
+// @createdAt     10/22/2020
 // @author        StaticPH
 // @description   Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?
 // @description   I don't know, and I dislike having to open a dropdown just to mark something as "read", so I did something about it.

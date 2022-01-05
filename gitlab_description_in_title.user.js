@@ -7,6 +7,7 @@
 // @match         *://gitlab.*.org/*/*
 // @match         *://salsa.debian.org/*/*
 // @version       1.1
+// @createdAt     5/22/2021
 // @author        StaticPH
 // @description   Try to add the description to the page title on Gitlab repositories.
 // @license       MIT

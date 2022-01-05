@@ -12,6 +12,7 @@
 // @exclude-match https://www.twitch.tv/jobs*
 // @exclude-match https://www.twitch.tv/turbo*
 // @version       1.0
+// @createdAt     5/19/2021
 // @author        StaticPH
 // @description   Makes the video stats overlay 50% transparent
 // @license       MIT

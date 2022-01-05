@@ -8,6 +8,7 @@
 // @match       https://18.foxaholic.com/*/*/
 // @match       https://18.foxaholic.com/*/
 // @version     1.0
+// @createdAt   6/2/2021
 // @author      StaticPH
 // @description Fix Foxaholic's deliberate breaking of context menus, keypresses, and text selection
 // @license     MIT

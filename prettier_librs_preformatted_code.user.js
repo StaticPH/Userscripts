@@ -3,6 +3,7 @@
 // @namespace     https://github.com/StaticPH
 // @match         https://lib.rs/crates/*
 // @version       1.0
+// @createdAt     7/5/2020
 // @author        StaticPH
 // @description   Makes <pre><code> blocks on lib.rs look more like they do on crates.io; lib.rs is so much faster thanks to reduced JS use, but it's not as pretty.
 // @license       MIT
