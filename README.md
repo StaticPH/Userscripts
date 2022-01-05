@@ -30,6 +30,7 @@ To add a script:
 |--------------------------------------------|:-------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
 | [Hide YouTube Overlay Ads](#HYOA)          | [install][raw-HYOA] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
+| [Youtube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2021:11:13 |
 | [Twitch Hide Channel Leaderboard](#THCL)   | [install][raw-THCL] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:03:30 |
 | [Twitch Transparent Video Stats](#TTVS)    | [install][raw-TTVS] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2021:05:19 |
 | [Github Repo Network Tab](#GRNT)           | [install][raw-GRNT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2021:11:23 |
@@ -83,6 +84,14 @@ This "fixes" the excessively large bottom gradient area that sometimes appears o
 **So far, I've only seen the phenomenon that led me to write this while using Vivaldi.**
 
 [[Install]][raw-FYPBG]
+
+---
+
+### Youtube Channel Keyboard Protection <a name="YCKP"></a>
+
+Prevents YouTube from hijacking the Up/Down arrow keys on channel pages, as it likes to do sometimes (Left and Right arrow keys are okay though, because those don't control page scrolling).
+
+[[Install]][raw-YCKP]
 
 ---
 
@@ -296,6 +305,7 @@ Please report any issues within this repository's [issue section](https://github
 -->
 [raw-HYOA]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/hide_youtube_overlay_ads.user.js
 [raw-FYPBG]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/fix_youtube_player_bottom_gradient.user.js
+[raw-YCKP]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/youtube_channel_keyboard_protector.user.js
 [raw-THCL]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_hide_channel_leaderboard.user.js
 [raw-TTVS]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_transparent_video_stats.user.js
 [raw-GRNT]: https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_repo_network_tab.user.js
