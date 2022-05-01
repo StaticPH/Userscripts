@@ -16,6 +16,7 @@
 // @exclude-match https://github.com/security*
 // @exclude-match https://github.com/settings/*
 // @exclude-match https://github.com/team*
+// @exclude-match https://github.com/topics*
 // @exclude-match https://github.com/trending*
 // @version       1.5
 // @createdAt     4/06/2020
