@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        YouTube Channel Keyboard Protector
 // @namespace   https://github.com/StaticPH
-// @include     /^https?:\/\/(www\.)?youtube\.com\/c(hannel)?\/[^/]+(\/)?/
-// @include     /^https?:\/\/(www\.)?youtube\.com\/c(hannel)?\/[^/]+\/(featured|videos|playlists|community|channels|about)(\/.*|\?.+)?/
-// @version     1.0
+// @include     /^https?:\/\/(www\.)?youtube\.com\/(user|c(hannel)?)\/[^/]+(\/)?/
+// @include     /^https?:\/\/(www\.)?youtube\.com\/(user|c(hannel)?)\/[^/]+\/(featured|videos|playlists|community|channels|about)(\/.*|\?.+)?/
+// @version     1.1
 // @createdAt   11/13/2021, 12:12:07 PM
 // @author      StaticPH
 // @description Prevents YouTube from hijacking the Up/Down arrow keys on channel pages, as it likes to do sometimes (Left and Right arrow keys are okay though, because those don't control page scrolling).
