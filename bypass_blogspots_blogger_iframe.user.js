@@ -5,7 +5,7 @@
 // @match       *://*.blogspot.com/*
 // @match       *://blogger.com/*
 // @match       *://*.blogger.com/*
-// @version     1.0
+// @version     1.1
 // @createdAt   6/2/2021
 // @author      StaticPH
 // @description Unhide the page body and hide obstructing iframes on some blogspot pages, which use those methods for reasons like discouraging ad blocking.
@@ -23,7 +23,8 @@
 	'use strict';
 
 	/* Remove the iframe that obscures the entire page far too often. */
-	document.getElementById('injected-iframe').remove();
+	let injectedFrame = document.getElementById('injected-iframe');
+	injectedFrame && injectedFrame.remove();
 
 	/*
 	   The first child element of body is expected to be a style, which makes all children of body invisible.
