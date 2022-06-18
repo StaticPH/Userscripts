@@ -5,7 +5,7 @@
 // @version     1.0
 // @createdAt   4/20/2022, 5:46:34 PM
 // @author      StaticPH
-// @description 4/20/2022, 5:46:34 PM
+// @description Modifies the format of the page title for some of CurseForge's Minecraft pages.
 // @license     MIT
 // @updateURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/minecraft_curseforge_title_tweaks.user.js
 // @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/minecraft_curseforge_title_tweaks.user.js
