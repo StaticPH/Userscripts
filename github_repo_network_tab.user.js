@@ -2,6 +2,7 @@
 // @name          Github Repo Network Tab
 // @namespace     https://github.com/StaticPH
 // @match         https://github.com/*/*
+// @exclude-match https://github.com/*/*/search*
 // @exclude-match https://github.com/about*
 // @exclude-match https://github.com/contact*
 // @exclude-match https://github.com/customer-stories*
@@ -18,7 +19,8 @@
 // @exclude-match https://github.com/team*
 // @exclude-match https://github.com/topics*
 // @exclude-match https://github.com/trending*
-// @version       1.5
+// @exclude-match https://github.com/users/*/projects/*
+// @version       1.6
 // @createdAt     4/06/2020
 // @author        StaticPH
 // @description   Adds a navigation tab for faster access to the 'Network' page of a repository.
