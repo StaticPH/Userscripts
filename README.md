@@ -328,6 +328,31 @@ Brute force access to articles on Medium.com, always trying to at least get the 
 ---
 -->
 
+## Legacy Workaround Scripts
+
+These scripts are just simple and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
+If you've updated your browser to the current release at any point in the last 2 years, you almost certainly don't want these.
+
+---
+
+<a name="GLHW"></a>
+### GitHub Line Hyperlink Workaround
+
+Add simple onclick handlers to the line numbers when viewing files on GitHub, as the normal behavior of linking directly to a clicked line number seems to have broken on legacy browsers as a result of some change to the implementation.
+
+[[Install]][raw-GLHW]
+
+---
+
+<a name="GNAW"></a>
+### GitHub Notifications Archive Workaround
+
+Quick and simple redirect to work around strange behavior of being sent to github.com/notifications/beta/archive when marking notifications as done.
+
+[[Install]][raw-GNAW]
+
+---
+
 ## Issues
 Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)
 
@@ -362,12 +387,16 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-RNNF]: /roll20_character_sheet_no_scrolling_number_fields.user.js?raw=1
 [raw-CGTN]: /centered_gmail_toast_notifications.user.js?raw=1
 [raw-BBBI]: /bypass_blogspots_blogger_iframe.user.js?raw=1
-[raw-Foxf]: /foxaholic_fixes.user.js?raw=1
+[raw-FoxF]: /foxaholic_fixes.user.js?raw=1
 [raw-WGFF]: /wider_google_form_fields.user.js?raw=1
 [raw-GFCC]: /correct_google_form_correctness.user.js?raw=1
 [raw-MTBR]: /mitigate_target_blank_risk.user.js?raw=1
 [raw-MDIT]: /msys2_package_description_in_title.user.js?raw=1
 [raw-MCTT]: /minecraft_curseforge_title_tweaks.user.js?raw=1
+
+<!-- Legacy Workaround Scripts -->
+[raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
+[raw-GNAW]: /legacy_browser_workarounds/github_notifications_archive_workaround.user.js?raw=1
 
 
 [raw-GPOFCB]: /github_pr_fork_compare_button.user.js?raw=1
