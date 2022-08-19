@@ -14,8 +14,8 @@
 // @supportURL  https://github.com/StaticPH/UserScripts/issues
 // @icon        https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png
 // @grant       none
-// @run-at      document-start
 // @noframes
+// @run-at      document-start
 // ==/UserScript==
 
 (function(){
