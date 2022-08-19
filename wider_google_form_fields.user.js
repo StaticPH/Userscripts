@@ -24,7 +24,7 @@
 	if (typeof GM == 'undefined'){
 		this.GM = {};
 	}
-	if (typeof GM['addstyle'] == 'undefined'){
+	if (typeof GM['addStyle'] == 'undefined'){
 		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
 		GM['addStyle'] = function(...args){
 			return new Promise((onResolve, onReject) => {
