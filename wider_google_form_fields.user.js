@@ -21,6 +21,7 @@
 (function(){
 	"use strict";
 
+	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
 	if (typeof GM == 'undefined'){
 		this.GM = {};
 	}

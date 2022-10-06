@@ -10,8 +10,9 @@
 // @exclude-match https://www.twitch.tv/p/*
 // @exclude-match https://www.twitch.tv/downloads*
 // @exclude-match https://www.twitch.tv/jobs*
+// @exclude-match https://www.twitch.tv/settings*
 // @exclude-match https://www.twitch.tv/turbo*
-// @version       1.1
+// @version       1.2
 // @createdAt     6/19/2020
 // @author        StaticPH
 // @description   Hides the stupid channel leaderboard on Twitch.tv
@@ -26,11 +27,27 @@
 // @run-at        document-start
 // ==/UserScript==
 
-// Prefer using the GM_* methods supported by TamperMonkey, Violentmonkey, and GreaseMonkey < v4
-GM_addStyle ( `
-    div.channel-leaderboard.tw-z-default {
-    	display: none;
-    }
-`
-);
-// document.querySelector('div.channel-leaderboard.tw-z-default').hidden=true;
+(function(){
+	'use strict';
+
+	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
+	if (typeof GM == 'undefined'){
+		this.GM = {};
+	}
+	if (typeof GM['addStyle'] == 'undefined'){
+		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
+		GM['addStyle'] = function(...args){
+			return new Promise((onResolve, onReject) => {
+				try{ onResolve(GM_addStyle.apply(this, args)); }
+				catch(err){ onReject(err); }
+			});
+		}
+	}
+
+	GM.addStyle ( `
+		div.channel-leaderboard.tw-z-default {
+			display: none;
+		}
+	`
+	);
+})();

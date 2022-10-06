@@ -10,8 +10,9 @@
 // @exclude-match https://www.twitch.tv/p/*
 // @exclude-match https://www.twitch.tv/downloads*
 // @exclude-match https://www.twitch.tv/jobs*
+// @exclude-match https://www.twitch.tv/settings*
 // @exclude-match https://www.twitch.tv/turbo*
-// @version       1.0
+// @version       1.1
 // @createdAt     5/19/2021
 // @author        StaticPH
 // @description   Makes the video stats overlay 50% transparent
@@ -29,8 +30,21 @@
 (function(){
 	'use strict';
 
-	// Prefer using the GM_* methods supported by TamperMonkey, Violentmonkey, and GreaseMonkey < v4
-	GM_addStyle(`
+	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
+	if (typeof GM == 'undefined'){
+		this.GM = {};
+	}
+	if (typeof GM['addStyle'] == 'undefined'){
+		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
+		GM['addStyle'] = function(...args){
+			return new Promise((onResolve, onReject) => {
+				try{ onResolve(GM_addStyle.apply(this, args)); }
+				catch(err){ onReject(err); }
+			});
+		}
+	}
+	
+	GM.addStyle(`
 		div.video-player__overlay div.simplebar-scroll-content > div.simplebar-content > div {
 			opacity: 0.5;
 		}
