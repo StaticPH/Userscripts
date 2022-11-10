@@ -35,8 +35,8 @@
 			The last component of the URL path is composed entirely of numbers and period characters ('.'), which will only occur on the Readme (default) subpage for an old version of a crate.
 		*/
 		setTimeout(function wait(){
-			const crateName = document.querySelector('div[class*="_header-row"] > div > h1');
 			const crateDesc = document.querySelector('div[class*="_description"]');
+			const crateName = document.querySelector('div[class*="_header-row"] > div > h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
 
 			if (crateName && crateDesc){
 				document.title=`${crateName.textContent}${versionString} — ${crateDesc.textContent.trim()}`;
@@ -52,8 +52,8 @@
 		let versionString = secondLastSegment.match(/^[0-9.]+$/) ? '/' + secondLastSegment : '';
 
 		setTimeout(function wait(){
-			const crateName = document.querySelector('div[class*="_header-row"] > div > h1');
 			const crateDesc = document.querySelector('div[class*="_description"]');
+			const crateName = document.querySelector('div[class*="_header-row"] > div > h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
 			const crateSubpage = document.querySelector('a[class*="_active_"]');
 
 			if (crateName && crateDesc && crateSubpage){

@@ -45,7 +45,7 @@ To add a script:
 | [GitLab Description In Title](#GDIT)       | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
 | [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
 | [Lib.rs Description in Title](#LDIT)       | [install][raw-LDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
-| [Crates.io Description In Title](#CDIT)    | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:06:13 |
+| [Crates.io Description In Title](#CDIT)    | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
 | [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
 | [Wider Google Form Fields](#WGFF)          | [install][raw-WGFF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
 | [Correct Google Form Correctness](#GFCC)   | [install][raw-GFCC] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
@@ -75,6 +75,7 @@ Description
 ---
 
 Format END -->
+<!-- TODO: Decide on format to use for documenting configurable values -->
 ---
 
 <a name="HYOA"></a>
