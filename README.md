@@ -64,7 +64,7 @@ To add a script:
 <!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | yyyy:mm:dd | yyyy:mm:dd | -->
 
 <!-- Script Details -->
-<!--NOTE: It is important that the anchor be placed on its own line prior to the scriptname heading, otherwise links directly to the heading are liable to position the browser viewport just below the heading, instead of at it. Also note that the closing `</a>` is mandatory, and must also be placed prior to the heading itself.-->
+<!-- NOTE: It is important that the anchor be placed on its own line prior to the scriptname heading, otherwise links directly to the heading are liable to position the browser viewport just below the heading, instead of at it. Also note that the closing `</a>` is mandatory, and must also be placed prior to the heading itself.-->
 <!-- Format BEGIN
 <a name="Anchor_Name"></a>
 ### Next script
@@ -420,6 +420,6 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 
 [ViolentMonkey_src]: https://github.com/violentmonkey/violentmonkey/releases
 [ViolentMonkey_Firefox]: https://addons.mozilla.org/firefox/addon/violentmonkey/
-[ViolentMonkey_Chrome]: https://addons.mozilla.org/firefox/addon/violentmonkey/
-[ViolentMonkey_Edge]: https://addons.mozilla.org/firefox/addon/violentmonkey/
+[ViolentMonkey_Chrome]: https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag
+[ViolentMonkey_Edge]: https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao
 [GreaseMonkey_v3_Moonchild]: https://github.com/janekptacijarabaci/greasemonkey/releases
