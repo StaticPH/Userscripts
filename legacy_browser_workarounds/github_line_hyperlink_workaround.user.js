@@ -2,7 +2,9 @@
 // @name           GitHub Line-hyperlinks Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/blob/*
-// @version        1.0
+// @match          https://github.com/*/*/pull/*/files
+// @match          https://github.com/*/*/commit/*
+// @version        1.1
 // @createdAt      8/10/2022, 5:34:41 PM
 // @author         StaticPH
 // @description    Add simple onclick handlers to the line numbers when viewing files on GitHub, as the normal behavior of linking directly to a clicked line number seems to have broken on legacy browsers as a result of some change to the implementation.
@@ -21,9 +23,15 @@
 	"use strict";
 
 	function lineClickHandler(evnt){
-	// 	history.pushState(null, document.title, location.origin + location.pathname + '#' + evnt.target.id); // This doesn't realign the viewport in an attempt to place the target line at the top.
+		// This doesn't realign the viewport in an attempt to place the target line at the top.
+		// history.pushState(null, document.title, location.origin + location.pathname + '#' + evnt.target.id);
+
 		location.href = location.origin + location.pathname + '#' + evnt.target.id;
+		window.scrollTo(null, evnt.target.offsetTop); // worked better than the more intuitive evnt.target.scrollIntoViewIfNeeded(true)
 	}
 
-	document.querySelectorAll('table.js-file-line-container > tbody > tr > td.js-line-number.js-code-nav-line-number:first-child').forEach(lineNum => lineNum.onclick = lineClickHandler);	
+	document.querySelectorAll(
+		'table.js-file-line-container > tbody > tr > td.js-line-number.js-code-nav-line-number:first-child,' + // blobs
+		'table > tbody > tr > td.js-linkable-line-number.js-code-nav-line-number' // pulls and commits
+	).forEach(lineNum => lineNum.onclick = lineClickHandler);
 })();
