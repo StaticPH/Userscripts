@@ -1,35 +1,35 @@
 // ==UserScript==
-// @name          Github Repo Network Tab
-// @namespace     https://github.com/StaticPH
-// @match         https://github.com/*/*
-// @exclude-match https://github.com/*/*/search*
-// @exclude-match https://github.com/about*
-// @exclude-match https://github.com/contact*
-// @exclude-match https://github.com/customer-stories*
-// @exclude-match https://github.com/enterprise*
-// @exclude-match https://github.com/explore*
-// @exclude-match https://github.com/features*
-// @exclude-match https://github.com/marketplace*
-// @exclude-match https://github.com/new*
-// @exclude-match https://github.com/notifications*
-// @exclude-match https://github.com/pricing*
-// @exclude-match https://github.com/search*
-// @exclude-match https://github.com/security*
-// @exclude-match https://github.com/settings/*
-// @exclude-match https://github.com/team*
-// @exclude-match https://github.com/topics*
-// @exclude-match https://github.com/trending*
-// @exclude-match https://github.com/users/*/projects/*
-// @version       1.6
-// @createdAt     4/06/2020
-// @author        StaticPH
-// @description   Adds a navigation tab for faster access to the 'Network' page of a repository.
-// @license       MIT
-// @updateURL     https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_repo_network_tab.user.js
-// @downloadURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_repo_network_tab.user.js
-// @homepageURL   https://github.com/StaticPH/UserScripts
-// @supportURL    https://github.com/StaticPH/UserScripts/issues
-// @icon          https://github.githubassets.com/pinned-octocat.svg
+// @name             Github Repo Network Tab
+// @namespace        https://github.com/StaticPH
+// @match            https://github.com/*/*
+// @exclude-match    https://github.com/*/*/search*
+// @exclude-match    https://github.com/about*
+// @exclude-match    https://github.com/contact*
+// @exclude-match    https://github.com/customer-stories*
+// @exclude-match    https://github.com/enterprise*
+// @exclude-match    https://github.com/explore*
+// @exclude-match    https://github.com/features*
+// @exclude-match    https://github.com/marketplace*
+// @exclude-match    https://github.com/new*
+// @exclude-match    https://github.com/notifications*
+// @exclude-match    https://github.com/pricing*
+// @exclude-match    https://github.com/search*
+// @exclude-match    https://github.com/security*
+// @exclude-match    https://github.com/settings/*
+// @exclude-match    https://github.com/team*
+// @exclude-match    https://github.com/topics*
+// @exclude-match    https://github.com/trending*
+// @exclude-match    https://github.com/users/*/projects/*
+// @version          1.6
+// @createdAt        4/06/2020
+// @author           StaticPH
+// @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
+// @license          MIT
+// @updateURL        https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_repo_network_tab.user.js
+// @downloadURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_repo_network_tab.user.js
+// @homepageURL      https://github.com/StaticPH/UserScripts
+// @supportURL       https://github.com/StaticPH/UserScripts/issues
+// @icon             https://github.githubassets.com/pinned-octocat.svg
 // ==/UserScript==
 
 (function(){

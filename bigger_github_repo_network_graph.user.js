@@ -1,33 +1,33 @@
 // ==UserScript==
-// @name        Bigger Github Repo Network Graph
-// @namespace   https://github.com/StaticPH
-// @match       http*://github.com/*/*/network
-// include     /^https?:\/\/github\.com\/.*\/.*\/network/
-// @version     1.0
-// @createdAt   4/12/2020
-// @author      StaticPH
-// @description Makes the timeline on the Network page of Github repositories utilize more of that available whitespace on the sides. Still can't seem to make it use everything on the right though...
-// @license     MIT
-// @updateURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/bigger_github_network_graph.user.js
-// @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/bigger_github_network_graph.user.js
-// @homepageURL https://github.com/StaticPH/UserScripts
-// @supportURL  https://github.com/StaticPH/UserScripts/issues
-// @icon         https://github.githubassets.com/pinned-octocat.svg
-// @grant       GM.addStyle
-// @grant       GM_addStyle
+// @name           Bigger Github Repo Network Graph
+// @namespace      https://github.com/StaticPH
+// @match          http*://github.com/*/*/network
+// include        /^https?:\/\/github\.com\/.*\/.*\/network/
+// @version        1.0
+// @createdAt      4/12/2020
+// @author         StaticPH
+// @description    Makes the timeline on the Network page of Github repositories utilize more of that available whitespace on the sides. Still can't seem to make it use everything on the right though...
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/bigger_github_network_graph.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/bigger_github_network_graph.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon            https://github.githubassets.com/pinned-octocat.svg
+// @grant          GM.addStyle
+// @grant          GM_addStyle
 // ==/UserScript==
 
 (function(){
 	'use strict';
-	
-	// console.debug('Un-centering timeline.');	
+
+	// console.debug('Un-centering timeline.');
 	GM.addStyle(`
-		.new-discussion-timeline { 
-			margin-right: unset; 
+		.new-discussion-timeline {
+			margin-right: unset;
 			margin-left: unset;
 			width: auto;
 		}
-		.container-lg { 
+		.container-lg {
 			max-width: none !important;
 			margin-left: 0px !important;
 		}
@@ -36,7 +36,7 @@
 		}
 	`);
 	// console.debug('Timeline no longer centered.');
-	
+
 })();
 
 
@@ -53,9 +53,9 @@
 	remove class 'overflow-hidden'
 	add attribute 'overflow-x: scroll'
 	add attribute 'resize: both' */
-	
-	
-	
+
+
+
 /* qp=Array.from(document.querySelectorAll('.container-lg')[2].computedStyleMap()).slice(0,10).filterInPlace((e)=>
 	e[1] == 'auto'
 )
@@ -70,4 +70,4 @@ Array.from(document.querySelectorAll('.container-lg')[2].computedStyleMap()).fin
 	console.log('e[0]='+e[0]+'\te[1]='+e[1]);
 	return e[1]=='auto'
 })
- */	
+ */

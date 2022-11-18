@@ -1,23 +1,23 @@
 // ==UserScript==
-// @name          GitLab Description In Title
-// @namespace     https://github.com/StaticPH
-// @match         *://gitlab.com/*/*
-// @match         *://gitlab.org/*/*
-// @match         *://git.synz.io/*/*
-// @match         *://gitlab.*.org/*/*
-// @match         *://salsa.debian.org/*/*
-// @version       1.1
-// @createdAt     5/22/2021
-// @author        StaticPH
-// @description   Try to add the description to the page title on Gitlab repositories.
-// @license       MIT
-// @updateURL     https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
-// @downloadURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
-// @homepageURL   https://github.com/StaticPH/UserScripts
-// @supportURL    https://github.com/StaticPH/UserScripts/issues
-// @icon          https://about.gitlab.com/images/press/logo/svg/gitlab-icon-rgb.svg
-// @grant         none
-// @run-at        document-idle
+// @name           GitLab Description In Title
+// @namespace      https://github.com/StaticPH
+// @match          *://gitlab.com/*/*
+// @match          *://gitlab.org/*/*
+// @match          *://git.synz.io/*/*
+// @match          *://gitlab.*.org/*/*
+// @match          *://salsa.debian.org/*/*
+// @version        1.1
+// @createdAt      5/22/2021
+// @author         StaticPH
+// @description    Try to add the description to the page title on Gitlab repositories.
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/gitlab_description_in_title.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           https://about.gitlab.com/images/press/logo/svg/gitlab-icon-rgb.svg
+// @grant          none
+// @run-at         document-idle
 // ==/UserScript==
 
 (function(){

@@ -1,19 +1,19 @@
 // ==UserScript==
-// @name        Mitigate target _blank Risk
-// @namespace   https://github.com/StaticPH
-// @match       *://*/*
-// @version     1.1
-// @createdAt   8/27/2021
-// @author      StaticPH
-// @description This script appends `rel="noopener noreferrer"` to every link that has `target="_blank"`, as it prevents a major security risk.
-// @license     MIT
-// @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/mitigate_target_blank_risk.user.js
-// @updateURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/mitigate_target_blank_risk.user.js
-// @homepageURL https://github.com/StaticPH/UserScripts
-// @supportURL  https://github.com/StaticPH/UserScripts/issues
-// @icon        
-// @grant       GM_getValue
-// @run-at      
+// @name           Mitigate target _blank Risk
+// @namespace      https://github.com/StaticPH
+// @match          *://*/*
+// @version        1.1
+// @createdAt      8/27/2021
+// @author         StaticPH
+// @description    This script appends `rel="noopener noreferrer"` to every link that has `target="_blank"`, as it prevents a major security risk.
+// @license        MIT
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/mitigate_target_blank_risk.user.js
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/mitigate_target_blank_risk.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           
+// @grant          GM_getValue
+// @run-at         
 // ==/UserScript==
 
 

@@ -1,20 +1,20 @@
 // ==UserScript==
-// @name        Correct Google Form Correctness
-// @namespace   https://github.com/StaticPH
-// @match       https://docs.google.com/forms/*
-// @version     1.0
-// @createdAt   11/9/2021, 9:55:12 AM
-// @author      StaticPH
-// @description Fields manually marked correct should appear no differently from fields that exactly matched the preset correct answer.
-// @license     MIT
-// @updateURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/correct_google_form_correctness.user.js
-// @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/correct_google_form_correctness.user.js
-// @homepageURL https://github.com/StaticPH/UserScripts
-// @supportURL  https://github.com/StaticPH/UserScripts/issues
-// @icon        https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png
-// @grant       none
+// @name           Correct Google Form Correctness
+// @namespace      https://github.com/StaticPH
+// @match          https://docs.google.com/forms/*
+// @version        1.0
+// @createdAt      11/9/2021, 9:55:12 AM
+// @author         StaticPH
+// @description    Fields manually marked correct should appear no differently from fields that exactly matched the preset correct answer.
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/correct_google_form_correctness.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/correct_google_form_correctness.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png
+// @grant          none
 // @noframes
-// @run-at      document-end
+// @run-at         document-end
 // ==/UserScript==
 
 (function(){
@@ -27,7 +27,7 @@
 		let iconGroupDiv = correctnessIconDiv.querySelector(`.${iconPrefix}El`);
 
 		correctnessIconDiv.setAttribute(
-			'aria-label', 
+			'aria-label',
 			correctnessIconDiv.getAttribute('aria-label').replace('Incorrect', 'Correct')
 		);
 

@@ -1,19 +1,19 @@
 // ==UserScript==
-// @name          Prettier preformatted code for lib.rs
-// @namespace     https://github.com/StaticPH
-// @match         https://lib.rs/crates/*
-// @version       1.0
-// @createdAt     7/5/2020
-// @author        StaticPH
-// @description   Makes <pre><code> blocks on lib.rs look more like they do on crates.io; lib.rs is so much faster thanks to reduced JS use, but it's not as pretty.
-// @license       MIT
-// @updateURL     https://raw.githubusercontent.com/StaticPH/Userscripts/master/prettier_librs_preformatted_code.user.js
-// @downloadURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/prettier_librs_preformatted_code.user.js
-// @homepageURL   https://github.com/StaticPH/UserScripts
-// @supportURL    https://github.com/StaticPH/UserScripts/issues
-// @icon          https://lib.rs/favicon.png
-// @grant         GM_addStyle
-// @run-at        document-start
+// @name           Prettier preformatted code for lib.rs
+// @namespace      https://github.com/StaticPH
+// @match          https://lib.rs/crates/*
+// @version        1.0
+// @createdAt      7/5/2020
+// @author         StaticPH
+// @description    Makes <pre><code> blocks on lib.rs look more like they do on crates.io; lib.rs is so much faster thanks to reduced JS use, but it's not as pretty.
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/prettier_librs_preformatted_code.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/prettier_librs_preformatted_code.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           https://lib.rs/favicon.png
+// @grant          GM_addStyle
+// @run-at         document-start
 // ==/UserScript==
 
 GM_addStyle(`

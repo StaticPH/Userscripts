@@ -1,19 +1,19 @@
 // ==UserScript==
-// @name          GitHub Notification Page Tweaks
-// @namespace     https://github.com/StaticPH
-// @match         https://github.com/notifications*
-// @version       1.1
-// @createdAt     10/22/2020
-// @author        StaticPH
-// @description   Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?
-// @description   I don't know, and I dislike having to open a dropdown just to mark something as "read", so I did something about it.
-// @license       MIT
-// @updateURL     https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
-// @downloadURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
-// @homepageURL   https://github.com/StaticPH/UserScripts
-// @supportURL    https://github.com/StaticPH/UserScripts/issues
-// @icon          https://github.githubassets.com/pinned-octocat.svg
-// @run-at        document-idle
+// @name           GitHub Notification Page Tweaks
+// @namespace      https://github.com/StaticPH
+// @match          https://github.com/notifications*
+// @version        1.1
+// @createdAt      10/22/2020
+// @author         StaticPH
+// @description    Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?
+// @description    I don't know, and I dislike having to open a dropdown just to mark something as "read", so I did something about it.
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/github_notification_page_tweaks.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           https://github.githubassets.com/pinned-octocat.svg
+// @run-at         document-idle
 // ==/UserScript==
 
 (function(){

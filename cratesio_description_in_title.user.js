@@ -1,24 +1,24 @@
 // ==UserScript==
-// @name        Crates.io Description In Title
-// @namespace   https://github.com/StaticPH
-// @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+(\/)?$/
-// @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+\/[0-9.]+(\/)?$/
-// @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/versions(\/|\?page=[0-9]+)?$/
-// @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/(reverse_)?dependencies(\/|\?page=[0-9]+)?$/
-// @include     /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/[0-9.]+\/dependencies(\/|\?page=[0-9]+)?$/
-// @version     1.1
-// @createdAt   3/16/2021
-// @author      StaticPH
-// @description Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. Indicates subpage when not on the Readme.
-// @description Convenient for bookmarking and tab-saving extensions, as crate's pages on crates.io don't have particularly informative titles by default.
-// @license     MIT
-// @updateURL   https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
-// @downloadURL https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
-// @homepageURL https://github.com/StaticPH/UserScripts
-// @supportURL  https://github.com/StaticPH/UserScripts/issues
-// @icon        https://crates.io/favicon.ico
-// @grant       none
-// @run-at      document-idle
+// @name           Crates.io Description In Title
+// @namespace      https://github.com/StaticPH
+// @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+(\/)?$/
+// @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+\/[0-9.]+(\/)?$/
+// @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/versions(\/|\?page=[0-9]+)?$/
+// @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/(reverse_)?dependencies(\/|\?page=[0-9]+)?$/
+// @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/[0-9.]+\/dependencies(\/|\?page=[0-9]+)?$/
+// @version        1.1
+// @createdAt      3/16/2021
+// @author         StaticPH
+// @description    Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. Indicates subpage when not on the Readme.
+// @description    Convenient for bookmarking and tab-saving extensions, as crate's pages on crates.io don't have particularly informative titles by default.
+// @license        MIT
+// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
+// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
+// @homepageURL    https://github.com/StaticPH/UserScripts
+// @supportURL     https://github.com/StaticPH/UserScripts/issues
+// @icon           https://crates.io/favicon.ico
+// @grant          none
+// @run-at         document-idle
 // ==/UserScript==
 
 (function(){
