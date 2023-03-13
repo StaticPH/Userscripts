@@ -380,6 +380,18 @@ Add simple onclick handlers to the collapsed details of commits on GitHub, as th
 
 ---
 
+<a name="GLRAW"></a>
+### GitHub Lazy Release Asset Workaround
+
+Multiple fixes related to user-downloadable asset files on GitHub for users of legacy browsers.
+	- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.
+	- Fix the timestamps on the release page(s), most of which are within asset lists.
+	- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets.
+
+[[Install]][raw-GLRAW]
+
+---
+
 ## Issues
 Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)
 
@@ -426,6 +438,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
 [raw-GNAW]: /legacy_browser_workarounds/github_notifications_archive_workaround.user.js?raw=1
 [raw-GCDW]: /legacy_browser_workarounds/github_collapsed_details_workaround.user.js?raw=1
+[raw-GLRAW]: /legacy_browser_workarounds/github_lazy_release_asset_workaround.user.js?raw=1
 
 
 [raw-GPOFCB]: /github_pr_fork_compare_button.user.js?raw=1
