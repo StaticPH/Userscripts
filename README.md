@@ -55,6 +55,7 @@ To add a script:
 | [Mitigate Target \_blank Risk](#MTBR)       | [install][raw-MTBR] | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
 | [MSYS2 Package Description in Title](#MDIT)   | [install][raw-MDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Minecraft CurseForge Title Tweaks](#MCTT)   | [install][raw-MCTT] | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
+| [Another Open In Steam Button](#OISB)   | [install][raw-OISB] | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -323,6 +324,16 @@ Modifies the format of the page title for some of CurseForge's Minecraft pages.
 [[Install]][raw-MCTT]
 
 ---
+
+<a name="OISB"></a>
+### Another "Open In Steam" Button
+
+As the name should imply, this is my own version of a script which adds a new button on Steam's steampowered and steamcommunity sites to open the current page in the Steam app.
+Some of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372-open-steam-url after I spent well over an hour fiddling with my own CSS in the pre-dawn hours, and decided I wasn't going to manage much better.
+
+[[Install]][raw-OISB]
+
+---
 <!--
 
 <a name="BFMW"></a>
@@ -409,6 +420,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-MTBR]: /mitigate_target_blank_risk.user.js?raw=1
 [raw-MDIT]: /msys2_package_description_in_title.user.js?raw=1
 [raw-MCTT]: /minecraft_curseforge_title_tweaks.user.js?raw=1
+[raw-OISB]: /steam_app_from_webpage.user.js.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
