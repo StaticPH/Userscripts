@@ -20,7 +20,7 @@ Some scripts will likely require modifications for this to work; if you do this 
 ## Important note:
 I tend to open a lot of things in new tabs, which happens to result in matching scripts always being injected. As such, many of my userscripts are written to only inject after loading the specific page(s) for which they are written. That means some methods of page navigation (e.g. AJAX) may result in scripts not being injected and executed on pages they should be.
 If your browsing habit doesn't involve much opening things in new tabs, you'll likely want to modify/override the exclude-match list for some of my scripts. Alternatively, you could simply refresh relevant pages after the initial navigation, to cause your userscript manager to re-check which scripts should be injected.
-One example of such a scenario could be opening a Twitch.tv livestream from the directory view. 
+One example of such a scenario could be opening a Twitch.tv livestream from the directory view.
 
 
 ---
@@ -31,31 +31,31 @@ To add a script:
 * Or, install the scripts from OpenUserJS (OU).
 -->
 
-| Userscript<br>Description                  | Direct<br>Install   | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
-|--------------------------------------------|:-------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
-| [Hide YouTube Overlay Ads](#HYOA)          | [install][raw-HYOA] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
+| Userscript<br>Description                      | Direct<br>Install    | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
+|------------------------------------------------|:--------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
+| [Hide YouTube Overlay Ads](#HYOA)              | [install][raw-HYOA]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
 | [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
-| [Youtube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
-| [Twitch Hide Channel Leaderboard](#THCL)   | [install][raw-THCL] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
-| [Twitch Transparent Video Stats](#TTVS)    | [install][raw-TTVS] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
-| [GitHub Repo Network Tab](#GRNT)           | [install][raw-GRNT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2022:08:19 |
-| [Bigger GitHub Network Graph](#BGNG)       | [install][raw-BGNG] | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
-| [GitHub Notification Page Tweaks](#GNPT)   | [install][raw-GNPT] | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
-| [GitHub Sticky Editor Header](#GSEH)     | [install][raw-GSEH] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
-| [GitLab Description In Title](#GDIT)       | [install][raw-GDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
-| [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
-| [Lib.rs Description in Title](#LDIT)       | [install][raw-LDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
-| [Crates.io Description In Title](#CDIT)    | [install][raw-CDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
-| [Centered Gmail Toast Notifications](#CGTN)   | [install][raw-CGTN] | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
-| [Wider Google Form Fields](#WGFF)          | [install][raw-WGFF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
-| [Correct Google Form Correctness](#GFCC)   | [install][raw-GFCC] | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
-| [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
-| [Bypass Blogspots Blogger IFrame](#BBBI)   | [install][raw-BBBI] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
-| [Foxaholic Fixes](#FoxF)                   | [install][raw-FoxF] | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
-| [Mitigate Target \_blank Risk](#MTBR)       | [install][raw-MTBR] | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
-| [MSYS2 Package Description in Title](#MDIT)   | [install][raw-MDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
-| [Minecraft CurseForge Title Tweaks](#MCTT)   | [install][raw-MCTT] | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
-| [Another Open In Steam Button](#OISB)   | [install][raw-OISB] | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
+| [Youtube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
+| [Twitch Hide Channel Leaderboard](#THCL)       | [install][raw-THCL]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
+| [Twitch Transparent Video Stats](#TTVS)        | [install][raw-TTVS]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
+| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2022:08:19 |
+| [Bigger GitHub Network Graph](#BGNG)           | [install][raw-BGNG]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
+| [GitHub Notification Page Tweaks](#GNPT)       | [install][raw-GNPT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
+| [GitHub Sticky Editor Header](#GSEH)           | [install][raw-GSEH]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
+| [GitLab Description In Title](#GDIT)           | [install][raw-GDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
+| [Prettier Lib.rs Preformatted Code](#PLPC)     | [install][raw-PLPC]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
+| [Lib.rs Description in Title](#LDIT)           | [install][raw-LDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
+| [Crates.io Description In Title](#CDIT)        | [install][raw-CDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
+| [Centered Gmail Toast Notifications](#CGTN)    | [install][raw-CGTN]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
+| [Wider Google Form Fields](#WGFF)              | [install][raw-WGFF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
+| [Correct Google Form Correctness](#GFCC)       | [install][raw-GFCC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
+| [Roll20 Nonscrolling Number Fields](#RNNF)     | [install][raw-RNNF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
+| [Bypass Blogspots Blogger IFrame](#BBBI)       | [install][raw-BBBI]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
+| [Foxaholic Fixes](#FoxF)                       | [install][raw-FoxF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
+| [Mitigate Target \_blank Risk](#MTBR)          | [install][raw-MTBR]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
+| [MSYS2 Package Description in Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
+| [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
+| [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -376,7 +376,7 @@ Quick and simple redirect to work around strange behavior of being sent to githu
 
 Add simple onclick handlers to the collapsed details of commits on GitHub, as the normal behavior of expanding the ellipses to the full commit message when clicked seems to have broken on legacy browsers as a result of some change to the implementation.
 
-[[Install]][raw-GNAW]
+[[Install]][raw-GCDW]
 
 ---
 
@@ -389,7 +389,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 <!-- Format
 [raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
 Append "?raw=1" to a file link to create a link to the raw file (may be GitHub specific).
-	That is to say, the following two lines are interchangeable 
+	That is to say, the following two lines are interchangeable
 	[ANCHOR]: https://raw.githubusercontent.com/USER/REPO/BRANCH/FILEPATH
 	[ANCHOR]: https://github.com/USER/REPO/BRANCH/blob/FILEPATH?raw=1
 As explained on <https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file/7658676>, it should also be possible to create branch-relative links in GitHub README (and other markup) files, simply by only using the path to the file (i.e. replace "https://github.com/USER/REPO/BRANCH/blob/FILEPATH" with "FILEPATH"). This should also work relative to the repository root if prefixed with '/', and relative to the path of the markup file using '../' and './'
