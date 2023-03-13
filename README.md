@@ -397,6 +397,20 @@ Please report any issues within this repository's [issue section](https://github
 
 Additionally, I do occasionally take requests for simple scripts, so feel free to ask. Please bear in mind that JavaScript is not a language I consider pleasant to use, nor do I consider myself particularly competent with it. I reserve the right to refuse any request with or without comment.
 
+---
+
+## Some of the awesome scripts I use from other authors
+- [Wide GitHub](https://github.com/xthexder/wide-github)
+- [GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding)
+- [GitHub Gist Search Box](https://greasyfork.org/en/scripts/395318-github-gist-search-box)
+- [GitHub Search Autocomplete](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-search-autocomplete)
+- [GitHub - Add Path Search](https://gist.github.com/splintor/8d3f12b86962efe5dcacb28ca15aa87d)
+- [SteamWorkshopSearch](https://openuserjs.org/scripts/Seishiin/SteamWorkshopSearch) (AKA SteamWorkshop - Subscribed Mods Search)
+- [Curseforge QOL Fixes](https://github.com/comp500/Curseforge-Userscripts/)
+- [Breezewiki Redirector](http://alphamethyl.barr0w.net/~barrow/src/barrownet_ca_redirector/breezewiki_redirector.user.js)
+- [GitHub Network Ninja](https://github.com/maliayas/github-network-ninja/blob/master/main.user.js)
+
+
 <!-- Link References -->
 <!-- Format
 [raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
