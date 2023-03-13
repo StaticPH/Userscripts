@@ -80,6 +80,7 @@ Format END -->
 
 <a name="HYOA"></a>
 ### Hide YouTube Overlay Ads
+**This script should no longer be needed after Google's removal of overlay ads on April 6th, 2023.**
 
 You know those little overlay advertisements that pop up on the bottom center of YouTube videos? If those really annoy you, this simple userscript (really just a userstyle wrapped into a userscript) will help by simply preventing them from rendering.<br>
 Note that this _does not_ affect other ads.
