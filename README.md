@@ -47,6 +47,7 @@ To add a script:
 | [Lib.rs Description in Title](#LDIT)           | [install][raw-LDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Crates.io Description In Title](#CDIT)        | [install][raw-CDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
 | [Centered Gmail Toast Notifications](#CGTN)    | [install][raw-CGTN]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
+| [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A                 | :heavy_check_mark:      | MIT     | 2023:03:03 | 2023:03:03 |
 | [Wider Google Form Fields](#WGFF)              | [install][raw-WGFF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
 | [Correct Google Form Correctness](#GFCC)       | [install][raw-GFCC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
 | [Roll20 Nonscrolling Number Fields](#RNNF)     | [install][raw-RNNF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
@@ -56,6 +57,8 @@ To add a script:
 | [MSYS2 Package Description in Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
 | [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
+| [Ubuntu Packages Description In Title](#UBDIT) | [install][raw-UBDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
+| [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -249,6 +252,17 @@ This little change should help mitigate the problem by moving the toast notifica
 
 ---
 
+<a name="GMIHD"></a>
+### Google Meet Ignore Hardware Disabled
+
+A.K.A "I know my hardware is disabled, Google" <br>
+Thanks Google, but I'm well aware that my browser hasn't given you permission to access my hardware; I don't need you showing a prompt that can't be closed with a keypress. <br>
+
+[[Install]][raw-GMIHD]
+
+
+---
+
 <a name="WGFF"></a>
 ### Wider Google Form Fields
 
@@ -332,6 +346,25 @@ As the name should imply, this is my own version of a script which adds a new bu
 Some of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372-open-steam-url after I spent well over an hour fiddling with my own CSS in the pre-dawn hours, and decided I wasn't going to manage much better.
 
 [[Install]][raw-OISB]
+
+---
+
+<a name="UPDIT"></a>
+### Ubuntu Packages Description in Title
+
+Try to provide a minimal, yet meaningful, page title that includes the package description on Ubuntu's package search/archive website.
+
+[[Install]][raw-UPDIT]
+
+---
+
+<a name="QRSC"></a>
+### Quietly Reject StackExchange Cookies
+
+Hide the pesky cookie permission requests on StackExchange sites, which don't actually appear to set even "necessary" cookies until the user responds to the permission prompt. <br>
+Also hides a few other little things that just don't warrant another tiny script.
+
+[[Install]][raw-QRSC]
 
 ---
 <!--
@@ -437,16 +470,19 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-PLPC]: /prettier_librs_preformatted_code.user.js?raw=1
 [raw-LDIT]: /librs_description_in_title.user.js?raw=1
 [raw-CDIT]: /cratesio_description_in_title.user.js?raw=1
-[raw-RNNF]: /roll20_character_sheet_no_scrolling_number_fields.user.js?raw=1
 [raw-CGTN]: /centered_gmail_toast_notifications.user.js?raw=1
-[raw-BBBI]: /bypass_blogspots_blogger_iframe.user.js?raw=1
-[raw-FoxF]: /foxaholic_fixes.user.js?raw=1
+[raw-GMIHD]: /google_meet_ignore_hardware_disabled.user.js?raw=1
 [raw-WGFF]: /wider_google_form_fields.user.js?raw=1
 [raw-GFCC]: /correct_google_form_correctness.user.js?raw=1
+[raw-RNNF]: /roll20_character_sheet_no_scrolling_number_fields.user.js?raw=1
+[raw-BBBI]: /bypass_blogspots_blogger_iframe.user.js?raw=1
+[raw-FoxF]: /foxaholic_fixes.user.js?raw=1
 [raw-MTBR]: /mitigate_target_blank_risk.user.js?raw=1
 [raw-MDIT]: /msys2_package_description_in_title.user.js?raw=1
 [raw-MCTT]: /minecraft_curseforge_title_tweaks.user.js?raw=1
 [raw-OISB]: /steam_app_from_webpage.user.js.user.js?raw=1
+[raw-UPDIT]: /ubuntu_packages_description_in_title.user.js?raw=1
+[raw-QRSC]: /quietly_reject_stackexchange_cookies.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
