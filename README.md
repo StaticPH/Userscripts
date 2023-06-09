@@ -59,6 +59,7 @@ To add a script:
 | [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
 | [Ubuntu Packages Description In Title](#UBDIT) | [install][raw-UBDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
 | [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
+| [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -367,6 +368,17 @@ Also hides a few other little things that just don't warrant another tiny script
 [[Install]][raw-QRSC]
 
 ---
+
+<a name="PDIT"></a>
+### PyPI Description In Title
+
+Rewrite the page title for a PyPI package to include a brief summary, when available.
+
+Also doesn't use that centered dot character as a separator.
+
+[[Install]][raw-PDIT]
+
+---
 <!--
 
 <a name="BFMW"></a>
@@ -483,6 +495,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-OISB]: /steam_app_from_webpage.user.js.user.js?raw=1
 [raw-UPDIT]: /ubuntu_packages_description_in_title.user.js?raw=1
 [raw-QRSC]: /quietly_reject_stackexchange_cookies.user.js?raw=1
+[raw-PDIT]: /pypi_description_in_title.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
