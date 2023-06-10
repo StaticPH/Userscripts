@@ -1,20 +1,43 @@
 // ==UserScript==
-// @name           GitHub Collapsed Details Legacy Workaround
-// @namespace      https://github.com/StaticPH
-// @match          https://github.com/*/*
-// @version        1.2
-// @createdAt      9/30/2022, 9:32:58 PM
-// @author         StaticPH
-// @description    Add simple onclick handlers to the collapsed details of commits on GitHub, as the normal behavior of expanding the ellipses to the full commit message when clicked seems to have broken on legacy browsers as a result of some change to the implementation. Also fixes some other instances of non-functioning collapsing elements.
-// @license        MIT
-// @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/legacy_browser_workarounds/github_collapsed_details_workaround.user.js
-// @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/legacy_browser_workarounds/github_collapsed_details_workaround.user.js
-// @homepageURL    https://github.com/StaticPH/UserScripts
-// @supportURL     https://github.com/StaticPH/UserScripts/issues
-// @icon           https://github.githubassets.com/pinned-octocat.svg
-// @grant          none
+// @name             GitHub Collapsed Details Legacy Workaround
+// @namespace        https://github.com/StaticPH
+// @match            https://github.com/*/*
+// @exclude-match    https://github.com/*/*/search*
+// @exclude-match    https://github.com/about*
+// @exclude-match    https://github.com/contact*
+// @exclude-match    https://github.com/customer-stories*
+// @exclude-match    https://github.com/enterprise*
+// @exclude-match    https://github.com/explore*
+// @exclude-match    https://github.com/features*
+// @exclude-match    https://github.com/login/*
+// @exclude-match    https://github.com/marketplace*
+// @exclude-match    https://github.com/new*
+// @exclude-match    https://github.com/notifications*
+// @exclude-match    https://github.com/organizations/*
+// @exclude-match    https://github.com/orgs/*
+// @exclude-match    https://github.com/pricing*
+// @exclude-match    https://github.com/search*
+// @exclude-match    https://github.com/security*
+// @exclude-match    https://github.com/sessions/*
+// @exclude-match    https://github.com/settings/*
+// @exclude-match    https://github.com/site*
+// @exclude-match    https://github.com/team*
+// @exclude-match    https://github.com/topics*
+// @exclude-match    https://github.com/trending*
+// @exclude-match    https://github.com/users/*/projects/*
+// @version          1.2
+// @createdAt        9/30/2022, 9:32:58 PM
+// @author           StaticPH
+// @description      Add simple onclick handlers to the collapsed details of commits on GitHub, as the normal behavior of expanding the ellipses to the full commit message when clicked seems to have broken on legacy browsers as a result of some change to the implementation. Also fixes some other instances of non-functioning collapsing elements.
+// @license          MIT
+// @updateURL        https://raw.githubusercontent.com/StaticPH/Userscripts/master/legacy_browser_workarounds/github_collapsed_details_workaround.user.js
+// @downloadURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/legacy_browser_workarounds/github_collapsed_details_workaround.user.js
+// @homepageURL      https://github.com/StaticPH/UserScripts
+// @supportURL       https://github.com/StaticPH/UserScripts/issues
+// @icon             https://github.githubassets.com/pinned-octocat.svg
+// @grant            none
 // @noframes
-// @run-at         document-end
+// @run-at           document-end
 // ==/UserScript==
 
 (function(){
