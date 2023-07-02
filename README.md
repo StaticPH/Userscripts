@@ -57,7 +57,7 @@ To add a script:
 | [MSYS2 Package Description in Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
 | [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
-| [Ubuntu Packages Description In Title](#UBDIT) | [install][raw-UBDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
+| [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
 | [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
 | [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
 
@@ -267,7 +267,7 @@ Thanks Google, but I'm well aware that my browser hasn't given you permission to
 <a name="WGFF"></a>
 ### Wider Google Form Fields
 
-Unhide the page body and hide obstructive injected iframes on some Blogspot pages, which use those methods for reasons like discouraging ad blocking. <br>
+Widens the input fields in google forms from 50% to 100% of the question element (minus padding) <br>
 
 [[Install]][raw-WGFF]
 
