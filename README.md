@@ -14,7 +14,7 @@ They may also work with GreaseMonkey, TamperMonkey, or on other browsers.
 	</sub>
 -->
 ### Other
-* If you use [Pale Moon](http://www.palemoon.org/) or [Basilisk](https://www.basilisk-browser.org), try [this fork of GreaseMonkey v3][GreaseMonkey_v3_Moonchild].<br>
+* If you use [Pale Moon](https://www.palemoon.org), [Basilisk](https://www.basilisk-browser.org), or [K-Meleon](http://kmeleonbrowser.org), try [this fork of GreaseMonkey v3][GreaseMonkey_v3_Moonchild].<br>
 Some scripts will likely require modifications for this to work; if you do this yourself, please submit a pull request so that others may also benefit.
 
 ## Important note:
@@ -60,6 +60,8 @@ To add a script:
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
 | [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
 | [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
+| [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2023:07:02 |
+| [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -379,6 +381,31 @@ Also doesn't use that centered dot character as a separator.
 [[Install]][raw-PDIT]
 
 ---
+
+<a name="SUTC"></a>
+### Simple URL Tracker Cleaner
+
+Scrub various common tracker parameters from URLs. Even if you don't mind being tracked, parameters like these often make URLs rather long; why copy, share, or save a 200 character URL when you could get the exact same content by removing 160 of those characters, without routing traffic through some URL shortening service?
+
+Primarily targets parameters related to Google, Amazon, and Facebook.
+
+<sub>
+Icon from: <a href="https://www.flaticon.com/free-icon/fly-swatter_185441" title="Fly Swatter">Fly Swatter free icon created by Freepik - Flaticon</a>
+</sub>
+[[Install]][raw-SUTC]
+
+---
+
+<a name="ORHS"></a>
+### Old Reddit Hide Posts By Sub
+
+Hide posts from arbitrary subreddits (unless specifically looking at them, of course).
+
+Only works for old.reddit.com, not www.reddit.com, because the not only does the latter use a DOM structure that makes it unsuitable for applying styles to entire post-elements by the CSS selector of the child element holding the subreddit, it _also_ commits the desktop (and frankly, even mobile) user-experience war-crime of infinite pagination (endless scrolling). **TLDR: Modern Reddit UI sucks, and supporting it would take more effort than I'm willing to put in to this for my own use.**
+
+[[Install]][raw-ORHS]
+
+---
 <!--
 
 <a name="BFMW"></a>
@@ -496,6 +523,8 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-UPDIT]: /ubuntu_packages_description_in_title.user.js?raw=1
 [raw-QRSC]: /quietly_reject_stackexchange_cookies.user.js?raw=1
 [raw-PDIT]: /pypi_description_in_title.user.js?raw=1
+[raw-SUTC]: /simple_url_tracker_cleaner.user.js?raw=1
+[raw-ORHS]: /reddit_hide_by_subreddit.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
