@@ -38,6 +38,7 @@ To add a script:
 | [Youtube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
 | [Twitch Hide Channel Leaderboard](#THCL)       | [install][raw-THCL]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
 | [Twitch Transparent Video Stats](#TTVS)        | [install][raw-TTVS]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
+| [Twitch Hide Content Disclosure](#THCD)        | [install][raw-THCD]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:06:29 | 2023:06:29 |
 | [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2023:06:10 |
 | [Bigger GitHub Network Graph](#BGNG)           | [install][raw-BGNG]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
 | [GitHub Notification Page Tweaks](#GNPT)       | [install][raw-GNPT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
@@ -132,6 +133,16 @@ Extensions like FrankerFaceZ may already have this functionality.
 Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much.<br>
 
 [[Install]][raw-TTVS]
+
+---
+
+<a name="THCD"></a>
+### Twitch Hide Content Disclosure
+
+Hides the stupid content disclosure overlay from the Twitch.tv video player.<br>
+Extensions like FrankerFaceZ may already have this functionality.
+
+[[Install]][raw-THCD]
 
 ---
 
@@ -520,6 +531,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-YCKP]: /youtube_channel_keyboard_protector.user.js?raw=1
 [raw-THCL]: /twitch_hide_channel_leaderboard.user.js?raw=1
 [raw-TTVS]: /twitch_transparent_video_stats.user.js?raw=1
+[raw-THCD]: /twitch_hide_content_disclosure.user.js?raw=1
 [raw-GRNT]: /github_repo_network_tab.user.js?raw=1
 [raw-BGNG]: /bigger_github_network_graph.user.js?raw=1
 [raw-GNPT]: /github_notification_page_tweaks.user.js?raw=1
