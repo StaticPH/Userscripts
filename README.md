@@ -474,6 +474,15 @@ Multiple fixes related to user-downloadable asset files on GitHub for users of l
 
 ---
 
+<a name="SELCE"></a>
+### StackExchange Legacy Comments Expander
+
+Replace 'Show X more comments' handler for StackExchange sites to better support older browsers; in particular, this enables showing all comments when using Chromium 72.
+
+[[Install]][raw-SELCE]
+
+---
+
 ## Issues
 Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)
 
@@ -542,6 +551,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-GNAW]: /legacy_browser_workarounds/github_notifications_archive_workaround.user.js?raw=1
 [raw-GCDW]: /legacy_browser_workarounds/github_collapsed_details_workaround.user.js?raw=1
 [raw-GLRAW]: /legacy_browser_workarounds/github_lazy_release_asset_workaround.user.js?raw=1
+[raw-SELCE]: /legacy_browser_workarounds/stackexchange_legacy_comments_expander.user.js?raw=1
 
 
 [raw-GPOFCB]: /github_pr_fork_compare_button.user.js?raw=1
