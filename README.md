@@ -50,6 +50,7 @@ To add a script:
 | [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A                 | :heavy_check_mark:      | MIT     | 2023:03:03 | 2023:03:03 |
 | [Wider Google Form Fields](#WGFF)              | [install][raw-WGFF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
 | [Correct Google Form Correctness](#GFCC)       | [install][raw-GFCC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
+| [Google Search Lean Query Updates](#GSLQU)     | [install][raw-GSLQU] | N/A                 | :heavy_check_mark:      | MIT     | 2023:07:12 | 2023:07:12 |
 | [Roll20 Nonscrolling Number Fields](#RNNF)     | [install][raw-RNNF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
 | [Bypass Blogspots Blogger IFrame](#BBBI)       | [install][raw-BBBI]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
 | [Foxaholic Fixes](#FoxF)                       | [install][raw-FoxF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
@@ -284,6 +285,15 @@ Make fields that have been manually marked as correct take on the same styling a
 
 ---
 
+<a name="GSLQU"></a>
+### Google Search Lean Query Updates
+
+Proof-of-concept: Prevent modifications to the Google search query in the on-page search bar from inserting a bunch of unwanted parameters into the resulting URL.
+
+[[Install]][raw-GSLQU]
+
+---
+
 <a name="RNNF"></a>
 ### Roll20 Nonscrolling Number Fields
 
@@ -513,6 +523,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-GMIHD]: /google_meet_ignore_hardware_disabled.user.js?raw=1
 [raw-WGFF]: /wider_google_form_fields.user.js?raw=1
 [raw-GFCC]: /correct_google_form_correctness.user.js?raw=1
+[raw-GSLQU]: /google_search_lean_query_updates.user.js?raw=1
 [raw-RNNF]: /roll20_character_sheet_no_scrolling_number_fields.user.js?raw=1
 [raw-BBBI]: /bypass_blogspots_blogger_iframe.user.js?raw=1
 [raw-FoxF]: /foxaholic_fixes.user.js?raw=1
