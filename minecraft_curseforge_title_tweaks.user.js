@@ -2,7 +2,8 @@
 // @name           Minecraft CurseForge Title Tweaks
 // @namespace      https://github.com/StaticPH
 // @match          https://www.curseforge.com/minecraft/mc-mods/*
-// @version        1.0
+// @match          https://legacy.curseforge.com/minecraft/mc-mods/*
+// @version        1.1
 // @createdAt      4/20/2022, 5:46:34 PM
 // @author         StaticPH
 // @description    Modifies the format of the page title for some of CurseForge's Minecraft pages.
@@ -28,6 +29,25 @@
 		}
 	}
 	else {
+		if (document.location.pathname.startsWith('/minecraft/mc-mods/')){
+			const findModTitle = document.querySelector('header > .container > div > div > div > h2, .project-header > h1');
+			const modTitle = !findModTitle ? 'ERROR NO TITLE FOUND' : findModTitle.textContent.replace(/[[{(]\s*F(orge|abric)\s?[&/]\s?F(orge|abric)\s*[\])}]/i, '');
+			document.title = modTitle;
+			if (document.location.pathname.includes('/files')){
+				// if (document.location.pathname.endsWith('/')){  }
+				document.title += ' - Downloads';
+			}
+			else if (document.location.pathname.endsWith('/screenshots')){
+				document.title += ' - Images' ;
+			}
+			else if (document.location.pathname.endsWith('/relations/dependencies')){
+				document.title += ' - Dependencies';
+			}
+			else if (document.location.pathname.endsWith('/relations/dependents')){
+				document.title += ' - Dependents';
+			}
+			document.title += ' - CurseForge Minecraft Mods';
+		}
 		if (document.title.match('Mods - Projects - CurseForge')){
 			document.title = document.title.replace('Mods - Projects - CurseForge', '') + 'CurseForge Minecraft Projects';
 		}

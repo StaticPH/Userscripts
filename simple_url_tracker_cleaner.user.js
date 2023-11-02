@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.3
+// @version        1.4
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -37,8 +37,8 @@
 					console.warn('Could not find expected "url" parameter for link:  ' + link.href);
 				}
 			}
-			if (link.href.match(/(?:[?&])(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/)){
-				fixed = link.href.replace(/(?:[?&])(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*/g, '').replace(/[?&]*#/, '#').replace(/[?&]*$/, '');
+			if (link.href.match(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/)){
+				fixed = link.href.replace(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*/g, '').replace(/[?&]*#/, '#').replace(/[?&]*$/, '');
 				console.log( link.href + ' --> ' + fixed );
 				link.href = fixed;
 			}

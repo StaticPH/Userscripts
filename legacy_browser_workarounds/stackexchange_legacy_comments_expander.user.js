@@ -8,7 +8,7 @@
 // @match          https://stackexchange.com/*
 // @match          https://*.stackoverflow.com/*
 // @match          https://*.stackexchange.com/*
-// @version        1.0
+// @version        1.1
 // @createdAt      11/6/2022, 1:17:14 AM
 // @author         StaticPH
 // @description    Replace 'Show X more comments' handler for StackExchange sites to better support older browsers; in particular, this enables showing all comments when using Chromium 72.
@@ -45,11 +45,11 @@
 	}
 
 	function onExpandComments(evnt){
-		if (evnt.target.matches('.answer a.js-show-link')){
+		if (evnt.target.matches('.answer a.js-show-link, .question a.js-show-link')){
 			evnt.stopImmediatePropagation();
 			evnt.preventDefault();
-			const answer = evnt.target.closest('.answer');
-			const postID = answer.getAttribute('data-answerid');
+			const answer = evnt.target.closest('.answer, .question');
+			const postID = answer.getAttribute('data-answerid') || answer.getAttribute('data-questionid');
 			const insertInto = answer.querySelector('ul.comments-list');
 			fetch(document.location.origin + '/posts/' + postID + '/comments', {
 			  'headers': {
