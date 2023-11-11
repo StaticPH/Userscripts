@@ -64,6 +64,7 @@ To add a script:
 | [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
 | [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2023:07:02 |
 | [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
+| [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2023:10:08 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -427,6 +428,15 @@ Only works for old.reddit.com, not www.reddit.com, because the not only does the
 [[Install]][raw-ORHS]
 
 ---
+
+<a name="SRLU"></a>
+### ScribbleHub Reading List Upgrades
+
+Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the title, and more planned.
+
+[[Install]][raw-SRLU]
+
+---
 <!--
 
 <a name="BFMW"></a>
@@ -557,6 +567,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-PDIT]: /pypi_description_in_title.user.js?raw=1
 [raw-SUTC]: /simple_url_tracker_cleaner.user.js?raw=1
 [raw-ORHS]: /reddit_hide_by_subreddit.user.js?raw=1
+[raw-SRLU]: /scribblehub_reading_list_upgrades.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
