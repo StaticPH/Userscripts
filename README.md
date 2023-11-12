@@ -65,6 +65,7 @@ To add a script:
 | [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2023:07:02 |
 | [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
 | [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2023:10:08 |
+| [NovelUpdates Reading List Upgrades](#NRLU)    | [install][raw-NRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:07:08 | 2022:11:16 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
 <!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
@@ -437,6 +438,15 @@ Allows hiding novels the user is caught up on from their reading lists, adds the
 [[Install]][raw-SRLU]
 
 ---
+
+<a name="NRLU"></a>
+### NovelUpdates Reading List Upgrades
+
+Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the title, and more planned.
+
+[[Install]][raw-NRLU]
+
+---
 <!--
 
 <a name="BFMW"></a>
@@ -568,6 +578,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-SUTC]: /simple_url_tracker_cleaner.user.js?raw=1
 [raw-ORHS]: /reddit_hide_by_subreddit.user.js?raw=1
 [raw-SRLU]: /scribblehub_reading_list_upgrades.user.js?raw=1
+[raw-NRLU]: /novelupdates_reading_list_upgrades.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
