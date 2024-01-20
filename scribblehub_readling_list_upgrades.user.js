@@ -2,7 +2,7 @@
 // @name           ScribbleHub Reading List Upgrades
 // @namespace      https://github.com/StaticPH
 // @match          https://www.scribblehub.com/reading-list/
-// @version        1.1
+// @version        1.2
 // @createdAt      10/7/2022, 11:34:28 PM
 // @author         StaticPH
 // @description    Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the title, and more planned.
@@ -25,6 +25,7 @@
 	const settings = {
 		hideCaughtUpByDefault: false,
 		improvePageTitle: true,
+		ctrlEnterSavesNotes: true,
 		// customTagDropdownList: true, // TODO: Not yet implemented
 		// invertableTagFiltering: true // TODO: Not yet implemented
 	};
@@ -62,7 +63,8 @@
 			// Label indicates what the button does when clicked, not the current state.
 			click2Hide: 'Hide Caught Up Novels',
 			click2Show: 'Show Caught Up Novels'
-		}
+		},
+		closeAndDiscard: 'Close and discard changes'
 	};
 
 	GM.addStyle(`
@@ -109,6 +111,23 @@
 				);
 				throw err;
 			}
+		}
+	}
+
+	async function saveNotesKeybindHandler(evnt){
+		const notesPopup = document.querySelector('#my_popupnotes[aria-hidden="false"]');
+		if (! notesPopup){ return; } // Notes editor is not open, allow normal event processing to occur.
+		else if (evnt.key && evnt.key === 'Enter' && evnt.ctrlKey && !evnt.shiftKey){
+			// Notes editor is open, and ctrl+enter has been pressed. Trigger the normal "Save" workflow.
+			notesPopup.querySelector('.savenotes').click();
+			evnt.stopImmediatePropagation();
+			evnt.stopPropagation();
+		}
+	}
+
+	function setTitleForFakeButton(elem, includeElemText = false, prefix = '', suffix = ''){
+		if(elem){
+			elem.title = includeElemText ? prefix + elem.textContent.trim() + suffix : prefix;
 		}
 	}
 
@@ -207,6 +226,12 @@
 	document.querySelectorAll('script').forEach(s => (s.textContent.includes('urchinTracker') || s.src.includes('analytic')) && s.remove());
 
 	settings.improvePageTitle && improveTitle();
-	caughtUpHelper.init();
+	if (settings.ctrlEnterSavesNotes){
+		document.addEventListener('keyup', saveNotesKeybindHandler);
+		setTitleForFakeButton(document.querySelector('.rlnotes_btn.savenotes'), true, '', ' (Ctrl+Enter)');
+	}
+	// By default, the notes editor has already been set up to close when the Escape key is pressed, so it just needs a tooltip to say that.
+	setTitleForFakeButton(document.querySelector('.rlnotes_btn.my_popupnotes_close'), false, labelStrings.closeAndDiscard + ' (Esc)');
 
+	caughtUpHelper.init();
 })();
