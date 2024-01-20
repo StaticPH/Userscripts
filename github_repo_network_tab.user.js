@@ -25,7 +25,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.6
+// @version          1.7
 // @createdAt        4/06/2020
 // @author           StaticPH
 // @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -35,6 +35,9 @@
 // @homepageURL      https://github.com/StaticPH/UserScripts
 // @supportURL       https://github.com/StaticPH/UserScripts/issues
 // @icon             https://github.githubassets.com/pinned-octocat.svg
+// @grant            none
+// @run-at           document-idle
+// @noframes
 // ==/UserScript==
 
 (function(){
@@ -42,7 +45,7 @@
 
 	/* Determine what repository we are looking at */
 	let here = (function getRepoAddress(){
-		return location.href.split('/', 5).slice(-2).join('/');
+		return location.pathname.split('/', 5).slice(-2).join('/');
 	})();
 
 	/* Honestly, I feel like creating the HTML directly is less of a hassle than creating all the elements with JavaScript */
@@ -53,7 +56,6 @@
 				'		<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/>\n' +
 				'	</svg>\n' +
 				'	<span data-content="Network">\n' +
-				// '		::before\n' +
 				'		Network\n' +
 				'	</span">\n' +
 				'</a>\n';
@@ -79,29 +81,22 @@
 				'<li>';
 	}
 
-	/* Find 'Pull Requests' tab and insert new tab immediately after it, ensuring consistent placement */
-	function querySelectorAllContaining(...str){
-		return document.querySelectorAll(
-			str.map( (sel) => '[data-selected-links*="' + sel + '"]' )
-		);
-	}
-
 	//TODO: Consider insertion at Nth element position, rather than relative to PR tab.
 	setTimeout(function wait(){
-		const repoPullsTab = querySelectorAllContaining('repo_pulls');
+		/* Find the 'Pull Requests' tab; inserting the new Network tab immediately after it ensures consistent placement. */
+		const repoPullsTab = document.querySelectorAll('[data-seleced-links*="repo_pulls"]');
 		const dropdownRetryLimit = 5;
 		let dropdownRetries = 0;
 
-		// Wait until the page loads in enough to have the Pull Request tab in the repository header, so that it can be used as a point of reference for element insertion
-		if (repoPullsTab){
+		// Wait until the page loads in enough to have the 'Pull Requests' tab in the repository header, so that it can be used as a point of reference for element insertion
+		if (repoPullsTab.length !== 0){
 			repoPullsTab[0].insertAdjacentHTML('afterend', createBigNetworkTabHTML());
 			document.getElementById('bigNetworkTab') && console.debug('Added big Network tab.');
 
-			try{
+			if (repoPullsTab.length >= 1){
 				repoPullsTab[1].insertAdjacentHTML('afterend', createSmallNetworkTabHTML());
 				document.getElementById('smallNetworkTab') && console.debug('Added small Network tab.');
 			}
-			catch{};// ignore failure
 
 //			setTimeout(function foo(){
 //				if (document.querySelector('[data-selected-links*="repo_network"]')){

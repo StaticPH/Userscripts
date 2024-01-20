@@ -39,7 +39,7 @@ To add a script:
 | [Twitch Hide Channel Leaderboard](#THCL)       | [install][raw-THCL]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
 | [Twitch Transparent Video Stats](#TTVS)        | [install][raw-TTVS]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
 | [Twitch Hide Content Disclosure](#THCD)        | [install][raw-THCD]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:06:29 | 2023:06:29 |
-| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2023:06:10 |
+| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2024:01:20 |
 | [Bigger GitHub Network Graph](#BGNG)           | [install][raw-BGNG]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
 | [GitHub Notification Page Tweaks](#GNPT)       | [install][raw-GNPT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
 | [GitHub Sticky Editor Header](#GSEH)           | [install][raw-GSEH]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
