@@ -20,6 +20,8 @@
 (function(){
 	"use strict";
 
+	// TODO: consider retaining the 'tbs' search parameter if present.
+	// It's one of the parameters actually worth keeping, as it controls some of the "advanced" filtering.
 	const prefix = 'https://www.google.com/search?q=';
 	function enterHandler(evnt){
 		if (evnt.key === 'Enter' && evnt.target.matches('textarea[name="q"], input[name="q"]')){

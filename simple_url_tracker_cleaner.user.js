@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.4
+// @version        1.6.1
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -20,6 +20,15 @@
 (function(){
 	'use strict';
 
+	function queryParamFirst(href){
+		// Put the damn query parameter first so it's predictable
+		const args = href.split('&');
+		const queryIndex = args.findIndex(s => s.startsWith('q='));
+		args[0] = args[0].replace('search?', `search?${args[queryIndex]}&`);
+		delete args[queryIndex];
+		return args.filter(s => s).join('&');
+	}
+
 	async function cleanURLs(){
 		Array.from(document.links).forEach(async function(link){
 			let fixed = null;
@@ -29,12 +38,31 @@
 					fixed = url.searchParams.get('url');
 					if (!fixed || fixed.length === 0){ console.warn('Found empty "url" parameter in link: ' + link.href); }
 					else{
+						// In this scenario, we assume that the url parameter's value is a google search url, just without the origin.
+						// Put differently, it is assumed that fixed now starts with '/search?'
+						if (!decodeURIComponent(fixed).startsWith('https://www/google.com')){
+							fixed = 'https://www.google.com' + fixed;
+						}
 						console.log( link.href + ' --> ' + fixed );
 						link.href = fixed;
 					}
 				}
-				else {
-					console.warn('Could not find expected "url" parameter for link:  ' + link.href);
+				else if (url.searchParams.has('q')){
+					fixed = url.searchParams.get('q');
+					if (!fixed || fixed.length === 0){ console.warn('Found empty "q" parameter in link: ' + link.href); }
+					else if (fixed.startsWith('https://')){
+						if (url.searchParams.has('tbs')){ // This is one of the parameters actually worth keeping, as it controls some of the "advanced" filtering
+							fixed = fixed + '&' + url.searchParams.get('tbs');
+						}
+						console.log( link.href + ' --> ' + fixed );
+						link.href = fixed;
+					}
+					else{
+						console.info('Expected query parameter starting with "https://", but found q=' + fixed);
+					}
+				}
+				else{
+					console.warn('Could not find expected "url" or "q" parameter for link: ' + link.href);
 				}
 			}
 			if (link.href.match(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/)){
@@ -43,8 +71,16 @@
 				link.href = fixed;
 			}
 			// if (link.href.match(/google\.[^/]+\/search\?q=.+/)){
-			if (link.href.match(/google\.[^/]+\/search\?q=.*?\&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/)){
-				fixed = link.href.replace(/\&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
+			if (link.href.match(/google\.[^/]+\/search.*?[&?](ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/)){
+				// fixed = link.href.replace(/&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
+				// fixed = link.href.replace(/\?([^&#=]+=[^&#]*((&[^&#=]+=[^&#]*)+)?&)(q=[^&?#]*)(.*)/, '?$4&$1$5').replace('&&','&'); // This *CAN'T* be the optimal way to handle scenarios where 'q' isn't the first search parameter...
+				fixed = queryParamFirst(link.href);
+				fixed = fixed.replace(/&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
+				/* Compare performance against:
+				const oldUrl = new URL(link.href);
+				['ei','sa','ved','biw','bih','spell','oq','gs_lcp','sclient','uact'].forEach(oldUrl.searchParams.delete);
+				fixed = oldUrl.href;
+				*/
 				console.log( link.href + ' --> ' + fixed );
 				link.href = fixed;
 			}
