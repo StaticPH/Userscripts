@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.6.1
+// @version        1.6.2
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -38,11 +38,6 @@
 					fixed = url.searchParams.get('url');
 					if (!fixed || fixed.length === 0){ console.warn('Found empty "url" parameter in link: ' + link.href); }
 					else{
-						// In this scenario, we assume that the url parameter's value is a google search url, just without the origin.
-						// Put differently, it is assumed that fixed now starts with '/search?'
-						if (!decodeURIComponent(fixed).startsWith('https://www/google.com')){
-							fixed = 'https://www.google.com' + fixed;
-						}
 						console.log( link.href + ' --> ' + fixed );
 						link.href = fixed;
 					}
