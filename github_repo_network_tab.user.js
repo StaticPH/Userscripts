@@ -25,7 +25,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.7
+// @version          1.7.1
 // @createdAt        4/06/2020
 // @author           StaticPH
 // @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -84,7 +84,7 @@
 	//TODO: Consider insertion at Nth element position, rather than relative to PR tab.
 	setTimeout(function wait(){
 		/* Find the 'Pull Requests' tab; inserting the new Network tab immediately after it ensures consistent placement. */
-		const repoPullsTab = document.querySelectorAll('[data-seleced-links*="repo_pulls"]');
+		const repoPullsTab = document.querySelectorAll('[data-selected-links*="repo_pulls"]');
 		const dropdownRetryLimit = 5;
 		let dropdownRetries = 0;
 
@@ -93,7 +93,7 @@
 			repoPullsTab[0].insertAdjacentHTML('afterend', createBigNetworkTabHTML());
 			document.getElementById('bigNetworkTab') && console.debug('Added big Network tab.');
 
-			if (repoPullsTab.length >= 1){
+			if (repoPullsTab.length > 1){
 				repoPullsTab[1].insertAdjacentHTML('afterend', createSmallNetworkTabHTML());
 				document.getElementById('smallNetworkTab') && console.debug('Added small Network tab.');
 			}
