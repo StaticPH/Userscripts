@@ -34,18 +34,18 @@ To add a script:
 | Userscript<br>Description                      | Direct<br>Install    | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
 |------------------------------------------------|:--------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
 | [Hide YouTube Overlay Ads](#HYOA)              | [install][raw-HYOA]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
-| [Fix Youtube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
-| [Youtube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
+| [Fix YouTube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
+| [YouTube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
 | [Twitch Hide Channel Leaderboard](#THCL)       | [install][raw-THCL]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
 | [Twitch Transparent Video Stats](#TTVS)        | [install][raw-TTVS]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
 | [Twitch Hide Content Disclosure](#THCD)        | [install][raw-THCD]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:06:29 | 2023:06:29 |
-| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2024:01:20 |
+| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2024:02:01 |
 | [Bigger GitHub Network Graph](#BGNG)           | [install][raw-BGNG]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
 | [GitHub Notification Page Tweaks](#GNPT)       | [install][raw-GNPT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
 | [GitHub Sticky Editor Header](#GSEH)           | [install][raw-GSEH]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
 | [GitLab Description In Title](#GDIT)           | [install][raw-GDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
 | [Prettier Lib.rs Preformatted Code](#PLPC)     | [install][raw-PLPC]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
-| [Lib.rs Description in Title](#LDIT)           | [install][raw-LDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
+| [Lib.rs Description In Title](#LDIT)           | [install][raw-LDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Crates.io Description In Title](#CDIT)        | [install][raw-CDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
 | [Centered Gmail Toast Notifications](#CGTN)    | [install][raw-CGTN]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
 | [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A                 | :heavy_check_mark:      | MIT     | 2023:03:03 | 2023:03:03 |
@@ -56,15 +56,15 @@ To add a script:
 | [Bypass Blogspots Blogger IFrame](#BBBI)       | [install][raw-BBBI]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
 | [Foxaholic Fixes](#FoxF)                       | [install][raw-FoxF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
 | [Mitigate Target \_blank Risk](#MTBR)          | [install][raw-MTBR]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
-| [MSYS2 Package Description in Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
+| [MSYS2 Package Description In Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
 | [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
 | [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
 | [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
 | [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
-| [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2023:07:02 |
+| [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2024:01:28 |
 | [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
-| [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2023:10:08 |
+| [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2024:01:19 |
 | [NovelUpdates Reading List Upgrades](#NRLU)    | [install][raw-NRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:07:08 | 2022:11:16 |
 
 <!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
@@ -101,7 +101,7 @@ Note that this _does not_ affect other ads.
 ---
 
 <a name="FYPBG"></a>
-### Fix Youtube Player Bottom Gradient
+### Fix YouTube Player Bottom Gradient
 
 This "fixes" the excessively large bottom gradient area that sometimes appears on the YouTube video player when the mouse cursor is within the player frame.<br>
 **So far, I've only seen the phenomenon that led me to write this while using Vivaldi.**
@@ -111,7 +111,7 @@ This "fixes" the excessively large bottom gradient area that sometimes appears o
 ---
 
 <a name="YCKP"></a>
-### Youtube Channel Keyboard Protection
+### YouTube Channel Keyboard Protection
 
 Prevents YouTube from hijacking the Up/Down arrow keys on channel pages, as it likes to do sometimes (Left and Right arrow keys are okay though, because those don't control page scrolling).
 
@@ -132,7 +132,7 @@ Extensions like FrankerFaceZ may already have this functionality.
 <a name="TTVS"></a>
 ### Twitch Transparent Video Stats
 
-Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much.<br>
+Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much.
 
 [[Install]][raw-TTVS]
 
@@ -162,7 +162,7 @@ Known bugs:
 ---
 
 <a name="BGNG"></a>
-### Bigger GitHub Repo Network Graph
+### Bigger GitHub Network Graph
 
 Makes the timeline on the Network page of GitHub repositories utilize more of that available whitespace on the sides.<br>
 Still can't seem to make it use all the space on the right side though...
@@ -273,7 +273,7 @@ This little change should help mitigate the problem by moving the toast notifica
 ### Google Meet Ignore Hardware Disabled
 
 A.K.A "I know my hardware is disabled, Google" <br>
-Thanks Google, but I'm well aware that my browser hasn't given you permission to access my hardware; I don't need you showing a prompt that can't be closed with a keypress. <br>
+Thanks Google, but I'm well aware that my browser hasn't given you permission to access my hardware; I don't need you showing a prompt that can't be closed with a keypress.
 
 [[Install]][raw-GMIHD]
 
@@ -283,7 +283,7 @@ Thanks Google, but I'm well aware that my browser hasn't given you permission to
 <a name="WGFF"></a>
 ### Wider Google Form Fields
 
-Widens the input fields in google forms from 50% to 100% of the question element (minus padding) <br>
+Widens the input fields in google forms from 50% to 100% of the question element (minus padding).
 
 [[Install]][raw-WGFF]
 
@@ -320,7 +320,7 @@ TODO: Replace the use of setTimeout with a MutationObserver.
 <a name="BBBI"></a>
 ### Bypass Blogspot's Blogger IFrame
 
-Unhide the page body and hide obstructive injected iframes on some Blogspot pages, which use those methods for reasons like discouraging ad blocking. <br>
+Unhide the page body and hide obstructive injected iframes on some Blogspot pages, which use those methods for reasons like discouraging ad blocking.
 
 [[Install]][raw-BBBI]
 
@@ -348,7 +348,7 @@ e.g. Setting `customAllowedOrigins` to `'http://wordpress.com https://stackexcha
 ---
 
 <a name="MDIT"></a>
-### MSYS2 Package Description in Title
+### MSYS2 Package Description In Title
 
 Include the package description on the tab title for a package's page on packages.msys2.org/packages
 
@@ -376,7 +376,7 @@ Some of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372
 ---
 
 <a name="UPDIT"></a>
-### Ubuntu Packages Description in Title
+### Ubuntu Packages Description In Title
 
 Try to provide a minimal, yet meaningful, page title that includes the package description on Ubuntu's package search/archive website.
 
@@ -462,7 +462,7 @@ Brute force access to articles on Medium.com, always trying to at least get the 
 ## Legacy Workaround Scripts
 
 These scripts are just simple and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
-If you've updated your browser to the current release at any point in the last 2 years, you almost certainly don't want these.
+If you've updated your browser to the current release at any point in the last few years, you almost certainly don't want these.
 
 ---
 
@@ -571,7 +571,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-MTBR]: /mitigate_target_blank_risk.user.js?raw=1
 [raw-MDIT]: /msys2_package_description_in_title.user.js?raw=1
 [raw-MCTT]: /minecraft_curseforge_title_tweaks.user.js?raw=1
-[raw-OISB]: /steam_app_from_webpage.user.js.user.js?raw=1
+[raw-OISB]: /steam_app_from_webpage.user.js?raw=1
 [raw-UPDIT]: /ubuntu_packages_description_in_title.user.js?raw=1
 [raw-QRSC]: /quietly_reject_stackexchange_cookies.user.js?raw=1
 [raw-PDIT]: /pypi_description_in_title.user.js?raw=1
