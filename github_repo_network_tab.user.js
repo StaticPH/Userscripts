@@ -25,7 +25,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.7.1
+// @version          1.7.2
 // @createdAt        4/06/2020
 // @author           StaticPH
 // @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -45,7 +45,7 @@
 
 	/* Determine what repository we are looking at */
 	let here = (function getRepoAddress(){
-		return location.pathname.split('/', 5).slice(-2).join('/');
+		return location.pathname.split('/', 3).slice(1).join('/');
 	})();
 
 	/* Honestly, I feel like creating the HTML directly is less of a hassle than creating all the elements with JavaScript */
