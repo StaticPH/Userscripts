@@ -2,7 +2,7 @@
 // @name           MSYS Packages Description In Title
 // @namespace      https://github.com/StaticPH
 // @include        http*://packages.msys2.org/package/*
-// @version        1.0
+// @version        1.1
 // @createdAt      4/28/2021
 // @author         StaticPH
 // @description    Include the package description on the tab title for a package's page on packages.msys2.org/packages.
@@ -21,7 +21,7 @@
 
 	setTimeout(function wait(){
 		const pkgName = document.querySelector('h4.card-title');
-		const pkgDesc = document.querySelector('h6.card-subtitle');
+		const pkgDesc = document.querySelector('h6.card-subtitle, .card-body > dl > dd:nth-child(6)');
 
 		//TODO: Modify script to also indicate which pkg subpage is currently loaded (if it isnt the readme subpage)
 
