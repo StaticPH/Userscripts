@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name             Better IzzyOnDroid App Titles
 // @namespace        https://github.com/StaticPH
-// @match            https://apt.izzysoft.de/fdroid/index/apk/*
-// @version          1.0.0
+// @match            *://apt.izzysoft.de/fdroid/index/apk/*
+// @match            *://android.izzysoft.de/repo/apk/*
+// @version          1.0.1
 // @createdAt        5/2/2024, 5:33:04 PM
 // @author           StaticPH
 // @description      Adds app description to page titles where possible.
