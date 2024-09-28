@@ -51,17 +51,17 @@ To add a script:
 | [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A                 | :heavy_check_mark:      | MIT     | 2023:03:03 | 2023:03:03 |
 | [Wider Google Form Fields](#WGFF)              | [install][raw-WGFF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
 | [Correct Google Form Correctness](#GFCC)       | [install][raw-GFCC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
-| [Google Search Lean Query Updates](#GSLQU)     | [install][raw-GSLQU] | N/A                 | :heavy_check_mark:      | MIT     | 2023:07:12 | 2024:01:14 |
+| [Google Search Lean Query Updates](#GSLQU)     | [install][raw-GSLQU] | N/A                 | :heavy_check_mark:      | MIT     | 2023:07:12 | 2024:09:28 |
 | [Roll20 Nonscrolling Number Fields](#RNNF)     | [install][raw-RNNF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
 | [Bypass Blogspots Blogger IFrame](#BBBI)       | [install][raw-BBBI]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
 | [Foxaholic Fixes](#FoxF)                       | [install][raw-FoxF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
 | [Mitigate Target \_blank Risk](#MTBR)          | [install][raw-MTBR]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
-| [MSYS2 Package Description In Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2024:05:06 |
+| [MSYS2 Package Description In Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2024:09:28 |
 | [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
 | [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
 | [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
-| [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2023:05:31 |
+| [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2024:08:15 |
 | [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2024:01:28 |
 | [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
 | [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2024:01:19 |

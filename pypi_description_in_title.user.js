@@ -11,7 +11,7 @@
 // @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/pypi_description_in_title.user.js
 // @homepageURL    https://github.com/StaticPH/UserScripts
 // @supportURL     https://github.com/StaticPH/UserScripts/issues
-// @icon           https://pypi.org/static/images/logo-small.2a411bc6.svg
+// @icon           https://pypi.org/static/images/logo-small.8998e9d1.svg
 // @grant          none
 // @run-at         document-end
 // @noframes
