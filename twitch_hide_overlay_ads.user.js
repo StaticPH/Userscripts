@@ -12,7 +12,8 @@
 // @exclude-match    https://www.twitch.tv/jobs*
 // @exclude-match    https://www.twitch.tv/settings*
 // @exclude-match    https://www.twitch.tv/turbo*
-// @version          1.0.0
+// @exclude-match    https://www.twitch.tv/annual-recap
+// @version          1.0.1
 // @createdAt        12/14/2023, 7:34:48 PM
 // @author           StaticPH
 // @description      Hides the unacceptable overlay ads on Twitch.tv

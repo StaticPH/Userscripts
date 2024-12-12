@@ -12,7 +12,8 @@
 // @exclude-match    https://www.twitch.tv/jobs*
 // @exclude-match    https://www.twitch.tv/settings*
 // @exclude-match    https://www.twitch.tv/turbo*
-// @version          1.1
+// @exclude-match    https://www.twitch.tv/annual-recap
+// @version          1.1.1
 // @createdAt        5/19/2021
 // @author           StaticPH
 // @description      Makes the video stats overlay 50% transparent
