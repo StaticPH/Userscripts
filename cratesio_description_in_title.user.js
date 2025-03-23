@@ -6,11 +6,10 @@
 // @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/versions(\/|\?page=[0-9]+)?$/
 // @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/(reverse_)?dependencies(\/|\?page=[0-9]+)?$/
 // @include        /^https?:\/\/(www\.)?crates\.io\/crates\/[^/]+?\/[0-9.]+\/dependencies(\/|\?page=[0-9]+)?$/
-// @version        1.1
+// @version        1.2.0
 // @createdAt      3/16/2021
 // @author         StaticPH
-// @description    Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. Indicates subpage when not on the Readme.
-// @description    Convenient for bookmarking and tab-saving extensions, as crate's pages on crates.io don't have particularly informative titles by default.
+// @description    Replace the unhelpful part of the tab title on a crate.io crate's page with the short description of the crate, if one is provided. Indicates subpage when not on the Readme. Convenient for bookmarking and tab-saving extensions, as crate's pages on crates.io don't have particularly informative titles by default.
 // @license        MIT
 // @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
 // @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/cratesio_description_in_title.user.js
@@ -36,7 +35,7 @@
 		*/
 		setTimeout(function wait(){
 			const crateDesc = document.querySelector('div[class*="_description"]');
-			const crateName = document.querySelector('div[class*="_header-row"] > div > h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
+			const crateName = document.querySelector('div[class*="_header"] h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
 
 			if (crateName && crateDesc){
 				document.title=`${crateName.textContent}${versionString} — ${crateDesc.textContent.trim()}`;
@@ -53,7 +52,7 @@
 
 		setTimeout(function wait(){
 			const crateDesc = document.querySelector('div[class*="_description"]');
-			const crateName = document.querySelector('div[class*="_header-row"] > div > h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
+			const crateName = document.querySelector('div[class*="_header"] h1') || (crateDesc !== null ? crateDesc.previousElementSibling.firstElementChild : null);
 			const crateSubpage = document.querySelector('a[class*="_active_"]');
 
 			if (crateName && crateDesc && crateSubpage){
