@@ -1,12 +1,21 @@
 // ==UserScript==
 // @name           Legacy Discussion Forum Scroll Fixer
 // @namespace      https://github.com/StaticPH
-// @match          *://discuss.python.org/*
-// @match          *://discourse.cmake.org/*
 // @match          *://community.blokada.org/*
-// @match          *://talk.restarters.net/*
 // @match          *://community.syncromsp.com/*
-// @version        1.0.1
+// @match          *://discourse.cmake.org/*
+// @match          *://discuss.gradle.org/*
+// @match          *://discuss.python.org/*
+// @match          *://discussions.unity.com/*
+// @match          *://forum.endeavouros.com/*
+// @match          *://forum.f-droid.org/*
+// @match          *://forum.graphviz.org/*
+// @match          *://forum.kee.pm/*
+// @match          *://forum.manjaro.org/*
+// @match          *://forums.comodo.com/*
+// @match          *://forums.spongepowered.org/*
+// @match          *://talk.restarters.net/*
+// @version        1.0.2
 // @createdAt      6/29/2024, 6:24:11 PM
 // @author         StaticPH
 // @description    Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.
