@@ -10,7 +10,7 @@ They may also work with GreaseMonkey, TamperMonkey, or on other browsers.
 * Alternatively, install ViolentMonkey from its [source][ViolentMonkey_src]
 <!--
 	* <sub>
-		Alternatively, you can try installing ViolentMonkey from its <a href="https://github.com/violentmonkey/violentmonkey/releases">source</a> as an unpacked extension in Chrome/Chromium or as a temporary extension in firefox.
+		Alternatively, you can try installing ViolentMonkey from its <a href="https://github.com/violentmonkey/violentmonkey/releases">source</a> as an unpacked extension in Chrome/Chromium or as a temporary extension in Firefox.
 	</sub>
 -->
 ### Other
@@ -19,7 +19,9 @@ Some scripts will likely require modifications for this to work; if you do this 
 
 ## Important note:
 I tend to open a lot of things in new tabs, which happens to result in matching scripts always being injected. As such, many of my userscripts are written to only inject after loading the specific page(s) for which they are written. That means some methods of page navigation (e.g. AJAX) may result in scripts not being injected and executed on pages they should be.
+
 If your browsing habit doesn't involve much opening things in new tabs, you'll likely want to modify/override the exclude-match list for some of my scripts. Alternatively, you could simply refresh relevant pages after the initial navigation, to cause your userscript manager to re-check which scripts should be injected.
+
 One example of such a scenario could be opening a Twitch.tv livestream from the directory view.
 
 
@@ -33,46 +35,44 @@ To add a script:
 
 | Userscript<br>Description                      | Direct<br>Install    | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
 |------------------------------------------------|:--------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
-| [Hide YouTube Overlay Ads](#HYOA)              | [install][raw-HYOA]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:04 | 2020:10:27 |
-| [Fix YouTube Player Bottom Gradient](#FYPBG)   | [install][raw-FYPBG] | N/A                 | :heavy_check_mark:      | MIT     | 2021:02:26 | 2021:03:30 |
-| [YouTube Channel Keyboard Protection](#YCKP)   | [install][raw-YCKP]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:13 | 2022:05:01 |
-| [Twitch Hide Channel Leaderboard](#THCL)       | [install][raw-THCL]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2022:08:19 |
-| [Twitch Transparent Video Stats](#TTVS)        | [install][raw-TTVS]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:19 | 2022:08:19 |
-| [Twitch Hide Content Disclosure](#THCD)        | [install][raw-THCD]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:06:29 | 2023:06:29 |
-| [GitHub Repo Network Tab](#GRNT)               | [install][raw-GRNT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:06 | 2024:02:01 |
-| [Bigger GitHub Network Graph](#BGNG)           | [install][raw-BGNG]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:04:12 | 2021:10:28 |
-| [GitHub Notification Page Tweaks](#GNPT)       | [install][raw-GNPT]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:10:22 | 2021:08:03 |
-| [GitHub Sticky Editor Header](#GSEH)           | [install][raw-GSEH]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:24 | 2021:11:24 |
-| [GitLab Description In Title](#GDIT)           | [install][raw-GDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:05:22 | 2021:08:03 |
-| [Prettier Lib.rs Preformatted Code](#PLPC)     | [install][raw-PLPC]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:07:05 | 2021:03:30 |
-| [Lib.rs Description In Title](#LDIT)           | [install][raw-LDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2021:05:11 |
-| [Crates.io Description In Title](#CDIT)        | [install][raw-CDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2022:11:10 |
-| [Centered Gmail Toast Notifications](#CGTN)    | [install][raw-CGTN]  | N/A                 | :heavy_check_mark:      | MIT     | 2020:06:19 | 2021:04:05 |
-| [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A                 | :heavy_check_mark:      | MIT     | 2023:03:03 | 2023:03:03 |
-| [Wider Google Form Fields](#WGFF)              | [install][raw-WGFF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:09:30 | 2022:08:19 |
-| [Correct Google Form Correctness](#GFCC)       | [install][raw-GFCC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:11:09 | 2021:11:09 |
-| [Google Search Lean Query Updates](#GSLQU)     | [install][raw-GSLQU] | N/A                 | :heavy_check_mark:      | MIT     | 2023:07:12 | 2024:09:28 |
-| [Roll20 Nonscrolling Number Fields](#RNNF)     | [install][raw-RNNF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:01:23 | 2021:04:05 |
-| [Bypass Blogspots Blogger IFrame](#BBBI)       | [install][raw-BBBI]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2022:05:01 |
-| [Foxaholic Fixes](#FoxF)                       | [install][raw-FoxF]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:06:02 | 2021:08:27 |
-| [Mitigate Target \_blank Risk](#MTBR)          | [install][raw-MTBR]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:27 | 2021:11:23 |
-| [MSYS2 Package Description In Title](#MDIT)    | [install][raw-MDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:04:28 | 2024:09:28 |
-| [Minecraft CurseForge Title Tweaks](#MCTT)     | [install][raw-MCTT]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:20 | 2022:06:18 |
-| [Another Open In Steam Button](#OISB)          | [install][raw-OISB]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:11:25 | 2022:11:25 |
-| [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:11 | 2023:05:11 |
-| [Quietly Reject StackExchange Cookies](#QRSC)  | [install][raw-QRSC]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:14 | 2023:05:14 |
-| [PyPI Description In Title](#PDIT)             | [install][raw-PDIT]  | N/A                 | :heavy_check_mark:      | MIT     | 2023:05:31 | 2024:08:15 |
-| [Simple URL Tracker Cleaner](#SUTC)            | [install][raw-SUTC]  | N/A                 | :heavy_check_mark:      | MIT     | 2021:08:10 | 2024:01:28 |
-| [Old Reddit Hide Posts By Sub](#ORHS)          | [install][raw-ORHS]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:04:08 | 2023:07:02 |
-| [ScribbleHub Reading List Upgrades](#SRLU)     | [install][raw-SRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:10:07 | 2024:01:19 |
-| [NovelUpdates Reading List Upgrades](#NRLU)    | [install][raw-NRLU]  | N/A                 | :heavy_check_mark:      | MIT     | 2022:07:08 | 2022:11:16 |
+| [Hide YouTube Overlay Ads](#HYOA) | [install][raw-HYOA] | N/A | :heavy_check_mark: | MIT | Apr  4, 2020 | Oct 27, 2020 |
+| [Fix YouTube Player Bottom Gradient](#FYPBG) | [install][raw-FYPBG] | N/A | :heavy_check_mark: | MIT | Feb 26, 2021 | Mar 30, 2021 |
+| [YouTube Channel Keyboard Protection](#YCKP) | [install][raw-YCKP] | N/A | :heavy_check_mark: | MIT | Nov 13, 2021 | May  1, 2022 |
+| [Twitch Hide Content Disclosure](#THCD) | [install][raw-THCD] | N/A | :heavy_check_mark: | MIT | Jun 29, 2023 | Dec 12, 2024 |
+| [Twitch Hide Channel Leaderboard](#THCL) | [install][raw-THCL] | N/A | :heavy_check_mark: | MIT | Jun 19, 2020 | Dec 12, 2024 |
+| [Twitch Hide Overlay Ads](#THOA) | [install][raw-THOA] | N/A | :heavy_check_mark: | MIT | Dec 14, 2023 | Dec 12, 2024 |
+| [Twitch Transparent Video Stats](#TTVS) | [install][raw-TTVS] | N/A | :heavy_check_mark: | MIT | May 19, 2021 | Dec 12, 2024 |
+| [GitHub Repo Network Tab](#GRNT) | [install][raw-GRNT] | N/A | :heavy_check_mark: | MIT | Apr  6, 2020 | Feb  1, 2024 |
+| [Bigger GitHub Network Graph](#BGNG) | [install][raw-BGNG] | N/A | :heavy_check_mark: | MIT | Apr 12, 2020 | Oct 28, 2021 |
+| [GitHub Notification Page Tweaks](#GNPT) | [install][raw-GNPT] | N/A | :heavy_check_mark: | MIT | Oct 22, 2020 | Aug  3, 2021 |
+| [GitHub Sticky Editor Header](#GSEH) | [install][raw-GSEH] | N/A | :heavy_check_mark: | MIT | Nov 24, 2021 | Nov 24, 2021 |
+| [GitLab Description In Title](#GDIT) | [install][raw-GDIT] | N/A | :heavy_check_mark: | MIT | May 22, 2021 | Aug  3, 2021 |
+| [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A | :heavy_check_mark: | MIT | Jul  5, 2020 | Mar 30, 2021 |
+| [Lib.rs Description In Title](#LDIT) | [install][raw-LDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | May 11, 2021 |
+| [Crates.io Description In Title](#CDIT) | [install][raw-CDIT] | N/A | :heavy_check_mark: | MIT | Mar 16, 2021 | Mar 23, 2025 |
+| [Centered Gmail Toast Notifications](#CGTN) | [install][raw-CGTN] | N/A | :heavy_check_mark: | MIT | Jun 19, 2020 | Apr  5, 2021 |
+| [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A | :heavy_check_mark: | MIT | Mar  3, 2023 | Mar  3, 2023 |
+| [Wider Google Form Fields](#WGFF) | [install][raw-WGFF] | N/A | :heavy_check_mark: | MIT | Sep 30, 2021 | Aug 19, 2022 |
+| [Correct Google Form Correctness](#GFCC) | [install][raw-GFCC] | N/A | :heavy_check_mark: | MIT | Nov  9, 2021 | Nov  9, 2021 |
+| [Google Search Lean Query Updates](#GSLQU) | [install][raw-GSLQU] | N/A | :heavy_check_mark: | MIT | Jul 12, 2023 | Sep 28, 2024 |
+| [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A | :heavy_check_mark: | MIT | Jan 23, 2021 | Apr  5, 2021 |
+| [Bypass Blogspot's Blogger IFrame](#BBBI) | [install][raw-BBBI] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | May  1, 2022 |
+| [Foxaholic Fixes](#FoxF) | [install][raw-FoxF] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | Aug 27, 2021 |
+| [Mitigate Target \_blank Risk](#MTBR) | [install][raw-MTBR] | N/A | :heavy_check_mark: | MIT | Aug 27, 2021 | Nov 23, 2021 |
+| [MSYS2 Package Description In Title](#MDIT) | [install][raw-MDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | Sep 28, 2024 |
+| [Minecraft CurseForge Title Tweaks](#MCTT) | [install][raw-MCTT] | N/A | :heavy_check_mark: | MIT | Apr 20, 2022 | Jun 18, 2022 |
+| [Another "Open In Steam" Button](#OISB) | [install][raw-OISB] | N/A | :heavy_check_mark: | MIT | Nov 25, 2022 | Nov 25, 2022 |
+| [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A | :heavy_check_mark: | MIT | May 11, 2023 | May 11, 2023 |
+| [Quietly Reject StackExchange Cookies](#QRSC) | [install][raw-QRSC] | N/A | :heavy_check_mark: | MIT | May 14, 2023 | May 14, 2023 |
+| [PyPI Description In Title](#PDIT) | [install][raw-PDIT] | N/A | :heavy_check_mark: | MIT | May 31, 2023 | Aug 15, 2024 |
+| [Simple URL Tracker Cleaner](#SUTC) | [install][raw-SUTC] | N/A | :heavy_check_mark: | MIT | Aug 10, 2021 | Jan 28, 2024 |
+| [Old Reddit Hide Posts By Sub](#ORHS) | [install][raw-ORHS] | N/A | :heavy_check_mark: | MIT | Apr  8, 2022 | Jul  2, 2023 |
+| [ScribbleHub Reading List Upgrades](#SRLU) | [install][raw-SRLU] | N/A | :heavy_check_mark: | MIT | Oct  7, 2022 | Jan 19, 2024 |
+| [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |
 
-<!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:03:16 | -->
-<!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:16 | 2021:04:05 | -->
-<!-- | [Brute Force Medium Workaround](#BFMW)     | [install][raw-BFMW] | N/A                 | :heavy_check_mark:      | MIT     | 2021:03:31 | 2021:04:05 | -->
-
-<!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | yyyy:mm:dd | yyyy:mm:dd | -->
-<!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | yyyy:mm:dd | yyyy:mm:dd | -->
+<!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
+<!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
+---
 
 <!-- Script Details -->
 <!-- NOTE: It is important that the anchor be placed on its own line prior to the scriptname heading, otherwise links directly to the heading are liable to position the browser viewport just below the heading, instead of at it. Also note that the closing `</a>` is mandatory, and must also be placed prior to the heading itself.-->
@@ -86,13 +86,14 @@ Description
 ---
 
 Format END -->
-<!-- TODO: Decide on format to use for documenting configurable values -->
 ---
+<!-- TODO: Decide on format to use for documenting configurable values -->
 
 <a name="HYOA"></a>
 ### Hide YouTube Overlay Ads
-**This script should no longer be needed after Google's removal of overlay ads on April 6th, 2023.**
 
+**This script should no longer be needed after Google's removal of overlay ads on April 6th, 2023.**<br>
+<br>
 You know those little overlay advertisements that pop up on the bottom center of YouTube videos? If those really annoy you, this simple userscript (really just a userstyle wrapped into a userscript) will help by simply preventing them from rendering.<br>
 Note that this _does not_ affect other ads.
 
@@ -119,6 +120,16 @@ Prevents YouTube from hijacking the Up/Down arrow keys on channel pages, as it l
 
 ---
 
+<a name="THCD"></a>
+### Twitch Hide Content Disclosure
+
+Hides the stupid content disclosure overlay from the Twitch.tv video player.<br>
+Extensions like FrankerFaceZ may already have this functionality.
+
+[[Install]][raw-THCD]
+
+---
+
 <a name="THCL"></a>
 ### Twitch Hide Channel Leaderboard
 
@@ -126,6 +137,15 @@ Hides the stupid channel leaderboard on Twitch.tv stream chat.<br>
 Extensions like FrankerFaceZ may already have this functionality.
 
 [[Install]][raw-THCL]
+
+---
+
+<a name="THOA"></a>
+### Twitch Hide Overlay Ads
+
+Hides the unacceptable overlay ads on Twitch.tv.
+
+[[Install]][raw-THOA]
 
 ---
 
@@ -138,21 +158,11 @@ Makes the video stats overlay on Twitch.tv video player partially transparent, s
 
 ---
 
-<a name="THCD"></a>
-### Twitch Hide Content Disclosure
-
-Hides the stupid content disclosure overlay from the Twitch.tv video player.<br>
-Extensions like FrankerFaceZ may already have this functionality.
-
-[[Install]][raw-THCD]
-
----
-
 <a name="GRNT"></a>
 ### GitHub Repo Network Tab
 
-Adds a navigation tab for faster access to the 'Network' page of a repository.
-
+Adds a navigation tab for faster access to the 'Network' page of a repository.<br>
+<br>
 Known bugs:
 - Occasionally the tab fails to be added, with no clear explanation or pattern. If this occurs, simply reload the page.
 - When switching between repository tabs, the network tab sometimes disappears, and something about the way GitHub does page navigation within a repository doesn't cause this script to be re-injected. Short of constantly checking state on a sub-second timer, or using a mutation observer, I don't know how else to solve this.
@@ -165,9 +175,9 @@ Known bugs:
 ### Bigger GitHub Network Graph
 
 Makes the timeline on the Network page of GitHub repositories utilize more of that available whitespace on the sides.<br>
-Still can't seem to make it use all the space on the right side though...
-
-Essentially a subset of [Wide GitHub](https://github.com/xthexder/wide-github) which, of course, I only realized after I'd written this.
+Still can't seem to make it use all the space on the right side though...<br>
+<br>
+Essentially a subset of [Wide GitHub](https://github.com/xthexder/wide-github) which, of course, I only realized after I'd written this.<br>
 Oh well, someone will probably find this useful.
 
 [[Install]][raw-BGNG]
@@ -177,7 +187,7 @@ Oh well, someone will probably find this useful.
 <a name="GNPT"></a>
 ### GitHub Notification Page Tweaks
 
-Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?
+Why does GitHub's beta notifications inbox use a "More" dropdown when there's more than enough space for the 2 elements within?<br>
 I don't know, and I dislike having to open a dropdown just to mark something as "read", so I did something about it.
 
 [[Install]][raw-GNPT]
@@ -193,18 +203,6 @@ Written because I got sick and tired of having to move up and down the page to c
 [[Install]][raw-GSEH]
 
 ---
-<!--
-
-<a name="GPOFCB"></a>
-### GitHub PR Obvious Fork Compare Button
-
-Makes it a little more obvious on the page for comparing GitHub branches that "compare across forks" acts like a button.<br>
-The default look gives the impression that it's a link to documentation, and for the life of me I never remember it isn't.
-
-[[Install]][raw-GPOFCB]
-
----
--->
 
 <a name="GDIT"></a>
 ### GitLab Description In Title
@@ -245,19 +243,6 @@ Convenient for bookmarking and tab-saving extensions, as pages are typically sto
 [[Install]][raw-CDIT]
 
 ---
-<!--
-
-<a name="CCMNT"></a>
-### Crates.io Common Meta Near Top
-
-When I visit a crate's page on crates.io, the first things I want to see are the crate name, short description,
-associated categories and keywords, the time since the most recent release, and a link to the crate's source code if it is public.<br>
-I don't know if I'm the only one, but in my mind, it only makes sense for those to be in the same place.
-
-[[Install]][raw-CCMNT]
-
----
--->
 
 <a name="CGTN"></a>
 ### Centered Gmail Toast Notifications
@@ -276,7 +261,6 @@ A.K.A "I know my hardware is disabled, Google"<br>
 Thanks Google, but I'm well aware that my browser hasn't given you permission to access my hardware; I don't need you showing a prompt that can't be closed with a keypress.
 
 [[Install]][raw-GMIHD]
-
 
 ---
 
@@ -368,7 +352,7 @@ Modifies the format of the page title for some of CurseForge's Minecraft pages.
 <a name="OISB"></a>
 ### Another "Open In Steam" Button
 
-As the name should imply, this is my own version of a script which adds a new button on Steam's steampowered and steamcommunity sites to open the current page in the Steam app.
+As the name should imply, this is my own version of a script which adds a new button on Steam's steampowered and steamcommunity sites to open the current page in the Steam app.<br>
 Some of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372-open-steam-url after I spent well over an hour fiddling with my own CSS in the pre-dawn hours, and decided I wasn't going to manage much better.
 
 [[Install]][raw-OISB]
@@ -397,8 +381,8 @@ Also hides a few other little things that just don't warrant another tiny script
 <a name="PDIT"></a>
 ### PyPI Description In Title
 
-Rewrite the page title for a PyPI package to include a brief summary, when available.
-
+Rewrite the page title for a PyPI package to include a brief summary, when available.<br>
+<br>
 Also doesn't use that centered dot character as a separator.
 
 [[Install]][raw-PDIT]
@@ -408,10 +392,10 @@ Also doesn't use that centered dot character as a separator.
 <a name="SUTC"></a>
 ### Simple URL Tracker Cleaner
 
-Scrub various common tracker parameters from URLs. Even if you don't mind being tracked, parameters like these often make URLs rather long; why copy, share, or save a 200 character URL when you could get the exact same content by removing 160 of those characters, without routing traffic through some URL shortening service?
-
-Primarily targets parameters related to Google, Amazon, and Facebook.
-
+Scrub various common tracker parameters from URLs. Even if you don't mind being tracked, parameters like these often make URLs rather long; why copy, share, or save a 200 character URL when you could get the exact same content by removing 160 of those characters, without routing traffic through some URL shortening service?<br>
+<br>
+Primarily targets parameters related to Google, Amazon, and Facebook.<br>
+<br>
 <sub>
 Icon from: <a href="https://www.flaticon.com/free-icon/fly-swatter_185441" title="Fly Swatter">Fly Swatter free icon created by Freepik - Flaticon</a>
 </sub>
@@ -423,8 +407,8 @@ Icon from: <a href="https://www.flaticon.com/free-icon/fly-swatter_185441" title
 <a name="ORHS"></a>
 ### Old Reddit Hide Posts By Sub
 
-Hide posts from arbitrary subreddits (unless specifically looking at them, of course).
-
+Hide posts from arbitrary subreddits (unless specifically looking at them, of course).<br>
+<br>
 Only works for old.reddit.com, not www.reddit.com, because not only does the latter use a DOM structure that makes it unsuitable for applying styles to entire post-elements by the CSS selector of the child element holding the subreddit, it _also_ commits the desktop (and frankly, even mobile) user-experience war-crime of infinite pagination (endless scrolling). **TLDR: Modern Reddit UI sucks, and supporting it would take more effort than I'm willing to put in to this for my own use.**
 
 [[Install]][raw-ORHS]
@@ -434,7 +418,7 @@ Only works for old.reddit.com, not www.reddit.com, because not only does the lat
 <a name="SRLU"></a>
 ### ScribbleHub Reading List Upgrades
 
-Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the title, and more planned.
+Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the page title, and more planned.
 
 [[Install]][raw-SRLU]
 
@@ -448,22 +432,20 @@ Allows hiding novels the user is caught up on from their reading lists, adds the
 [[Install]][raw-NRLU]
 
 ---
-<!--
-
-<a name="BFMW"></a>
-### Brute Force Medium Workaround
-
-Brute force access to articles on Medium.com, always trying to at least get the text to load in.
-
-[[Install]][raw-BFMW]
-
----
--->
 
 ## Legacy Workaround Scripts
 
-These scripts are just simple and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
+These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
 If you've updated your browser to the current release at any point in the last few years, you almost certainly don't want these.
+
+---
+
+<a name="DFSF"></a>
+### Legacy Discussion Forum Scroll Fixer
+
+Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.
+
+[[Install]][raw-DFSF]
 
 ---
 
@@ -498,9 +480,9 @@ Add simple onclick handlers to the collapsed details of commits on GitHub, as th
 ### GitHub Lazy Release Asset Workaround
 
 Multiple fixes related to user-downloadable asset files on GitHub for users of legacy browsers.
-	- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.
-	- Fix the timestamps on the release page(s), most of which are within asset lists.
-	- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets.
+- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.
+- Fix the timestamps on the release page(s), most of which are within asset lists.
+- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets.
 
 [[Install]][raw-GLRAW]
 
@@ -516,8 +498,8 @@ Replace 'Show X more comments' handler for StackExchange sites to better support
 ---
 
 ## Issues
-Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)
-
+Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)<br>
+<br>
 Additionally, I do occasionally take requests for simple scripts, so feel free to ask. Please bear in mind that JavaScript is not a language I consider pleasant to use, nor do I consider myself particularly competent with it. I reserve the right to refuse any request with or without comment.
 
 ---
@@ -535,7 +517,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 
 
 <!-- Link References -->
-<!-- Format
+<!-- Format BEGIN
 [raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
 Append "?raw=1" to a file link to create a link to the raw file (may be GitHub specific).
 	That is to say, the following two lines are interchangeable
@@ -546,15 +528,16 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [gf-ABBREVIATION]: url of script on GreasyFork
 
 [ou-ABBREVIATION]: url of script on OpenUserJS
--->
+Format END -->
 [raw-HYOA]: /hide_youtube_overlay_ads.user.js?raw=1
 [raw-FYPBG]: /fix_youtube_player_bottom_gradient.user.js?raw=1
 [raw-YCKP]: /youtube_channel_keyboard_protector.user.js?raw=1
-[raw-THCL]: /twitch_hide_channel_leaderboard.user.js?raw=1
-[raw-TTVS]: /twitch_transparent_video_stats.user.js?raw=1
 [raw-THCD]: /twitch_hide_content_disclosure.user.js?raw=1
+[raw-THCL]: /twitch_hide_channel_leaderboard.user.js?raw=1
+[raw-THOA]: /twitch_hide_overlay_ads.user.js?raw=1
+[raw-TTVS]: /twitch_transparent_video_stats.user.js?raw=1
 [raw-GRNT]: /github_repo_network_tab.user.js?raw=1
-[raw-BGNG]: /bigger_github_network_graph.user.js?raw=1
+[raw-BGNG]: /bigger_github_repo_network_graph.user.js?raw=1
 [raw-GNPT]: /github_notification_page_tweaks.user.js?raw=1
 [raw-GSEH]: /github_sticky_editor_header.user.js?raw=1
 [raw-GDIT]: /gitlab_description_in_title.user.js?raw=1
@@ -582,17 +565,14 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [raw-NRLU]: /novelupdates_reading_list_upgrades.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
+[raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
 [raw-GLHW]: /legacy_browser_workarounds/github_line_hyperlink_workaround.user.js?raw=1
 [raw-GNAW]: /legacy_browser_workarounds/github_notifications_archive_workaround.user.js?raw=1
 [raw-GCDW]: /legacy_browser_workarounds/github_collapsed_details_workaround.user.js?raw=1
 [raw-GLRAW]: /legacy_browser_workarounds/github_lazy_release_asset_workaround.user.js?raw=1
 [raw-SELCE]: /legacy_browser_workarounds/stackexchange_legacy_comments_expander.user.js?raw=1
 
-
-[raw-GPOFCB]: /github_pr_fork_compare_button.user.js?raw=1
-[raw-CCMNT]: /cratesio_meta_near_top.user.js?raw=1
-[raw-BFMW]: /brute_force_medium_workaround.user.js?raw=1
-
+<!-- General Link References -->
 [ViolentMonkey_src]: https://github.com/violentmonkey/violentmonkey/releases
 [ViolentMonkey_Firefox]: https://addons.mozilla.org/firefox/addon/violentmonkey/
 [ViolentMonkey_Chrome]: https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag
