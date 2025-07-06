@@ -384,6 +384,17 @@
 			"updated": "Jan  4, 2024",
 			"desc": "Cleans up junk on Softpedia, and rewrites product homepage links to use the actual URL instead of calling php code.",
 			"version": "1.0.0"
+		},
+		{
+			"name": "Sublime Package Control Description in Title",
+			"anchorString": "SPCDIT",
+			"path": "/sublime_package_control_description_in_title.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Jan 23, 2024",
+			"updated": "Jan 23, 2024",
+			"desc": "When browsing Sublime Text plugins on Package Control, it can be useful to include plugin descriptions in the page title. If a description is provided for the currently viewed plugin, do just that.",
+			"version": "1.0.0"
 		}
 	]
 }

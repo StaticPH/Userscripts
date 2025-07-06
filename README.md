@@ -70,6 +70,7 @@ To add a script:
 | [ScribbleHub Reading List Upgrades](#SRLU) | [install][raw-SRLU] | N/A | :heavy_check_mark: | MIT | Oct  7, 2022 | Jan 19, 2024 |
 | [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |
 | [Softpedia Improvements](#SFTPD) | [install][raw-SFTPD] | N/A | :heavy_check_mark: | MIT | Jan  4, 2024 | Jan  4, 2024 |
+| [Sublime Package Control Description in Title](#SPCDIT) | [install][raw-SPCDIT] | N/A | :heavy_check_mark: | MIT | Jan 23, 2024 | Jan 23, 2024 |
 
 <!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
 <!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
@@ -443,6 +444,14 @@ Cleans up junk on Softpedia, and rewrites product homepage links to use the actu
 
 ---
 
+<a name="SPCDIT"></a>
+### Sublime Package Control Description in Title
+
+When browsing Sublime Text plugins on Package Control, it can be useful to include plugin descriptions in the page title. If a description is provided for the currently viewed plugin, do just that.
+
+[[Install]][raw-SPCDIT]
+
+---
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -574,6 +583,7 @@ Format END -->
 [raw-SRLU]: /scribblehub_reading_list_upgrades.user.js?raw=1
 [raw-NRLU]: /novelupdates_reading_list_upgrades.user.js?raw=1
 [raw-SFTPD]: /softpedia_improvements.user.js?raw=1
+[raw-SPCDIT]: /sublime_package_control_description_in_title.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
