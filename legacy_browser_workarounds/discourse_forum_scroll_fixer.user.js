@@ -2,6 +2,7 @@
 // @name           Legacy Discussion Forum Scroll Fixer
 // @namespace      https://github.com/StaticPH
 // @match          *://community.blokada.org/*
+// @match          *://community.cloudflare.com/*
 // @match          *://community.syncromsp.com/*
 // @match          *://discourse.cmake.org/*
 // @match          *://discuss.gradle.org/*
@@ -15,7 +16,7 @@
 // @match          *://forums.comodo.com/*
 // @match          *://forums.spongepowered.org/*
 // @match          *://talk.restarters.net/*
-// @version        1.0.2
+// @version        1.0.3
 // @createdAt      6/29/2024, 6:24:11 PM
 // @author         StaticPH
 // @description    Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.
