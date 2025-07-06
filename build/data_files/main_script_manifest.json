@@ -395,6 +395,17 @@
 			"updated": "Jan 23, 2024",
 			"desc": "When browsing Sublime Text plugins on Package Control, it can be useful to include plugin descriptions in the page title. If a description is provided for the currently viewed plugin, do just that.",
 			"version": "1.0.0"
+		},
+		{
+			"name": "YouTrack Use Standard Scrollbar",
+			"anchorString": "YUSS",
+			"path": "/youtrack_use_standard_scrollbar.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Aug 22, 2024",
+			"updated": "Aug 22, 2024",
+			"desc": "Use the browser's regular scrollbar style on JetBrains' YouTrack pages",
+			"version": "1.0.0"
 		}
 	]
 }

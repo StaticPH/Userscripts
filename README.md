@@ -71,6 +71,7 @@ To add a script:
 | [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |
 | [Softpedia Improvements](#SFTPD) | [install][raw-SFTPD] | N/A | :heavy_check_mark: | MIT | Jan  4, 2024 | Jan  4, 2024 |
 | [Sublime Package Control Description in Title](#SPCDIT) | [install][raw-SPCDIT] | N/A | :heavy_check_mark: | MIT | Jan 23, 2024 | Jan 23, 2024 |
+| [YouTrack Use Standard Scrollbar](#YUSS) | [install][raw-YUSS] | N/A | :heavy_check_mark: | MIT | Aug 22, 2024 | Aug 22, 2024 |
 
 <!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
 <!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
@@ -452,6 +453,15 @@ When browsing Sublime Text plugins on Package Control, it can be useful to inclu
 [[Install]][raw-SPCDIT]
 
 ---
+
+<a name="YUSS"></a>
+### YouTrack Use Standard Scrollbar
+
+Use the browser's regular scrollbar style on JetBrains' YouTrack pages
+
+[[Install]][raw-YUSS]
+
+---
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -584,6 +594,7 @@ Format END -->
 [raw-NRLU]: /novelupdates_reading_list_upgrades.user.js?raw=1
 [raw-SFTPD]: /softpedia_improvements.user.js?raw=1
 [raw-SPCDIT]: /sublime_package_control_description_in_title.user.js?raw=1
+[raw-YUSS]: /youtrack_use_standard_scrollbar.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
