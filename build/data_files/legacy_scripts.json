@@ -1,0 +1,64 @@
+{
+	"legacy_scripts": [
+		{
+			"name": "Legacy Discussion Forum Scroll Fixer",
+			"anchorString": "DFSF",
+			"path": "/legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Jun 29, 2024",
+			"updated": "Mar 23, 2025",
+			"desc": "Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other."
+		},
+		{
+			"name": "GitHub Line Hyperlink Workaround",
+			"anchorString": "GLHW",
+			"path": "/legacy_browser_workarounds/github_line_hyperlink_workaround.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Aug 10, 2022",
+			"updated": "Nov 18, 2022",
+			"desc": "Add simple onclick handlers to the line numbers when viewing files on GitHub, as the normal behavior of linking directly to a clicked line number seems to have broken on legacy browsers as a result of some change to the implementation."
+		},
+		{
+			"name": "GitHub Notifications Archive Workaround",
+			"anchorString": "GNAW",
+			"path": "/legacy_browser_workarounds/github_notifications_archive_workaround.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Jul 10, 2022",
+			"updated": "Mar 12, 2023",
+			"desc": "Quick and simple redirect to work around strange behavior of being sent to github.com/notifications/beta/archive when marking notifications as done."
+		},
+		{
+			"name": "GitHub Collapsed Details Workaround",
+			"anchorString": "GCDW",
+			"path": "/legacy_browser_workarounds/github_collapsed_details_workaround.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Sep 30, 2022",
+			"updated": "Jun 10, 2023",
+			"desc": "Add simple onclick handlers to the collapsed details of commits on GitHub, as the normal behavior of expanding the ellipses to the full commit message when clicked seems to have broken on legacy browsers as a result of some change to the implementation."
+		},
+		{
+			"name": "GitHub Lazy Release Asset Workaround",
+			"anchorString": "GLRAW",
+			"path": "/legacy_browser_workarounds/github_lazy_release_asset_workaround.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Oct  8, 2022",
+			"updated": "Mar 12, 2023",
+			"desc": "Multiple fixes related to user-downloadable asset files on GitHub for users of legacy browsers.\n- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.\n- Fix the timestamps on the release page(s), most of which are within asset lists.\n- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets."
+		},
+		{
+			"name": "StackExchange Legacy Comments Expander",
+			"anchorString": "SELCE",
+			"path": "/legacy_browser_workarounds/stackexchange_legacy_comments_expander.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Nov  6, 2022",
+			"updated": "Nov  2, 2023",
+			"desc": "Replace 'Show X more comments' handler for StackExchange sites to better support older browsers; in particular, this enables showing all comments when using Chromium 72."
+		}
+	]
+}

@@ -1,0 +1,99 @@
+# StaticPH's Userscripts
+[![HitCount](http://hits.dwyl.com/StaticPH/Userscripts.svg)](http://hits.dwyl.com/StaticPH/UserScripts)<br>
+Unless otherwise specified in their description, all userscripts have been tested with ViolentMonkey on Chromium 72 or later and on Vivaldi 3.6 or later.
+They may also work with GreaseMonkey, TamperMonkey, or on other browsers.
+
+{% include "userscript_manager.md.j2" ignore missing %}
+
+## Important note:
+I tend to open a lot of things in new tabs, which happens to result in matching scripts always being injected. As such, many of my userscripts are written to only inject after loading the specific page(s) for which they are written. That means some methods of page navigation (e.g. AJAX) may result in scripts not being injected and executed on pages they should be.
+
+If your browsing habit doesn't involve much opening things in new tabs, you'll likely want to modify/override the exclude-match list for some of my scripts. Alternatively, you could simply refresh relevant pages after the initial navigation, to cause your userscript manager to re-check which scripts should be injected.
+
+One example of such a scenario could be opening a Twitch.tv livestream from the directory view.
+
+
+---
+To add a script:
+* Install a script directly from GitHub by clicking on the "install" link in the table below.
+<!-- I haven't put any of my userscripts up on any site except GitHub as of this point in time.
+* Install a script from GreasyFork (GF) from the userscript site page
+* Or, install the scripts from OpenUserJS (OU).
+-->
+
+| Userscript<br>Description                      | Direct<br>Install    | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
+|------------------------------------------------|:--------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
+{#- TODO: ?Have minijinja use MIT as the license if not specified by the data file ? #}
+{#- Table entries go here #}
+{%- for script in scripts %}
+| [{{ script.name }}](#{{ script.anchorString }}) | [install][raw-{{ script.anchorString }}] | N/A | {{ ":heavy_check_mark:" if script.autoUpdates == true else script.autoUpdates }} | {{ script.license }} | {{ script.created }} | {{ script.updated|default(script.created) }} |
+{%- endfor %}
+
+<!-- | [GitHub PR Obvious Fork Compare Button](#GPOFCB)   | [install][raw-GPOFCB] | N/A                 | :heavy_check_mark:      | MIT     | Mar 16, 2021 | Mar 16, 2021 | -->
+<!-- | [Crates.io Common Meta Near Top](#CCMNT)   | [install][raw-CCMNT] | N/A                 | :heavy_check_mark:      | MIT     | Mar 16, 2021 | Apr  5, 2021 | -->
+<!-- | [Brute Force Medium Workaround](#BFMW)     | [install][raw-BFMW] | N/A                 | :heavy_check_mark:      | MIT     | Mar 31, 2021 | Apr  5, 2021 | -->
+
+<!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
+<!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
+---
+
+<!-- Script Details -->
+<!-- NOTE: It is important that the anchor be placed on its own line prior to the scriptname heading, otherwise links directly to the heading are liable to position the browser viewport just below the heading, instead of at it. Also note that the closing `</a>` is mandatory, and must also be placed prior to the heading itself.-->
+<!-- Format BEGIN
+<a name="Anchor_Name"></a>
+### Next script
+
+Description
+[[Install]][raw-ABBREVIATION]  <a href="greasyfork_link">[Install from GreasyFork]</a>  <a href="OpenUserJS_link">[Install from OpenUserJS]</a>
+
+---
+
+Format END -->
+---
+{#- Script Details go here #}
+<!-- TODO: Decide on format to use for documenting configurable values -->
+{%- for script in scripts %}
+
+<a name="{{ script.anchorString }}"></a>
+### {{ script.name }}
+
+{{ script.desc -}} {# Can I do something like `{{script.desc|default("TODO")}}` here? #}
+
+[[Install]][raw-{{ script.anchorString }}]
+
+---
+
+{%- endfor %}
+## Legacy Workaround Scripts
+
+These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
+If you've updated your browser to the current release at any point in the last few years, you almost certainly don't want these.
+
+---
+{%- for script in legacy_scripts %}
+
+<a name="{{ script.anchorString }}"></a>
+### {{ script.name }}
+
+{{ script.desc -}} {# Can I do something like `{{script.desc|default("TODO")}}` here? #}
+
+[[Install]][raw-{{ script.anchorString }}]
+
+---
+
+{%- endfor %}
+
+## Issues
+Please report any issues within this repository's [issue section](https://github.com/StaticPH/Userscripts/issues)<br>
+<br>
+Additionally, I do occasionally take requests for simple scripts, so feel free to ask. Please bear in mind that JavaScript is not a language I consider pleasant to use, nor do I consider myself particularly competent with it. I reserve the right to refuse any request with or without comment.
+
+---
+
+## {{ recommendations.title }}
+{%- for script in recommendations.scripts %}
+- {{ script }}
+{%- endfor %}
+
+
+{% include "link_refs.md.j2" ignore missing %}

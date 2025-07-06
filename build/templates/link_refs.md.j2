@@ -1,0 +1,26 @@
+<!-- Link References -->
+<!-- Format BEGIN
+[raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
+Append "?raw=1" to a file link to create a link to the raw file (may be GitHub specific).
+	That is to say, the following two lines are interchangeable
+	[ANCHOR]: https://raw.githubusercontent.com/USER/REPO/BRANCH/FILEPATH
+	[ANCHOR]: https://github.com/USER/REPO/BRANCH/blob/FILEPATH?raw=1
+As explained on <https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file/7658676>, it should also be possible to create branch-relative links in GitHub README (and other markup) files, simply by only using the path to the file (i.e. replace "https://github.com/USER/REPO/BRANCH/blob/FILEPATH" with "FILEPATH"). This should also work relative to the repository root if prefixed with '/', and relative to the path of the markup file using '../' and './'
+
+[gf-ABBREVIATION]: url of script on GreasyFork
+
+[ou-ABBREVIATION]: url of script on OpenUserJS
+Format END -->
+{%- for script in scripts %}
+[raw-{{ script.anchorString}}]: {{ script.path }}?raw=1
+{%- endfor %}
+
+<!-- Legacy Workaround Scripts -->
+{%- for script in legacy_scripts %}
+[raw-{{ script.anchorString}}]: {{ script.path }}?raw=1
+{%- endfor %}
+
+<!-- General Link References -->
+{%- for item in script_manager_refs %}
+{{ item }}
+{%- endfor %}
