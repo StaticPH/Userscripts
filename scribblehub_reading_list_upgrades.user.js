@@ -5,7 +5,7 @@
 // @version        1.2
 // @createdAt      10/7/2022, 11:34:28 PM
 // @author         StaticPH
-// @description    Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the title, and more planned.
+// @description    Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the page title, and more planned.
 // @license        MIT
 // @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/scribblehub_reading_list_upgrades.user.js
 // @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/scribblehub_reading_list_upgrades.user.js
