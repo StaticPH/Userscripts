@@ -373,6 +373,17 @@
 			"updated": "Nov 16, 2022",
 			"desc": "Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the page title, and more planned.",
 			"version": "1.0"
+		},
+		{
+			"name": "Softpedia Improvements",
+			"anchorString": "SFTPD",
+			"path": "/softpedia_improvements.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Jan  4, 2024",
+			"updated": "Jan  4, 2024",
+			"desc": "Cleans up junk on Softpedia, and rewrites product homepage links to use the actual URL instead of calling php code.",
+			"version": "1.0.0"
 		}
 	]
 }

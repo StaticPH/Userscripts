@@ -69,6 +69,7 @@ To add a script:
 | [Old Reddit Hide Posts By Sub](#ORHS) | [install][raw-ORHS] | N/A | :heavy_check_mark: | MIT | Apr  8, 2022 | Jul  2, 2023 |
 | [ScribbleHub Reading List Upgrades](#SRLU) | [install][raw-SRLU] | N/A | :heavy_check_mark: | MIT | Oct  7, 2022 | Jan 19, 2024 |
 | [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |
+| [Softpedia Improvements](#SFTPD) | [install][raw-SFTPD] | N/A | :heavy_check_mark: | MIT | Jan  4, 2024 | Jan  4, 2024 |
 
 <!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
 <!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
@@ -433,6 +434,15 @@ Allows hiding novels the user is caught up on from their reading lists, adds the
 
 ---
 
+<a name="SFTPD"></a>
+### Softpedia Improvements
+
+Cleans up junk on Softpedia, and rewrites product homepage links to use the actual URL instead of calling php code.
+
+[[Install]][raw-SFTPD]
+
+---
+
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -563,6 +573,7 @@ Format END -->
 [raw-ORHS]: /reddit_hide_by_subreddit.user.js?raw=1
 [raw-SRLU]: /scribblehub_reading_list_upgrades.user.js?raw=1
 [raw-NRLU]: /novelupdates_reading_list_upgrades.user.js?raw=1
+[raw-SFTPD]: /softpedia_improvements.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
