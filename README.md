@@ -55,6 +55,7 @@ To add a script:
 | [Wider Google Form Fields](#WGFF) | [install][raw-WGFF] | N/A | :heavy_check_mark: | MIT | Sep 30, 2021 | Aug 19, 2022 |
 | [Correct Google Form Correctness](#GFCC) | [install][raw-GFCC] | N/A | :heavy_check_mark: | MIT | Nov  9, 2021 | Nov  9, 2021 |
 | [Google Search Lean Query Updates](#GSLQU) | [install][raw-GSLQU] | N/A | :heavy_check_mark: | MIT | Jul 12, 2023 | Sep 28, 2024 |
+| [Google Search Footer Privacy](#GSFP) | [install][raw-GSFP] | N/A | :heavy_check_mark: | MIT | Dec 30, 2023 | Dec 30, 2023 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A | :heavy_check_mark: | MIT | Jan 23, 2021 | Apr  5, 2021 |
 | [Bypass Blogspot's Blogger IFrame](#BBBI) | [install][raw-BBBI] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | May  1, 2022 |
 | [Foxaholic Fixes](#FoxF) | [install][raw-FoxF] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | Aug 27, 2021 |
@@ -292,6 +293,15 @@ Make fields that have been manually marked as correct take on the same styling a
 Proof-of-concept: Prevent modifications to the Google search query in the on-page search bar from inserting a bunch of unwanted parameters into the resulting URL.
 
 [[Install]][raw-GSLQU]
+
+---
+
+<a name="GSFP"></a>
+### Google Search Footer Privacy
+
+Hide the "Location" part of the footer on Google Search results, and don't show the email address of the current user.
+
+[[Install]][raw-GSFP]
 
 ---
 
@@ -588,6 +598,7 @@ Format END -->
 [raw-WGFF]: /wider_google_form_fields.user.js?raw=1
 [raw-GFCC]: /correct_google_form_correctness.user.js?raw=1
 [raw-GSLQU]: /google_search_lean_query_updates.user.js?raw=1
+[raw-GSFP]: /google_search_footer_privacy.user.js?raw=1
 [raw-RNNF]: /roll20_character_sheet_no_scrolling_number_fields.user.js?raw=1
 [raw-BBBI]: /bypass_blogspots_blogger_iframe.user.js?raw=1
 [raw-FoxF]: /foxaholic_fixes.user.js?raw=1
