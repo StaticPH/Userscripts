@@ -406,6 +406,17 @@
 			"updated": "Aug 22, 2024",
 			"desc": "Use the browser's regular scrollbar style on JetBrains' YouTrack pages",
 			"version": "1.0.0"
+		},
+		{
+			"name": "StackExchange Wide Mode",
+			"anchorString": "SEWM",
+			"path": "/stackexchange_wide_mode.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Jun 20, 2024",
+			"updated": "Jun 20, 2024",
+			"desc": "StackExchange sites should take better advantage of the horizontal screen space, particularly on question pages. This removes the width restrictions on the main content part of those pages.",
+			"version": "1.0.0"
 		}
 	]
 }

@@ -72,6 +72,7 @@ To add a script:
 | [Softpedia Improvements](#SFTPD) | [install][raw-SFTPD] | N/A | :heavy_check_mark: | MIT | Jan  4, 2024 | Jan  4, 2024 |
 | [Sublime Package Control Description in Title](#SPCDIT) | [install][raw-SPCDIT] | N/A | :heavy_check_mark: | MIT | Jan 23, 2024 | Jan 23, 2024 |
 | [YouTrack Use Standard Scrollbar](#YUSS) | [install][raw-YUSS] | N/A | :heavy_check_mark: | MIT | Aug 22, 2024 | Aug 22, 2024 |
+| [StackExchange Wide Mode](#SEWM) | [install][raw-SEWM] | N/A | :heavy_check_mark: | MIT | Jun 20, 2024 | Jun 20, 2024 |
 
 <!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
 <!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
@@ -462,6 +463,15 @@ Use the browser's regular scrollbar style on JetBrains' YouTrack pages
 [[Install]][raw-YUSS]
 
 ---
+
+<a name="SEWM"></a>
+### StackExchange Wide Mode
+
+StackExchange sites should take better advantage of the horizontal screen space, particularly on question pages. This removes the width restrictions on the main content part of those pages.
+
+[[Install]][raw-SEWM]
+
+---
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -595,6 +605,7 @@ Format END -->
 [raw-SFTPD]: /softpedia_improvements.user.js?raw=1
 [raw-SPCDIT]: /sublime_package_control_description_in_title.user.js?raw=1
 [raw-YUSS]: /youtrack_use_standard_scrollbar.user.js?raw=1
+[raw-SEWM]: /stackexchange_wide_mode.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
