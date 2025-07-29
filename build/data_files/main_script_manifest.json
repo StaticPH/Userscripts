@@ -428,6 +428,17 @@
 			"updated": "Jun 20, 2024",
 			"desc": "StackExchange sites should take better advantage of the horizontal screen space, particularly on question pages. This removes the width restrictions on the main content part of those pages.",
 			"version": "1.0.0"
+		},
+		{
+			"name": "Better IzzyOnDroid App Titles",
+			"anchorString": "BIAT",
+			"path": "/izzyondroid_description_in_title.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "May  2, 2024",
+			"updated": "May 22, 2025",
+			"desc": "Adds app description to page titles where possible.",
+			"version": "1.0.0"
 		}
 	]
 }
