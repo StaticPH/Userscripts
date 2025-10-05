@@ -1,5 +1,5 @@
 <!-- Link References -->
-<!-- Format BEGIN
+{# <!-- Format BEGIN
 [raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
 Append "?raw=1" to a file link to create a link to the raw file (may be GitHub specific).
 	That is to say, the following two lines are interchangeable
@@ -10,7 +10,7 @@ As explained on <https://stackoverflow.com/questions/7653483/github-relative-lin
 [gf-ABBREVIATION]: url of script on GreasyFork
 
 [ou-ABBREVIATION]: url of script on OpenUserJS
-Format END -->
+Format END --> #}
 {%- for script in scripts %}
 [raw-{{ script.anchorString}}]: {{ script.path }}?raw=1
 {%- endfor %}

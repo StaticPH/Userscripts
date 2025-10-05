@@ -2,17 +2,14 @@
 [![HitCount](http://hits.dwyl.com/StaticPH/Userscripts.svg)](http://hits.dwyl.com/StaticPH/UserScripts)<br>
 Unless otherwise specified in their description, all userscripts have been tested with ViolentMonkey on Chromium 72 or later and on Vivaldi 3.6 or later.
 They may also work with GreaseMonkey, TamperMonkey, or on other browsers.
+I try to specifically write code that will run on these targets, _regardless of the extent to which the page(s) they run on will remain functional under those conditions._
 
 ### Get ViolentMonkey for your browser
 * [Firefox][ViolentMonkey_Firefox]
 * [Google Chrome and (most) Chromium-based browsers][ViolentMonkey_Chrome]
 * [Microsoft Edge (which people apparently use)][ViolentMonkey_Edge]
 * Alternatively, install ViolentMonkey from its [source][ViolentMonkey_src]
-<!--
-	* <sub>
-		Alternatively, you can try installing ViolentMonkey from its <a href="https://github.com/violentmonkey/violentmonkey/releases">source</a> as an unpacked extension in Chrome/Chromium or as a temporary extension in Firefox.
-	</sub>
--->
+
 ### Other
 * If you use [Pale Moon](https://www.palemoon.org), [Basilisk](https://www.basilisk-browser.org), or [K-Meleon](http://kmeleonbrowser.org), try [this fork of GreaseMonkey v3][GreaseMonkey_v3_Moonchild].<br>
 Some scripts will likely require modifications for this to work; if you do this yourself, please submit a pull request so that others may also benefit.
@@ -28,10 +25,7 @@ One example of such a scenario could be opening a Twitch.tv livestream from the 
 ---
 To add a script:
 * Install a script directly from GitHub by clicking on the "install" link in the table below.
-<!-- I haven't put any of my userscripts up on any site except GitHub as of this point in time.
-* Install a script from GreasyFork (GF) from the userscript site page
-* Or, install the scripts from OpenUserJS (OU).
--->
+
 
 | Userscript<br>Description                      | Direct<br>Install    | Sites               | Supports<br>Auto-Update | License | Created    | Updated    |
 |------------------------------------------------|:--------------------:|:-------------------:|:-----------------------:|:-------:|:----------:|:----------:|
@@ -76,22 +70,11 @@ To add a script:
 | [StackExchange Wide Mode](#SEWM) | [install][raw-SEWM] | N/A | :heavy_check_mark: | MIT | Jun 20, 2024 | Jun 20, 2024 |
 | [Better IzzyOnDroid App Titles](#BIAT) | [install][raw-BIAT] | N/A | :heavy_check_mark: | MIT | May  2, 2024 | May 22, 2025 |
 
-<!-- | [Script Name](#Page_Anchor)           | [install](link)     | [GF][ref] [OU][ref] | :x:                     | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
-<!-- | [Script Name](#Page_Anchor)           | [install][link_ref] | [GF][ref] [OU][ref] | :question:              | MIT     | mmm dd, yyyy | mmm dd, yyyy | -->
+
 ---
 
 <!-- Script Details -->
-<!-- NOTE: It is important that the anchor be placed on its own line prior to the scriptname heading, otherwise links directly to the heading are liable to position the browser viewport just below the heading, instead of at it. Also note that the closing `</a>` is mandatory, and must also be placed prior to the heading itself.-->
-<!-- Format BEGIN
-<a name="Anchor_Name"></a>
-### Next script
 
-Description
-[[Install]][raw-ABBREVIATION]  <a href="greasyfork_link">[Install from GreasyFork]</a>  <a href="OpenUserJS_link">[Install from OpenUserJS]</a>
-
----
-
-Format END -->
 ---
 <!-- TODO: Decide on format to use for documenting configurable values -->
 
@@ -576,18 +559,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 
 
 <!-- Link References -->
-<!-- Format BEGIN
-[raw-ABBREVIATION]: raw url of script on GitHub/Gist/wherever
-Append "?raw=1" to a file link to create a link to the raw file (may be GitHub specific).
-	That is to say, the following two lines are interchangeable
-	[ANCHOR]: https://raw.githubusercontent.com/USER/REPO/BRANCH/FILEPATH
-	[ANCHOR]: https://github.com/USER/REPO/BRANCH/blob/FILEPATH?raw=1
-As explained on <https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file/7658676>, it should also be possible to create branch-relative links in GitHub README (and other markup) files, simply by only using the path to the file (i.e. replace "https://github.com/USER/REPO/BRANCH/blob/FILEPATH" with "FILEPATH"). This should also work relative to the repository root if prefixed with '/', and relative to the path of the markup file using '../' and './'
 
-[gf-ABBREVIATION]: url of script on GreasyFork
-
-[ou-ABBREVIATION]: url of script on OpenUserJS
-Format END -->
 [raw-HYOA]: /hide_youtube_overlay_ads.user.js?raw=1
 [raw-FYPBG]: /fix_youtube_player_bottom_gradient.user.js?raw=1
 [raw-YCKP]: /youtube_channel_keyboard_protector.user.js?raw=1

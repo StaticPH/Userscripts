@@ -29,7 +29,7 @@ if sys.version_info < (3, 10):
 	defaultFileEncoding = getpreferredencoding(False) or sys.getdefaultencoding()
 
 __dateOutputFmtStr = '%b %d, %Y' # ex: Sep 08, 2024
-scriptStartTime = datetime.datetime.utcnow()
+scriptStartTime = datetime.datetime.now(datetime.timezone.utc)
 def fmtDateForDisplay(date: datetime.datetime) -> str:
 	dateStr = date.astimezone(datetime.timezone.utc).strftime(__dateOutputFmtStr)
 	# Use a space to left-pad single-digit days, rather than a zero
@@ -143,7 +143,7 @@ class DataUpdater:
 	_missingLicenseValue: str = 'No license found'
 	_missingVersionValue: str = '0.1.0'
 
-	def __init__(self): #noqa: ARG002, RUF100
+	def __init__(self) -> None: #noqa: ARG002, RUF100
 		self.dataFileContents: Dict[str, JSON_Value_Type] = {}
 
 	## Steps to use:
