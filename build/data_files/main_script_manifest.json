@@ -439,6 +439,17 @@
 			"updated": "May 22, 2025",
 			"desc": "Adds app description to page titles where possible.",
 			"version": "1.1.0"
+		},
+		{
+			"name": "Better F-Droid App Titles",
+			"anchorString": "BFAT",
+			"path": "/fdroid_app_description_in_title.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Aug 15, 2025",
+			"updated": "Aug 15, 2025",
+			"desc": "Adds app description to page titles where possible.",
+			"version": "1.0.0"
 		}
 	]
 }
