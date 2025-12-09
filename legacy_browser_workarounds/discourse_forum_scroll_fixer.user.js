@@ -15,8 +15,9 @@
 // @match          *://forum.manjaro.org/*
 // @match          *://forums.comodo.com/*
 // @match          *://forums.spongepowered.org/*
+// @match          *://meta.discourse.org/*
 // @match          *://talk.restarters.net/*
-// @version        1.0.3
+// @version        1.0.4
 // @createdAt      6/29/2024, 6:24:11 PM
 // @author         StaticPH
 // @description    Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.
