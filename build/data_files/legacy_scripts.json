@@ -51,6 +51,16 @@
 			"desc": "Multiple fixes related to user-downloadable asset files on GitHub for users of legacy browsers.\n- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.\n- Fix the timestamps on the release page(s), most of which are within asset lists.\n- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets."
 		},
 		{
+			"name": "GitHub Show Issue Comments Workaround",
+			"anchorString": "GSICW",
+			"path": "/legacy_browser_workarounds/github_show_issue_comments_workaround.user.js",
+			"license": "MIT",
+			"autoUpdates": ":heavy_check_mark:",
+			"created": "Nov 10, 2025",
+			"updated": "Nov 10, 2025",
+			"desc": "Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish."
+		},
+		{
 			"name": "StackExchange Legacy Comments Expander",
 			"anchorString": "SELCE",
 			"path": "/legacy_browser_workarounds/stackexchange_legacy_comments_expander.user.js",
