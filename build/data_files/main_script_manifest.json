@@ -450,6 +450,17 @@
 			"updated": "Aug 15, 2025",
 			"desc": "Adds app description to page titles where possible.",
 			"version": "1.0.0"
+		},
+		{
+			"name": "Better Greasyfork Page Titles",
+			"anchorString": "BGPT",
+			"path": "/greasyfork_better_page_titles.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Nov 15, 2025",
+			"updated": "Nov 15, 2025",
+			"desc": "Include userscript descriptions in page titles on Greasy Fork (and Sleazy Fork)",
+			"version": "1.0.0"
 		}
 	]
 }

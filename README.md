@@ -71,6 +71,7 @@ To add a script:
 | [StackExchange Wide Mode](#SEWM) | [install][raw-SEWM] | N/A | :heavy_check_mark: | MIT | Jun 20, 2024 | Jun 20, 2024 |
 | [Better IzzyOnDroid App Titles](#BIAT) | [install][raw-BIAT] | N/A | :heavy_check_mark: | MIT | May  2, 2024 | May 22, 2025 |
 | [Better F-Droid App Titles](#BFAT) | [install][raw-BFAT] | N/A | :heavy_check_mark: | MIT | Aug 15, 2025 | Aug 15, 2025 |
+| [Better Greasyfork Page Titles](#BGPT) | [install][raw-BGPT] | N/A | :heavy_check_mark: | MIT | Nov 15, 2025 | Nov 15, 2025 |
 
 
 ---
@@ -486,6 +487,15 @@ Adds app description to page titles where possible.
 [[Install]][raw-BFAT]
 
 ---
+
+<a name="BGPT"></a>
+### Better Greasyfork Page Titles
+
+Include userscript descriptions in page titles on Greasy Fork (and Sleazy Fork)
+
+[[Install]][raw-BGPT]
+
+---
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -622,6 +632,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 [raw-SEWM]: /stackexchange_wide_mode.user.js?raw=1
 [raw-BIAT]: /izzyondroid_description_in_title.user.js?raw=1
 [raw-BFAT]: /fdroid_app_description_in_title.user.js?raw=1
+[raw-BGPT]: /greasyfork_better_page_titles.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
