@@ -11,7 +11,8 @@ I try to specifically write code that will run on these targets, _regardless of 
 * Alternatively, install ViolentMonkey from its [source][ViolentMonkey_src]
 
 ### Other
-* If you use [Pale Moon](https://www.palemoon.org), [Basilisk](https://www.basilisk-browser.org), or [K-Meleon](http://kmeleonbrowser.org), try [this fork of GreaseMonkey v3][GreaseMonkey_v3_Moonchild].<br>
+* If you use [Pale Moon](https://www.palemoon.org), [Basilisk](https://www.basilisk-browser.org), [K-Meleon](http://kmeleonbrowser.org), [Arctic Fox](https://github.com/rmottola/Arctic-Fox), [Serpent, New Moon](https://rtfreesoft.blogspot.com), or another browser using the Goanna browser engine, try [this fork of GreaseMonkey v3][GreaseMonkey_v3_Moonchild].<br>
+* The [Hyperbola-fork of Iceweasel][Hyperbola_Iceweasel] has its own [fork of GreaseMonkey v3][GreaseMonkey_v3_Hyperbola_Iceweasel]<br><sub>Page only available in Spanish as of November 16th, 2025</sub>
 Some scripts will likely require modifications for this to work; if you do this yourself, please submit a pull request so that others may also benefit.
 
 ## Important note:
@@ -566,8 +567,9 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 ---
 
 ## Some of the awesome scripts I use from other authors
+<sub>I make no guarantees regarding the availability, maintenance, or browser version support of these scripts<\sub>
 - [Wide GitHub](https://github.com/xthexder/wide-github)
-- [GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding)
+- [GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding) <sub>(Note: last working version for Chrome 72 was v1.1.2, although subsequent changes to GitHub's UI have broken parts of that, too)</sub>
 - [GitHub Gist Search Box](https://greasyfork.org/en/scripts/395318-github-gist-search-box)
 - [GitHub Search Autocomplete](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-search-autocomplete)
 - [GitHub - Add Path Search](https://gist.github.com/splintor/8d3f12b86962efe5dcacb28ca15aa87d)
@@ -636,3 +638,5 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 [ViolentMonkey_Chrome]: https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag
 [ViolentMonkey_Edge]: https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao
 [GreaseMonkey_v3_Moonchild]: https://github.com/janekptacijarabaci/greasemonkey/releases
+[GreaseMonkey_v3_Hyperbola_Iceweasel]: https://wiki.hyperbola.info/doku.php?id=es:system:userspace:application:uxp:iceweasel-uxp_addons
+[Hyperbola_Iceweasel]: https://wiki.hyperbola.info/doku.php?id=es:system:userspace:application:uxp:iceweasel-uxp

@@ -3,7 +3,7 @@
 		"title": "Some of the awesome scripts I use from other authors",
 		"scripts": [
 			"[Wide GitHub](https://github.com/xthexder/wide-github)",
-			"[GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding)",
+			"[GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding) <sub>(Note: last working version for Chrome 72 was v1.1.2, although subsequent changes to GitHub's UI have broken parts of that, too)</sub>",
 			"[GitHub Gist Search Box](https://greasyfork.org/en/scripts/395318-github-gist-search-box)",
 			"[GitHub Search Autocomplete](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-search-autocomplete)",
 			"[GitHub - Add Path Search](https://gist.github.com/splintor/8d3f12b86962efe5dcacb28ca15aa87d)",
@@ -13,11 +13,22 @@
 			"[GitHub Network Ninja](https://github.com/maliayas/github-network-ninja/blob/master/main.user.js)"
 		]
 	},
+	"goanna_browsers_inline_refs": [
+		"[Pale Moon](https://www.palemoon.org)",
+		"[Basilisk](https://www.basilisk-browser.org)",
+		"[K-Meleon](http://kmeleonbrowser.org)",
+		"[Arctic Fox](https://github.com/rmottola/Arctic-Fox)",
+		"[Serpent, New Moon](https://rtfreesoft.blogspot.com)"
+	],
 	"script_manager_refs": [
 		"[ViolentMonkey_src]: https://github.com/violentmonkey/violentmonkey/releases",
 		"[ViolentMonkey_Firefox]: https://addons.mozilla.org/firefox/addon/violentmonkey/",
 		"[ViolentMonkey_Chrome]: https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag",
 		"[ViolentMonkey_Edge]: https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao",
-		"[GreaseMonkey_v3_Moonchild]: https://github.com/janekptacijarabaci/greasemonkey/releases"
+		"[GreaseMonkey_v3_Moonchild]: https://github.com/janekptacijarabaci/greasemonkey/releases",
+		"[GreaseMonkey_v3_Hyperbola_Iceweasel]: https://wiki.hyperbola.info/doku.php?id=es:system:userspace:application:uxp:iceweasel-uxp_addons"
+	],
+	"other_url_refs": [
+		"[Hyperbola_Iceweasel]: https://wiki.hyperbola.info/doku.php?id=es:system:userspace:application:uxp:iceweasel-uxp"
 	]
 }
