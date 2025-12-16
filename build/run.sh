@@ -32,20 +32,18 @@ case "$1" in
 		;;
 esac
 
+## POSIX way to determine the location of an executed shell script https://stackoverflow.com/a/29835459
+thisScriptLocation="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
+## Ensure this script is run in the context of it's parent directory, which is within the git repository.
+if [ "$PWD" != "$thisScriptLocation" ]; then
+	exec env -C "$thisScriptLocation" "./${0##*/}" "$@"
+fi
+
 repoRoot="$(git rev-parse --show-toplevel)"
 dataDir="${repoRoot}/build/data_files"
 templateDir="${repoRoot}/build/templates"
 
-OLDPWD="${PWD}"
-restorePWD(){
-	cd "${OLDPWD}" >/dev/null 2>&1 || return
-}
-trap restorePWD EXIT
-
-# shellcheck disable=SC2164
-cd "${repoRoot}/build" >/dev/null 2>&1
-
-TEST_READER=1 python3 "${repoRoot}/build/update_script_manifest.py"
+WRITE_FILES=1 python3 "${repoRoot}/build/update_script_manifest.py"
 jq -rs 'reduce .[] as $item ({}; . * $item)' "${dataDir}/general_url_references.json" "${dataDir}/legacy_scripts.json" newdata.json | \
 	minijinja-cli --format json "${templateDir}/primary_template.md.j2" - > output.md
 

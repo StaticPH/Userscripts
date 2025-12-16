@@ -272,27 +272,26 @@ class DataUpdater:
 		print(adjusted) # FIXME: Do something with this value other than just print it to stdout.
 		self.dataFileContents['scripts'] = adjusted # TEMP
 
-	def writeTest(self) -> None: # TEMP
-		with open('newdata.json', 'w', encoding=defaultFileEncoding) as outputFile:
+	def writeNew(self, toFile: str='newdata.json') -> None:
+		with open(toFile, 'w', encoding=defaultFileEncoding) as outputFile:
 			json.dump(self.dataFileContents, outputFile, indent="\t")
-		print('Go diff main_script_manifest.json and newdata.json')
 
 # TODO: ?Decide on some process to automatically assign an anchorString?
 
 if __name__ == '__main__':
-	from os import getenv
 	from functools import partial
 
-	hasDebugVar: bool = bool(getenv('DEBUG'))
+	hasDebugVar: bool = bool(os.getenv('DEBUG'))
 	if hasDebugVar:
 		mayPrint = partial(print, file=sys.stderr) #noqa: F811, RUF100
 
-	if bool(getenv('TEST_READER')):
-		updater = DataUpdater()
-		# TODO: utilize __file__ to make these paths relative to the script, rather than the working directory
-		updater.readJSONFile('./data_files/main_script_manifest.json')
-		here = os.getcwd()
-		os.chdir('..')
-		updater.findScriptData()
-		os.chdir(here)
-		updater.writeTest()
+	updater = DataUpdater()
+	# Get the parent directory of this script.
+	here = os.path.dirname(__file__)
+
+	updater.readJSONFile(here + '/data_files/main_script_manifest.json')
+	os.chdir(here + '/..')
+	updater.findScriptData()
+	if bool(os.getenv('WRITE_FILES')):
+		updater.writeNew(here + '/newdata.json')
+		print('Go diff main_script_manifest.json and newdata.json')
