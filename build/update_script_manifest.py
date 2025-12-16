@@ -83,7 +83,7 @@ class VersionString:
 		self.minor: int = int(minor, 10)
 		self.patch: int = int(patch, 10) or 0
 		self.originalValue: str = value
-		self.value: str = value + '.0' if patch == '' else value
+		self.value: str = f'{value}.{self.patch}' if value.count('.') < 2 else value
 
 	def __str__(self) -> str:
 		return self.value
@@ -228,12 +228,12 @@ class DataUpdater:
 			scriptItem['updated'] = scriptItem['created']
 		elif ('version' in scriptItem) and VersionString(scriptItem['version']) < scriptFileMeta['version']:
 			# The file's version info was increased since the last time the data file was updated by this script;
-			# record the new "updated" date as the current date, and update the "version" to match the script's meta block
+			# record the new "updated" date as the current date
 			scriptItem['updated'] = self._missingCreatedValue
 		if self.__needsAttrForDataFile(scriptItem, 'license'):
 			# Get license field from script file's metadata
 			scriptItem['license'] = scriptFileMeta['license'] or self._missingLicenseValue
-		# Unconditionally update the version field
+		# Unconditionally update the "version" field to match the script's meta block
 		scriptItem['version'] = str(VersionString(scriptFileMeta['version'])) or self._missingVersionValue
 		# Unconditionally update the autoUpdates field
 		scriptItem['autoUpdates'] = scriptFileMeta['autoUpdates'] or 'false'
