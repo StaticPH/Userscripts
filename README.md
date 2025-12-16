@@ -50,7 +50,7 @@ To add a script:
 | [Wider Google Form Fields](#WGFF) | [install][raw-WGFF] | N/A | :heavy_check_mark: | MIT | Sep 30, 2021 | Aug 19, 2022 |
 | [Correct Google Form Correctness](#GFCC) | [install][raw-GFCC] | N/A | :heavy_check_mark: | MIT | Nov  9, 2021 | Nov  9, 2021 |
 | [Google Search Lean Query Updates](#GSLQU) | [install][raw-GSLQU] | N/A | :heavy_check_mark: | MIT | Jul 12, 2023 | Sep 28, 2024 |
-| [Google Search Footer Privacy](#GSFP) | [install][raw-GSFP] | N/A | :heavy_check_mark: | MIT | Dec 30, 2023 | Dec 30, 2023 |
+| [Google Search Footer Privacy](#GSFP) | [install][raw-GSFP] | N/A | :heavy_check_mark: | MIT | Dec 30, 2023 | Dec 16, 2025 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A | :heavy_check_mark: | MIT | Jan 23, 2021 | Apr  5, 2021 |
 | [Bypass Blogspot's Blogger IFrame](#BBBI) | [install][raw-BBBI] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | May  1, 2022 |
 | [Foxaholic Fixes](#FoxF) | [install][raw-FoxF] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | Aug 27, 2021 |

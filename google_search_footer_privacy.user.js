@@ -3,7 +3,7 @@
 // @namespace      https://github.com/StaticPH
 // @match          *://google.com/search
 // @match          *://*.google.com/search
-// @version        1.1.0
+// @version        1.1.1
 // @createdAt      12/30/2023, 6:16:41 PM
 // @author         StaticPH
 // @description    Hide the "Location" part of the footer on Google Search results, and don't show the email address of the current user.
@@ -40,7 +40,7 @@
 		/* Hide email address of currently logged in user, if applicable */
 		/* #EOlPnc > :nth-last-child(2):not(:first-child) > :first-child:not(:last-child), */
 		/* Hide Location */
-		#EOlPnc > .Srfpq, .dfB0uf {
+		#EOlPnc > .Srfpq, .dfB0uf, .HddGcc > .VYM29 {
 			display: none !important;
 		}
 
