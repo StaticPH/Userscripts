@@ -239,14 +239,14 @@ class DataUpdater:
 		scriptItem['autoUpdates'] = scriptFileMeta['autoUpdates'] or 'false'
 		return self.sortScriptMeta(scriptItem)
 
-	def findScriptData(self) -> None:
+	def findScriptData(self, scriptArrayKey: str = 'scripts') -> None:
 		# Must be called after either `readJSONFile`/`readJSONStr`/`readJSONDict`
 		# FIXME: With the large blocks of data this function will eventually be producing and returning,
 		#        it would probably make sense to turn this into a Generator method, or at least make the
 		#        `for` loop into its own inner-function and make _that_ a Generator.
 
 		adjusted: List[Dict[str, Union[str, bool]]] = []
-		for scriptItem in self.dataFileContents['scripts']:
+		for scriptItem in self.dataFileContents[scriptArrayKey]:
 			scriptItem: Dict[str, str] # Shut up linter wrongly complaining that scriptItem is a string.
 			if 'path' not in scriptItem:
 				# TODO: support automatic detection of version-controlled scripts not in a data file,
@@ -270,9 +270,9 @@ class DataUpdater:
 
 			adjusted.append(self.getUpdatedScriptData(scriptFileMeta, scriptItem))
 		print(adjusted) # FIXME: Do something with this value other than just print it to stdout.
-		self.dataFileContents['scripts'] = adjusted # TEMP
+		self.dataFileContents[scriptArrayKey] = adjusted # TEMP
 
-	def writeNew(self, toFile: str='newdata.json') -> None:
+	def writeNew(self, toFile: str='new_main_manifest.json') -> None:
 		with open(toFile, 'w', encoding=defaultFileEncoding) as outputFile:
 			json.dump(self.dataFileContents, outputFile, indent="\t")
 
@@ -293,5 +293,12 @@ if __name__ == '__main__':
 	os.chdir(here + '/..')
 	updater.findScriptData()
 	if bool(os.getenv('WRITE_FILES')):
-		updater.writeNew(here + '/newdata.json')
-		print('Go diff main_script_manifest.json and newdata.json')
+		updater.writeNew(here + '/new_main_manifest.json')
+		print('Go diff main_script_manifest.json and new_main_manifest.json')
+
+	updater.readJSONFile(here + '/data_files/legacy_scripts.json')
+	os.chdir(here + '/..')
+	updater.findScriptData('legacy_scripts')
+	if bool(os.getenv('WRITE_FILES')):
+		updater.writeNew(here + '/new_legacy_manifest.json')
+		print('Go diff legacy_scripts.json and new_legacy_manifest.json')

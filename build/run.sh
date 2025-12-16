@@ -7,10 +7,12 @@ usage(){
 	printf '%s\n' \
 		'This script is used to generate updated versions of readme and manifest files.' \
 		'To "register" a new userscript for inclusion in the readme, add a new'  \
-		'object with both `path` and `anchorString` values to the `scripts` array' \
-		'in `main_script_manifest.json` before running this script.' \
+		'object with both `path` and `anchorString` values to the' \ '`scripts` array (or other such array where relevant)' \
+		'in `main_script_manifest.json` (and/or `legacy_scripts.json`)' \
+		'before running this script.' \
 		'Updated manifest and readme files will be created in the `build` directory,' \
-		'and named `newdata.json` and `output.md`, respectively.' \
+		'and named `new_main_manifest.json`/`new_legacy_manifest.json`' \
+		'and `output.md`, respectively.' \
 		'They can be manually copied over the originals.'
 	return 0
 }
@@ -44,7 +46,7 @@ dataDir="${repoRoot}/build/data_files"
 templateDir="${repoRoot}/build/templates"
 
 WRITE_FILES=1 python3 "${repoRoot}/build/update_script_manifest.py"
-jq -rs 'reduce .[] as $item ({}; . * $item)' "${dataDir}/general_url_references.json" "${dataDir}/legacy_scripts.json" newdata.json | \
+jq -rs 'reduce .[] as $item ({}; . * $item)' "${dataDir}/general_url_references.json" new_legacy_manifest.json new_main_manifest.json | \
 	minijinja-cli --format json "${templateDir}/primary_template.md.j2" - > output.md
 
 ################
