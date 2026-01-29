@@ -24,7 +24,7 @@
 	// Get the description from the visible element, rather than from
 	// the meta tag in document.head; the latter changes based on
 	// which tab (Info/Code/History/Feedback/Stats) is active.
-	const descEle = document.getElementById('script-description');
+	const descEle = document.querySelector('#script-description');
 	// Guard against a missing description element (which should never occur).
 	const descValue = descEle !== null ? descEle.textContent.trim() : 'No description';
 	// Guard against the description element's text being only whitespace or an empty string.

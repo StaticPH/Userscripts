@@ -120,6 +120,7 @@
 			// document.querySelectorAll('.bmhide > :not(.nu_editnotes):first-child') // get not caught up
 			// document.querySelectorAll('.bmhide > span[class*="bm_hide_me"]:first-child') // alternative to get not caught up
 	const caughtUpHelper = {
+		/* oxlint-disable unicorn/prefer-query-selector */
 		mainTbl: document.getElementById('myTable read'),
 		hiddenTbl: (function(){
 			const tbl = document.createElement('table');
@@ -216,7 +217,9 @@
 	// Fuck tracking and analytics
 	document.querySelectorAll('script').forEach(s => (s.textContent.includes('urchinTracker') || s.src.includes('analytic')) && s.remove());
 
-	settings.improvePageTitle && improveTitle();
+	if (settings.improvePageTitle){
+		improveTitle();
+	}
 	caughtUpHelper.init();
 
 })();

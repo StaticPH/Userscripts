@@ -26,7 +26,7 @@
 // 	`);
 
 	setTimeout(function wait(){
-		const playerBottomGradient = document.getElementById('movie_player').querySelector('.ytp-gradient-bottom');
+		const playerBottomGradient = document.querySelector('#movie_player .ytp-gradient-bottom');
 		if (playerBottomGradient){
 			console.log('Fixing bottom player gradient height');
 			playerBottomGradient.style.removeProperty('height');

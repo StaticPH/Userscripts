@@ -132,7 +132,7 @@
 	}
 
 	const caughtUpHelper = {
-		mainTbl: document.getElementsByClassName('rl_table')[0],
+		mainTbl: document.querySelector('.rl_table'),
 		hiddenTbl: (function(){
 			const tbl = document.createElement('table');
 			tbl.id = 'hiddenTbl';
@@ -225,7 +225,9 @@
 	// Fuck tracking and analytics
 	document.querySelectorAll('script').forEach(s => (s.textContent.includes('urchinTracker') || s.src.includes('analytic')) && s.remove());
 
-	settings.improvePageTitle && improveTitle();
+	if (settings.improvePageTitle){
+		improveTitle();
+	}
 	if (settings.ctrlEnterSavesNotes){
 		document.addEventListener('keyup', saveNotesKeybindHandler);
 		setTitleForFakeButton(document.querySelector('.rlnotes_btn.savenotes'), true, '', ' (Ctrl+Enter)');

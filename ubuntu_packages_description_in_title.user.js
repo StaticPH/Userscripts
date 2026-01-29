@@ -20,6 +20,7 @@
 (function(){
 	'use strict';
 
+	/* oxlint-disable unicorn/no-array-reverse */
 	const [pkg, repo, sourceSegment, /*lang*/] = document.location.pathname.split('/').reverse();
 
 	setTimeout(function wait(){

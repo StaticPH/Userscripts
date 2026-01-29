@@ -91,11 +91,13 @@
 		// Wait until the page loads in enough to have the 'Pull Requests' tab in the repository header, so that it can be used as a point of reference for element insertion
 		if (repoPullsTab.length !== 0){
 			repoPullsTab[0].insertAdjacentHTML('afterend', createBigNetworkTabHTML());
-			document.getElementById('bigNetworkTab') && console.debug('Added big Network tab.');
+			/* oxlint-disable no-unused-expressions */
+			document.querySelector('#bigNetworkTab') && console.debug('Added big Network tab.');
 
 			if (repoPullsTab.length > 1){
 				repoPullsTab[1].insertAdjacentHTML('afterend', createSmallNetworkTabHTML());
-				document.getElementById('smallNetworkTab') && console.debug('Added small Network tab.');
+				/* oxlint-disable no-unused-expressions */
+				document.querySelector('#smallNetworkTab') && console.debug('Added small Network tab.');
 			}
 
 //			setTimeout(function foo(){
@@ -112,7 +114,8 @@
 				const pullsDropdownItem = document.querySelector('details-menu li[data-menu-item="i2pull-requests-tab"]');
 				if (pullsDropdownItem){
 					pullsDropdownItem.insertAdjacentHTML('afterend', createNetworkTabInDropdownHTML());
-					document.getElementById('networkTabDropdown') && console.debug('Added Network tab item to dropdown.');
+					/* oxlint-disable no-unused-expressions */
+					document.querySelector('#networkTabDropdown') && console.debug('Added Network tab item to dropdown.');
 				}
 				else if (dropdownRetries >= dropdownRetryLimit){
 					console.log(`Number of attempts at adding Network tab to dropdown have exceeded the limit of ${dropdownRetryLimit} attempts. Giving up.`);

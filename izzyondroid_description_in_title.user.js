@@ -23,7 +23,7 @@
 
 	const parts = document.title.split('- IzzyOnDroid');
 	const tail = parts.pop();
-	let summary = document.getElementById('summary').textContent;
+	let summary = document.querySelector('#summary').textContent;
 	summary = summary[0].toLocaleUpperCase() + summary.slice(1);
 	parts.push('- ' + summary + ' | IzzyOnDroid' + tail);
 	document.title = parts.join('');

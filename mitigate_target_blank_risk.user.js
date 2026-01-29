@@ -47,7 +47,7 @@
 	let splitRel;
 	function cleanse(){
 		// Unsure whether to prefer getElementByTagName('a')+if target=='_blank' OR querySeletorAll('a[target="_blank"]')
-		Array.from(document.getElementsByTagName('a')).forEach( (link) => {
+		Array.from(document.querySelectorAll('a')).forEach( (link) => {
 			if (link.target == '_blank'){
 				if (allowedOrigins.includes(link.origin)){
 					console.log('Found link with allowed origin:"' + link.origin + '" and target="_blank". The link\'s "rel" attribute will not be modified.');

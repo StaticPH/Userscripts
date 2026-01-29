@@ -28,7 +28,7 @@
 
 	function replaceChildrenWithNodes(parentNode, ...newChildren){
 		while (parentNode.lastChild){
-			parentNode.removeChild(parentNode.lastChild);
+			parentNode.lastChild.remove();
 		}
 		if (newChildren !== undefined){
 			const replacements = (newChildren.length === 1 && Array.isArray(newChildren[0])) ? newChildren[0] : newChildren;
