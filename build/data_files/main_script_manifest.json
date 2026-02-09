@@ -282,9 +282,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Apr 28, 2021",
-			"updated": "Sep 28, 2024",
-			"desc": "Include the package description on the tab title for a package's page on packages.msys2.org/packages",
-			"version": "1.2.0"
+			"updated": "Feb  9, 2026",
+			"desc": "Include the package description on the tab title for a package's page on packages.msys2.org",
+			"version": "1.2.1"
 		},
 		{
 			"name": "Minecraft CurseForge Title Tweaks",

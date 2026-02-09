@@ -55,7 +55,7 @@ To add a script:
 | [Bypass Blogspot's Blogger IFrame](#BBBI) | [install][raw-BBBI] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | May  1, 2022 |
 | [Foxaholic Fixes](#FoxF) | [install][raw-FoxF] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | Aug 27, 2021 |
 | [Mitigate Target \_blank Risk](#MTBR) | [install][raw-MTBR] | N/A | :heavy_check_mark: | MIT | Aug 27, 2021 | Nov 23, 2021 |
-| [MSYS2 Package Description In Title](#MDIT) | [install][raw-MDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | Sep 28, 2024 |
+| [MSYS2 Package Description In Title](#MDIT) | [install][raw-MDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | Feb  9, 2026 |
 | [Minecraft CurseForge Title Tweaks](#MCTT) | [install][raw-MCTT] | N/A | :heavy_check_mark: | MIT | Apr 20, 2022 | Jun 18, 2022 |
 | [Another "Open In Steam" Button](#OISB) | [install][raw-OISB] | N/A | :heavy_check_mark: | MIT | Nov 25, 2022 | Nov 25, 2022 |
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A | :heavy_check_mark: | MIT | May 11, 2023 | May 11, 2023 |

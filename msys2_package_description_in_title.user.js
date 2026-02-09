@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name           MSYS Packages Description In Title
 // @namespace      https://github.com/StaticPH
+// @include        http*://packages.msys2.org/base/*
 // @include        http*://packages.msys2.org/package/*
 // @include        http*://packages.msys2.org/packages/*
-// @version        1.2.0
+// @version        1.2.1
 // @createdAt      4/28/2021
 // @author         StaticPH
-// @description    Include the package description on the tab title for a package's page on packages.msys2.org/packages.
+// @description    Include the package description on the tab title for a package's page on packages.msys2.org.
 // @license        MIT
 // @updateURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/msys2_package_description_in_title.user.js
 // @downloadURL    https://raw.githubusercontent.com/StaticPH/Userscripts/master/msys2_package_description_in_title.user.js
@@ -22,12 +23,16 @@
 
 	setTimeout(function wait(){
 		const pkgName = document.querySelector('h4.card-title');
-		const pkgDesc = document.querySelector('h6.card-subtitle, .card-body > dl > dd:nth-child(6)');
-
-		//TODO: Modify script to also indicate which pkg subpage is currently loaded (if it isnt the readme subpage)
+		let pkgDesc = null;
+		if (document.location.pathname.startsWith('/base/')){
+			pkgDesc = document.querySelector('.card-body > dl > dd:nth-child(2)');
+		}
+		else{
+			pkgDesc = document.querySelector('h6.card-subtitle, .card-body > dl > dd:nth-child(6)');
+		}
 
 		if (pkgName && pkgDesc){
-			document.title=`${pkgName.textContent.trim()} — ${pkgDesc.textContent.trim()}`;
+			document.title = `${pkgName.textContent.trim()} — ${pkgDesc.textContent.trim()}`;
 		}
 		else{
 			setTimeout(wait, 100); // Continue trying every 100ms until success
