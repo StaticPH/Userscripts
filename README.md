@@ -36,7 +36,7 @@ To add a script:
 | [Twitch Hide Content Disclosure](#THCD) | [install][raw-THCD] | N/A | :heavy_check_mark: | MIT | Jun 29, 2023 | Dec 12, 2024 |
 | [Twitch Hide Channel Leaderboard](#THCL) | [install][raw-THCL] | N/A | :heavy_check_mark: | MIT | Jun 19, 2020 | Dec 12, 2024 |
 | [Twitch Hide Overlay Ads](#THOA) | [install][raw-THOA] | N/A | :heavy_check_mark: | MIT | Dec 14, 2023 | Dec 12, 2024 |
-| [Twitch Transparent Video Stats](#TTVS) | [install][raw-TTVS] | N/A | :heavy_check_mark: | MIT | May 19, 2021 | Dec 12, 2024 |
+| [Twitch Transparent Video Stats](#TTVS) | [install][raw-TTVS] | N/A | :heavy_check_mark: | MIT | May 19, 2021 | Feb  9, 2026 |
 | [GitHub Repo Network Tab](#GRNT) | [install][raw-GRNT] | N/A | :heavy_check_mark: | MIT | Apr  6, 2020 | Feb  1, 2024 |
 | [Bigger GitHub Network Graph](#BGNG) | [install][raw-BGNG] | N/A | :heavy_check_mark: | MIT | Apr 12, 2020 | Oct 28, 2021 |
 | [GitHub Notification Page Tweaks](#GNPT) | [install][raw-GNPT] | N/A | :heavy_check_mark: | MIT | Oct 22, 2020 | Aug  3, 2021 |
@@ -335,7 +335,7 @@ e.g. Setting `customAllowedOrigins` to `'http://wordpress.com https://stackexcha
 <a name="MDIT"></a>
 ### MSYS2 Package Description In Title
 
-Include the package description on the tab title for a package's page on packages.msys2.org/packages
+Include the package description on the tab title for a package's page on packages.msys2.org
 
 [[Install]][raw-MDIT]
 

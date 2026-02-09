@@ -9,7 +9,7 @@
 			"created": "Apr  4, 2020",
 			"updated": "Oct 27, 2020",
 			"desc": "**This script should no longer be needed after Google's removal of overlay ads on April 6th, 2023.**<br>\n<br>\nYou know those little overlay advertisements that pop up on the bottom center of YouTube videos? If those really annoy you, this simple userscript (really just a userstyle wrapped into a userscript) will help by simply preventing them from rendering.<br>\nNote that this _does not_ affect other ads.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Fix YouTube Player Bottom Gradient",
@@ -20,7 +20,7 @@
 			"created": "Feb 26, 2021",
 			"updated": "Mar 30, 2021",
 			"desc": "This \"fixes\" the excessively large bottom gradient area that sometimes appears on the YouTube video player when the mouse cursor is within the player frame.<br>\n**So far, I've only seen the phenomenon that led me to write this while using Vivaldi.**",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "YouTube Channel Keyboard Protection",
@@ -31,7 +31,7 @@
 			"created": "Nov 13, 2021",
 			"updated": "May  1, 2022",
 			"desc": "Prevents YouTube from hijacking the Up/Down arrow keys on channel pages, as it likes to do sometimes (Left and Right arrow keys are okay though, because those don't control page scrolling).",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "Twitch Hide Content Disclosure",
@@ -73,9 +73,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "May 19, 2021",
-			"updated": "Dec 12, 2024",
+			"updated": "Feb  9, 2026",
 			"desc": "Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much.",
-			"version": "1.1.1"
+			"version": "1.1.2"
 		},
 		{
 			"name": "GitHub Repo Network Tab",
@@ -97,7 +97,7 @@
 			"created": "Apr 12, 2020",
 			"updated": "Oct 28, 2021",
 			"desc": "Makes the timeline on the Network page of GitHub repositories utilize more of that available whitespace on the sides.<br>\nStill can't seem to make it use all the space on the right side though...<br>\n<br>\nEssentially a subset of [Wide GitHub](https://github.com/xthexder/wide-github) which, of course, I only realized after I'd written this.<br>\nOh well, someone will probably find this useful.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "GitHub Notification Page Tweaks",
@@ -108,7 +108,7 @@
 			"created": "Oct 22, 2020",
 			"updated": "Aug  3, 2021",
 			"desc": "Why does GitHub's beta notifications inbox use a \"More\" dropdown when there's more than enough space for the 2 elements within?<br>\nI don't know, and I dislike having to open a dropdown just to mark something as \"read\", so I did something about it.",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "GitHub Sticky Editor Header",
@@ -119,7 +119,7 @@
 			"created": "Nov 24, 2021",
 			"updated": "Nov 24, 2021",
 			"desc": "Makes the header of the (text) file editor on GitHub sticky.<br>\nWritten because I got sick and tired of having to move up and down the page to change to and from the preview while editing this README.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "GitLab Description In Title",
@@ -130,7 +130,7 @@
 			"created": "May 22, 2021",
 			"updated": "Aug  3, 2021",
 			"desc": "Attempts to improve the page titles on GitLab by including the contents of the page's description, if one is provided.<br>\nThis also replaces instances of Unicode character 0x00B7, \"Middle Dot\", in the title, as I've found that particular character\nhas strangely led some editors to erroneously read and write the text in undesired encodings, such as GB2312, instead of UTF-8.",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "Prettier Lib.rs Preformatted Code",
@@ -141,7 +141,7 @@
 			"created": "Jul  5, 2020",
 			"updated": "Mar 30, 2021",
 			"desc": "Makes `<pre><code>` blocks on lib.rs look more like they do on crates.io; lib.rs is so much faster thanks to reduced JS use, but it's not as pretty.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Lib.rs Description In Title",
@@ -152,7 +152,7 @@
 			"created": "Apr 28, 2021",
 			"updated": "May 11, 2021",
 			"desc": "Replace the unhelpful part of the tab title on a lib.rs crate's page with the short description of the crate, if one is provided.<br>\nConvenient for bookmarking and tab-saving extensions, as pages are typically stored according to their titles.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Crates.io Description In Title",
@@ -174,7 +174,7 @@
 			"created": "Jun 19, 2020",
 			"updated": "Apr  5, 2021",
 			"desc": "Do you hate that Gmail shows a toast notification that blocks functional regions of the UI after you do something to any email? Me too!<br>\nThis little change should help mitigate the problem by moving the toast notification to the bottom center of the screen.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Google Meet Ignore Hardware Disabled",
@@ -185,7 +185,7 @@
 			"created": "Mar  3, 2023",
 			"updated": "Mar  3, 2023",
 			"desc": "A.K.A \"I know my hardware is disabled, Google\"<br>\nThanks Google, but I'm well aware that my browser hasn't given you permission to access my hardware; I don't need you showing a prompt that can't be closed with a keypress.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Wider Google Form Fields",
@@ -196,7 +196,7 @@
 			"created": "Sep 30, 2021",
 			"updated": "Aug 19, 2022",
 			"desc": "Widens the input fields in google forms from 50% to 100% of the question element (minus padding).",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "Correct Google Form Correctness",
@@ -207,7 +207,7 @@
 			"created": "Nov  9, 2021",
 			"updated": "Nov  9, 2021",
 			"desc": "Make fields that have been manually marked as correct take on the same styling as fields that exactly matched the preset correct answer.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Google Search Lean Query Updates",
@@ -240,7 +240,7 @@
 			"created": "Jan 23, 2021",
 			"updated": "Apr  5, 2021",
 			"desc": "This should disable changing the value of any numeric fields on Roll20 character sheets by scrolling.<br>\nTODO: Replace the use of setTimeout with a MutationObserver.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Bypass Blogspot's Blogger IFrame",
@@ -251,7 +251,7 @@
 			"created": "Jun  2, 2021",
 			"updated": "May  1, 2022",
 			"desc": "Unhide the page body and hide obstructive injected iframes on some Blogspot pages, which use those methods for reasons like discouraging ad blocking.",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "Foxaholic Fixes",
@@ -262,7 +262,7 @@
 			"created": "Jun  2, 2021",
 			"updated": "Aug 27, 2021",
 			"desc": "Fix Foxaholic's deliberate breaking of context menus, keypresses, and text selection.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Mitigate Target \\_blank Risk",
@@ -273,7 +273,7 @@
 			"created": "Aug 27, 2021",
 			"updated": "Nov 23, 2021",
 			"desc": "Appends `rel=\"noopener noreferrer\"` to every link (HTMLAnchorElement, not to be confused with HTMLLinkElement) that has `target=\"_blank\"`, preventing a possible security risk.<br>\nThis **_will_** break links to some sites, likely any links that would otherwise have opened in a new tab by default.<br>\nUsers may choose to ignore links from additional url origins, by setting the `customAllowedOrigins` key in the script's value storage to a list of origins, delimited by a single space character, `' '`.<br>\ne.g. Setting `customAllowedOrigins` to `'http://wordpress.com https://stackexchange.com https://novelupdates.com'` will prevent this script from modifying links to those origins.",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "MSYS2 Package Description In Title",
@@ -295,7 +295,7 @@
 			"created": "Apr 20, 2022",
 			"updated": "Jun 18, 2022",
 			"desc": "Modifies the format of the page title for some of CurseForge's Minecraft pages.",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "Another \"Open In Steam\" Button",
@@ -306,7 +306,7 @@
 			"created": "Nov 25, 2022",
 			"updated": "Nov 25, 2022",
 			"desc": "As the name should imply, this is my own version of a script which adds a new button on Steam's steampowered and steamcommunity sites to open the current page in the Steam app.<br>\nSome of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372-open-steam-url after I spent well over an hour fiddling with my own CSS in the pre-dawn hours, and decided I wasn't going to manage much better.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Ubuntu Packages Description In Title",
@@ -317,7 +317,7 @@
 			"created": "May 11, 2023",
 			"updated": "May 11, 2023",
 			"desc": "Try to provide a minimal, yet meaningful, page title that includes the package description on Ubuntu's package search/archive website.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Quietly Reject StackExchange Cookies",
@@ -328,7 +328,7 @@
 			"created": "May 14, 2023",
 			"updated": "May 14, 2023",
 			"desc": "Hide the pesky cookie permission requests on StackExchange sites, which don't actually appear to set even \"necessary\" cookies until the user responds to the permission prompt.<br>\nAlso hides a few other little things that just don't warrant another tiny script.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "PyPI Description In Title",
@@ -339,7 +339,7 @@
 			"created": "May 31, 2023",
 			"updated": "Aug 15, 2024",
 			"desc": "Rewrite the page title for a PyPI package to include a brief summary, when available.<br>\n<br>\nAlso doesn't use that centered dot character as a separator.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Simple URL Tracker Cleaner",
@@ -361,7 +361,7 @@
 			"created": "Apr  8, 2022",
 			"updated": "Jul  2, 2023",
 			"desc": "Hide posts from arbitrary subreddits (unless specifically looking at them, of course).<br>\n<br>\nOnly works for old.reddit.com, not www.reddit.com, because not only does the latter use a DOM structure that makes it unsuitable for applying styles to entire post-elements by the CSS selector of the child element holding the subreddit, it _also_ commits the desktop (and frankly, even mobile) user-experience war-crime of infinite pagination (endless scrolling). **TLDR: Modern Reddit UI sucks, and supporting it would take more effort than I'm willing to put in to this for my own use.**",
-			"version": "1.1"
+			"version": "1.1.0"
 		},
 		{
 			"name": "ScribbleHub Reading List Upgrades",
@@ -372,7 +372,7 @@
 			"created": "Oct  7, 2022",
 			"updated": "Jan 19, 2024",
 			"desc": "Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the page title, and more planned.",
-			"version": "1.2"
+			"version": "1.2.0"
 		},
 		{
 			"name": "NovelUpdates Reading List Upgrades",
@@ -383,7 +383,7 @@
 			"created": "Jul  8, 2022",
 			"updated": "Nov 16, 2022",
 			"desc": "Allows hiding novels the user is caught up on from their reading lists, adds the current reading list name to the page title, and more planned.",
-			"version": "1.0"
+			"version": "1.0.0"
 		},
 		{
 			"name": "Softpedia Improvements",

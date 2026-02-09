@@ -13,7 +13,7 @@
 // @exclude-match    https://www.twitch.tv/settings*
 // @exclude-match    https://www.twitch.tv/turbo*
 // @exclude-match    https://www.twitch.tv/annual-recap
-// @version          1.1.1
+// @version          1.1.2
 // @createdAt        5/19/2021
 // @author           StaticPH
 // @description      Makes the video stats overlay 50% transparent
@@ -25,7 +25,7 @@
 // @icon             https://brand.twitch.tv/assets/logos/svg/glitch/purple.svg
 // @grant            GM.addStyle
 // @grant            GM_addStyle
-// @run-at           document-start
+// @run-at           document-idle
 // ==/UserScript==
 
 (function(){
@@ -46,7 +46,8 @@
 	}
 
 	GM.addStyle(`
-		div.video-player__overlay div.simplebar-scroll-content > div.simplebar-content > div {
+		div.video-player__overlay div.simplebar-scroll-content > div.simplebar-content > div,
+		[data-a-target="player-overlay-video-stats"] {
 			opacity: 0.5;
 		}
 	`);
