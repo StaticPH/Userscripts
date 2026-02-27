@@ -25,7 +25,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.7.2
+// @version          1.8.0
 // @createdAt        4/06/2020
 // @author           StaticPH
 // @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -48,16 +48,16 @@
 		return location.pathname.split('/', 3).slice(1).join('/');
 	})();
 
+	const networkIconSvgHTML = '<svg class="octicon octicon-forked UnderlineNav-octicon d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 10 16" width="10" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>';
+
 	/* Honestly, I feel like creating the HTML directly is less of a hassle than creating all the elements with JavaScript */
 	function createBigNetworkTabHTML(){
 		// Exclude analytical "data-ga-click" and "data-selected-links" attributes
 		return 	'<a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="i2_1network-tab" href="/' + here + '/network" id="bigNetworkTab">\n' +
-				'	<svg class="octicon octicon-forked UnderlineNav-octicon d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 10 16" width="10" aria-hidden="true">\n' +
-				'		<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/>\n' +
-				'	</svg>\n' +
+				'\t' + networkIconSvgHTML + '\n' +
 				'	<span data-content="Network">\n' +
 				'		Network\n' +
-				'	</span">\n' +
+				'	</span>\n' +
 				'</a>\n';
 				//TODO: Intelligently determine if the <a> link element should have 'style="visibility:hidden;"' to start with?
 	}
@@ -79,6 +79,53 @@
 				'		Network\n' +
 				'	</a>\n' +
 				'<li>';
+	}
+
+	function maybeFixHighlightedTab(){
+		if (location.pathname.endsWith(here + '/network') || location.pathname.endsWith(here + '/network/')){
+			let networkTab = document.querySelector('[data-tab-item="i2_1network-tab"]');
+			let insightsTab = document.querySelector('[data-tab-item="i7insights-tab"]');
+
+			if (insightsTab /*&& insightsTab.hasAttribute('aria-current')*/){
+				insightsTab.removeAttribute('aria-current');
+				insightsTab.classList.remove('selected');
+			}
+			if (networkTab){
+				networkTab.setAttribute('aria-current', 'page');
+				networkTab.classList.add('selected');
+			}
+		}
+	}
+
+	function doesNeedModernTabVariant(){
+		// Thanks for making it more annoying to find or work with meaningful elements using CSS selectors, GitHub. /s
+		return document.querySelector('nav[class*="prc-components-UnderlineWrapper"]') !== null;
+	}
+
+	function modernUIAddNetworkTab(){
+		const prTabLink = document.querySelector(`li.prc-UnderlineNav-UnderlineNavItem-syRjR > a[href="/${here}/pulls"]`);
+		if (!prTabLink){ return false; } // Not ready yet... or GitHub changed shit again.
+
+		const dataAttrs = 'data-turbo-frame="repo-content-turbo-frame" data-discover="true"';
+		const isActiveTab = (location.pathname.endsWith('/network') || location.pathname.endsWith('/network/'));
+		const tabHTML = '<li class="prc-UnderlineNav-UnderlineNavItem-syRjR">\n' +
+			`<a class="prc-components-UnderlineItem-7fP-n" href="/${here}/network" id="bigNetworkTab" ${dataAttrs}>\n` +
+			`	<span data-component="icon">${networkIconSvgHTML}</span>\n` +
+			// May want to skip adding actual text manually due to css attr magic setting value from data-content
+			'	<span data-component="text" data-content="Network">Network</span>\n' +
+			'</a>\n' +
+		'</li>';
+		prTabLink.parentElement.insertAdjacentHTML('afterend', tabHTML);
+
+		const networkTab = document.querySelector('#bigNetworkTab');
+		if (isActiveTab){
+			const falseActiveTab = document.querySelector('li.prc-UnderlineNav-UnderlineNavItem-syRjR > a[aria-current]');
+			if (falseActiveTab){
+				falseActiveTab.removeAttribute('aria-current');
+			}
+			networkTab.setAttribute('aria-current', 'page');
+		}
+		return networkTab;
 	}
 
 	//TODO: Consider insertion at Nth element position, rather than relative to PR tab.
@@ -120,29 +167,39 @@
 				else if (dropdownRetries >= dropdownRetryLimit){
 					console.log(`Number of attempts at adding Network tab to dropdown have exceeded the limit of ${dropdownRetryLimit} attempts. Giving up.`);
 				}
-				else{
+				else {
 					console.log(`Waiting ${(dropdownRetries * 500) + 500}ms for page to load further before attempting insertion of dropdown-item.`);
 					dropdownRetries++;
 					setTimeout(waitmore, (dropdownRetries * 500) + 500);
 				}
 			});
 
-			if (location.pathname.endsWith(here + '/network') || location.pathname.endsWith(here + '/network/')){
-				let networkTab = document.querySelector('[data-tab-item="i2_1network-tab"]');
-				let insightsTab = document.querySelector('[data-tab-item="i7insights-tab"]');
-
-				if (insightsTab /*&& insightsTab.hasAttribute('aria-current')*/){
-					insightsTab.removeAttribute('aria-current');
-					insightsTab.classList.remove('selected');
-				}
-				if (networkTab){
-					networkTab.classList.add('selected');
-				}
+			maybeFixHighlightedTab();
+		}
+		else if (doesNeedModernTabVariant()){
+			if (modernUIAddNetworkTab()){
+				console.log('Added Network tab to modern nagivation menu.');
+				(async function(){
+					return await setInterval(function babysit(){
+						// Compensate for React's DOM fuckery often regenerating the navigation tabs (and who knows what else) shortly after document-idle;
+						// check back every 5 seconds.
+						if (!document.querySelector('#bigNetworkTab')){
+							console.log('Compensating for React DOM fuckery regenerating the navigation tabs. Re-adding Network tab');
+							if (modernUIAddNetworkTab()){
+								console.log('Network tab re-added to modern navigation menu.');
+							};
+						}
+					}, 5000);
+				})();
+			}
+			else {
+				console.log('Modern UI required; waiting 300ms for page to load further.');
+				return setTimeout(wait, 300);
 			}
 		}
-		else{
+		else {
 			console.log('Waiting 300ms for page to load further.');
-			setTimeout(wait, 300);
+			return setTimeout(wait, 300);
 		}
 	});
 })();

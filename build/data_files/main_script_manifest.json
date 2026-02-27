@@ -84,9 +84,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Apr  6, 2020",
-			"updated": "Feb  1, 2024",
+			"updated": "Feb 27, 2026",
 			"desc": "Adds a navigation tab for faster access to the 'Network' page of a repository.<br>\n<br>\nKnown bugs:\n- Occasionally the tab fails to be added, with no clear explanation or pattern. If this occurs, simply reload the page.\n- When switching between repository tabs, the network tab sometimes disappears, and something about the way GitHub does page navigation within a repository doesn't cause this script to be re-injected. Short of constantly checking state on a sub-second timer, or using a mutation observer, I don't know how else to solve this.",
-			"version": "1.7.2"
+			"version": "1.8.0"
 		},
 		{
 			"name": "Bigger GitHub Network Graph",
