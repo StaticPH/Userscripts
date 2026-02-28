@@ -25,7 +25,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.2
+// @version          1.2.1
 // @createdAt        9/30/2022, 9:32:58 PM
 // @author           StaticPH
 // @description      Add simple onclick handlers to the collapsed details of commits on GitHub, as the normal behavior of expanding the ellipses to the full commit message when clicked seems to have broken on legacy browsers as a result of some change to the implementation. Also fixes some other instances of non-functioning collapsing elements.
@@ -64,9 +64,12 @@
 		// let commitRow = evnt.target.closest('.Details').querySelector('p+*');
 		let commitRow = evnt.target.closest('.Details').querySelector('.Details-content--hidden, .Details-content--on') || evnt.target.closest('.Details').querySelector('.text-small').parentElement;
 		commitRow.classList.toggle('Details-content--hidden');
-		hasRefinedGithub && commitRow.closest('.rgh-dim-bot').classList.toggle('Details--on');
+		if (hasRefinedGithub){
+			commitRow.closest('.rgh-dim-bot').classList.toggle('Details--on');
+		}
 	}
 
+	/* oxlint-disable-next-line unicorn/prefer-add-event-listener */
 	document.querySelectorAll('.hidden-text-expander > button.ellipsis-expander.js-details-target').forEach(expander => expander.onclick = toggleShowDetails);
 
 	if (urlRelativeToRepoDefault.startsWith('/wiki')){
@@ -110,9 +113,9 @@
 				evnt.target.parentElement.querySelector('[data-target="annotation-message.showLessButton"]').toggleAttribute('hidden');
 			}
 			else { // Normally implies that classList contains 'annotation--expanded'
-				// replace 'annotation--expanded' with 'annotation--contracted' if the former exists, otherwise just add the latter;
-				// the second case is a fallback in case the class was previously just removed entirely, rather than replaced.
-				annotationBody.classList.replace('annotation--expanded', 'annotation--contracted') || annotationBody.classList.add('annotation--contracted');
+				// Always attempt to remove the `annotation--expanded` class from annotationBody, and ensure it always has the `annotation--contracted` class.
+				annotationBody.classList.remove('annotation--expanded');
+				annotationBody.classList.add('annotation--contracted');
 				evnt.target.toggleAttribute('hidden');
 				evnt.target.parentElement.querySelector('[data-target="annotation-message.showMoreButton"]').toggleAttribute('hidden');
 			}

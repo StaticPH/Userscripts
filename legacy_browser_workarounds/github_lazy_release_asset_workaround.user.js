@@ -2,7 +2,7 @@
 // @name           GitHub Lazy Release Assets Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/releases*
-// @version        1.1
+// @version        1.1.1
 // @createdAt      10/8/2022, 4:40:25 PM
 // @author         StaticPH
 // @description    Fixes a number of things related to user-downloadable asset files on GitHub for users of legacy browsers.
@@ -67,7 +67,7 @@
 		});
 	}
 
-	document.querySelectorAll('[data-view-component] include-fragment[loading="lazy"][src]:not([src=""])').forEach(async function(lazyPageFrag){
+	document.querySelectorAll('[data-view-component] include-fragment[loading="lazy"][src]:not([src=""]):not([data-target="select-panel.includeFragment"])').forEach(async function(lazyPageFrag){
 		try{
 			await fetch(lazyPageFrag.getAttribute('src'), requestTemplate).then(
 				resp => resp.text().then(

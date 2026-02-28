@@ -2,7 +2,7 @@
 // @name           GitHub Issue Comments Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/issues/*
-// @version        1.0.0
+// @version        1.0.1
 // @createdAt      11/10/2025, 6:17:25 PM
 // @author         StaticPH
 // @description    Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.
@@ -99,10 +99,9 @@
 	}
 
 	function fixIssueTimeline(){
-		const commentContainer = document.querySelector('div.react-comments-container > div.IssueViewer-module__commentsContainer--H8wxg');
+		const commentContainer = document.querySelector('div.react-comments-container > div[class*="IssueViewer-module__commentsContainer"]');
 		const frag = document.createDocumentFragment();
-		const substContainer = document.createElement('div');
-		substContainer.className = 'IssueViewer-module__commentsContainer--H8wxg';
+		const substContainer = commentContainer.cloneNode();
 
 		// fix borked styles
 		substContainer.insertAdjacentHTML('beforeEnd', `<style id="unbork">${fixedStyles}</style>`);
