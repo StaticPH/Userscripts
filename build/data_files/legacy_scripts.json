@@ -62,9 +62,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov 10, 2025",
-			"updated": "Nov 10, 2025",
+			"updated": "Mar  1, 2026",
 			"desc": "Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.",
-			"version": "1.0.1"
+			"version": "1.1.1"
 		},
 		{
 			"name": "StackExchange Legacy Comments Expander",

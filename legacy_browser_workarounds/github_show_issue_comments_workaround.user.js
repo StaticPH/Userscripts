@@ -2,7 +2,7 @@
 // @name           GitHub Issue Comments Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/issues/*
-// @version        1.1.0
+// @version        1.1.1
 // @createdAt      11/10/2025, 6:17:25 PM
 // @author         StaticPH
 // @description    Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.
@@ -55,8 +55,19 @@
 	// Each *COMMENT* item in responseNodesData has the following properties (non-exhaustive): {author:{avatarUrl, id, login, name, profileUrl}, bodyHTML, bodyVersion, createdAt, databaseId, id, lastEditedAt, lastUserContentEdit:{editor:{id, login, url, __typename}, id}, reactionGroups, url}
 	const responseNodesData = responses.map(e => e.node);
 
+	const friendlyTimeFormatter = new Intl.DateTimeFormat(navigator.language, { numberingSystem: 'ltn', calendar: 'gregory', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', hour12: true, minute: 'numeric', second: 'numeric' });
+
+	function buildTimeElement(timestamp){
+		return `<relative-time datetime="${timestamp}">${
+			// Until I come up with a way to make relative-time-element load
+			// (instead of being skipped due to earlier parsing errors),
+			// just use the absolute time in a friendly format
+			friendlyTimeFormatter.format(new Date(timestamp))
+		}</relative-time>`;
+	}
+
 	function buildCommentNode(commentNode){
-		return `\t<div class="LayoutHelpers-module__timelineElement--IsjVR " data-wrapper-timeline-id="{commentNode.id}">
+		return `\t<div class="LayoutHelpers-module__timelineElement--IsjVR " data-wrapper-timeline-id="${commentNode.id}">
 			<a class="Avatar-module__avatarLink--leRdV Avatar-module__avatarOuter--waYVs prc-Link-Link-85e08" href="${commentNode.author.profileUrl}" data-hovercard-url="/users/${commentNode.author.login}/hovercard" aria-label="@${commentNode.author.login}'s profile" aria-keyshortcuts="Alt+ArrowUp"><img data-component="Avatar" class="Box-sc-62in7e-0 iHEZa-d Avatar-module__issueViewerAvatar--LY0E0 Avatar-module__avatarWithDivider--ge7w7 prc-Avatar-Avatar-ZRS-m" alt="${commentNode.author.login}" width="24" height="24" src="${commentNode.author.avatarUrl}&amp;size=48" data-testid="github-avatar" style="--avatarSize-regular:24px;"></a>
 			<div class="TimelineRowBorder-module__Box--wRiZZ">
 				<div data-testid="timeline-divider-${commentNode.id}" class="Box-sc-62in7e-0 vLPhg TimelineDivider-module__Box--rX5hB"><div class="TimelineDivider-module__Box_1--nXo59"></div><div class="Box-sc-62in7e-0 bkHoaI TimelineDivider-module__Box_2--lsm39"></div></div>
@@ -65,14 +76,14 @@
 						<div data-testid="comment-viewer-outer-box-${commentNode.id}" class="IssueCommentViewer-module__IssueCommentContent--NdGAG">
 							<div id="issuecomment-${commentNode.databaseId}" data-testid="comment-header" class="Box-sc-62in7e-0 PphTR ActivityHeader-module__ActivityHeaderContainer--fKwFm">
 								<div class="Box-sc-62in7e-0 cLDsRm ActivityHeader-module__activityHeader--WiwzD ActivityHeader-module__ActivityHeaderGridLayout--Jwd78">
-									<h3 class="sr-only">${commentNode.author.login} commented <relative-time datetime="${commentNode.createdAt}"></relative-time></h3>
+									<h3 class="sr-only">${commentNode.author.login} commented ${buildTimeElement(commentNode.createdAt)}</h3>
 									<div class="Box-sc-62in7e-0 busFVx Avatar-module__avatarInner--leXLe ActivityHeader-module__AvatarContainer--p2vAR">
 										<a class="Avatar-module__avatarLink--leRdV prc-Link-Link-85e08" href="/${commentNode.author.login}" data-hovercard-url="/users/${commentNode.author.login}/hovercard" aria-label="@${commentNode.author.login}'s profile" aria-keyshortcuts="Alt+ArrowUp"><img data-component="Avatar" class="Box-sc-62in7e-0 lpqPbV Avatar-module__activityAvatar--xUQh3 prc-Avatar-Avatar-ZRS-m" alt="@${commentNode.author.login}" width="24" height="24" src="${commentNode.author.avatarUrl}&amp;v=4&amp;size=48" data-testid="github-avatar" style="--avatarSize-regular:24px;"></a>
 									</div>
 									<div class="ActivityHeader-module__narrowViewportWrapper--k4ncm ActivityHeader-module__CommentHeaderContentContainer--OOrIN" data-testid="comment-header-left-side-items">
 										<div class="ActivityHeader-module__TitleContainer--pa99A"><a class="ActivityHeader-module__AuthorName--Im5nP ActivityHeader-module__AuthorLink--D7Ojk color-fg-default prc-Link-Link-85e08" href="/${commentNode.author.login}" data-testid="avatar-link" data-hovercard-url="/users/${commentNode.author.login}/hovercard" aria-keyshortcuts="Alt+ArrowUp">${commentNode.author.login}</a></div>
 										<div class="ActivityHeader-module__footer--ssKOW ActivityHeader-module__FooterContainer--FHEpM">
-											<span class="ActivityHeader-module__HeaderMutedText--aJAo0"><a class="ActivityHeader-module__HeaderLink--fStdK prc-Link-Link-85e08" href="${commentNode.url}" data-turbo="true"><relative-time datetime="${commentNode.createdAt}"></relative-time></a></span><span class="MarkdownLastEditedBy-module__lastEditInfoContainer--EN_Qz"><!--Future Work--></span>
+											<span class="ActivityHeader-module__HeaderMutedText--aJAo0"><a class="ActivityHeader-module__HeaderLink--fStdK prc-Link-Link-85e08" href="${commentNode.url}" data-turbo="true">${buildTimeElement(commentNode.createdAt)}</a></span><span class="MarkdownLastEditedBy-module__lastEditInfoContainer--EN_Qz"><!--Future Work--></span>
 										</div>
 									</div>
 									<div data-testid="comment-header-right-side-items" class="ActivityHeader-module__narrowViewportWrapper--k4ncm ActivityHeader-module__ActionsContainer--Ebsux">
