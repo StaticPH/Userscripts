@@ -2,7 +2,7 @@
 // @name           GitHub Issue Comments Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/issues/*
-// @version        1.0.1
+// @version        1.0.2
 // @createdAt      11/10/2025, 6:17:25 PM
 // @author         StaticPH
 // @description    Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.
@@ -20,7 +20,9 @@
 (function(){
 	"use strict";
 
-	const reactionToolbarHTML = `<div role="toolbar" aria-label="Reactions" class="d-flex gap-1 flex-wrap"><button data-component="IconButton" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-c50BI ReactionViewerAnchor-module__ReactionViewerAnchorButton--kb52r prc-Button-IconButton-szpyj" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-describedby=":rq:-loading-announcement" aria-labelledby=":rr:" id=":rq:"><svg aria-hidden="true" focusable="false" class="octicon octicon-smiley" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-cYMVY" data-direction="s" aria-hidden="true" id=":rr:" popover="auto">React</span></div>`
+	const reactionIconHTML = '<svg aria-hidden="true" focusable="false" class="octicon octicon-smiley" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"></path></svg>';
+	const reactionToolbarHTML = `<div role="toolbar" aria-label="Reactions" class="d-flex gap-1 flex-wrap"><button data-component="IconButton" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-c50BI ReactionViewerAnchor-module__ReactionViewerAnchorButton--kb52r prc-Button-IconButton-szpyj" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" id=":rq:" title="React (not available)">${reactionIconHTML}</button></div>`;
+
 	const fixedStyles = `
 		.dShPvE {
 			display: flex;
@@ -112,4 +114,18 @@
 		commentContainer.replaceWith(frag);
 	}
 	fixIssueTimeline();
+
+	/*
+	document.querySelectorAll('[aria-label="Reactions"]').forEach(function(ele){
+		const btn = ele.querySelector('button[aria-labelledby=":rr:"]');
+		if (!btn || btn.title){ return; } // No need to substitute a tooltip
+		if (btn.ariaDescribedBy === ':rq:-loading-announcement){
+			btn.removeAttribute('aria-describedby');
+		}
+		const oldLabelEle = ele.querySelector('[id=":rr:"]');
+		if (!oldLabelEle){ return; } // No need to substitute a tooltip
+		btn.title = oldLabelEle.textContent;
+		oldLabelEle.remove(); // Will likely break the reaction menu popover, if I ever got around to fixing it in a way that resembles the modern standard behavior.
+	});
+	*/ // Hardcoded simplification, since the dummy reactions buttons are just constant raw HTML being applied by this script anyways.
 })();
