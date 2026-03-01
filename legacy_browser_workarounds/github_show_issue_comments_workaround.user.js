@@ -2,7 +2,7 @@
 // @name           GitHub Issue Comments Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/issues/*
-// @version        1.0.2
+// @version        1.1.0
 // @createdAt      11/10/2025, 6:17:25 PM
 // @author         StaticPH
 // @description    Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.
@@ -113,7 +113,57 @@
 		frag.append(substContainer);
 		commentContainer.replaceWith(frag);
 	}
+
+	function redoIssueLabelTooltips(){
+		// Add tooltips for long descriptions to Issue labels.
+		/*
+		document.querySelectorAll('[aria-describedby*="-tooltip"]').forEach(function(ele){
+			const tooltipIDSelector = ele.getAttribute('aria-describedby').split(' ').map(s => `[id="${s}"]`).join(',');
+			// Even if there may be multiple IDs, as the spec permits, take whatever is found first.
+			const descriptor = document.querySelector(tooltipIDSelector);
+
+			if(!descriptor){
+				console.warn(`ERROR: unable to find an element matching the selector "${tooltipIDSelector}"`);
+				return;
+			}
+			ele.title = descriptor.textContent.trim();
+			descriptor.remove();
+			ele.removeAttribute('aria-describedby');
+		});
+		*/
+
+		// Has a similar overall effect, but less explicit DOM manipulation, I guess?
+		document.head.insertAdjacentHTML('beforeEnd', `<style type="text/css">
+			.LabelsList-module__labelsListContainer__q43kf {
+				position: relative;
+				overflow: visible;
+			}
+			[role="tooltip"] {
+				/*visibility: hidden;*/
+				display:none;
+				position: absolute; top: -2em; left: 2em;
+				background-color: white; color: black;
+				padding: 0.25em; box-shadow: 2px 2px 1px grey;
+			}
+			/*[aria-describedby]:hover, [aria-describedby]:focus { position: relative; }*/
+			[aria-describedby]:hover [role="tooltip"], [aria-describedby]:focus [role="tooltip"]/*,
+			[role="tooltip"]:hover, [role="tooltip"]:focus */{
+			  /*visibility: visible;*/
+			  display:block;
+			  /* overflow: visible; */
+			  /*max-width: 50%;*/
+			  /*width: max-content;*/
+			  min-width: 5rem; height: auto; width: auto;
+			}
+			</style>
+		`);
+		// The attribute `role="tooltip"` isn't already added by GitHub, even though aria-describedby is.
+		// Not sure what was expected to happen like that.
+		document.querySelectorAll('.sr-only[id*="-tooltip"]').forEach(e => e.setAttribute('role', 'tooltip'));
+	}
+
 	fixIssueTimeline();
+	redoIssueLabelTooltips();
 
 	/*
 	document.querySelectorAll('[aria-label="Reactions"]').forEach(function(ele){
