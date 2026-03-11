@@ -2,7 +2,7 @@
 // @name           GitHub Lazy Release Assets Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/releases*
-// @version        1.1.1
+// @version        1.1.2
 // @createdAt      10/8/2022, 4:40:25 PM
 // @author         StaticPH
 // @description    Fixes a number of things related to user-downloadable asset files on GitHub for users of legacy browsers.
@@ -40,11 +40,12 @@
 		'method': 'GET',
 		'mode': 'cors'
 	};
-	const timestampPreset = { month: 'short', year: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+	const timestampPreset = new Intl.DateTimeFormat(navigator.language, { numberingSystem: 'ltn', calendar: 'gregory', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', hour12: true, minute: 'numeric' });
 	async function localizeTimestamp(dateObj){
-		return await dateObj.toLocaleString(navigator.language, timestampPreset);
+		return await timestampPreset.format(dateObj);
 	}
 
+	/*
 	// While on the topic of fixing things, fix all the timestamps on the page that don't seem to want to display.
 	// Use the same format as GitHub would be, by utilizing the attributes of the local-time elements.
 	async function fixDate(ele){
@@ -56,16 +57,20 @@
 		});
 	}
 	document.querySelectorAll('section local-time:first-of-type').forEach(fixDate);
+	*/
 
 	// Similar to fixDate, but tailored for relative-time rather than local-time
 	// FIXME: the format for relative times should probably be different. Check and confirm.
 	async function fixTime(ele){
-		ele.textContent = await new Date(ele.getAttribute('datetime')).toLocaleString(navigator.language, {
-			month: ele.getAttribute('month') || undefined,
-			day: ele.getAttribute('day') || undefined,
-			year: ele.getAttribute('year') || undefined
-		});
+		// ele.textContent = await new Date(ele.getAttribute('datetime')).toLocaleString(navigator.language, {
+			// month: ele.getAttribute('month') || undefined,
+			// day: ele.getAttribute('day') || undefined,
+			// year: ele.getAttribute('year') || undefined
+		// });
+		//// Screw it, just use absolute time for the locale.
+		ele.textContent = await localizeTimestamp(new Date(ele.getAttribute('datetime')));
 	}
+	document.querySelectorAll('section relative-time:first-of-type').forEach(fixTime);
 
 	document.querySelectorAll('[data-view-component] include-fragment[loading="lazy"][src]:not([src=""]):not([data-target="select-panel.includeFragment"])').forEach(async function(lazyPageFrag){
 		try{
@@ -73,8 +78,8 @@
 				resp => resp.text().then(
 					async function(html){
 						await lazyPageFrag.replaceChildren(...parser.parseFromString(html, 'text/html').querySelectorAll('body > [data-view-component]'));
-						await lazyPageFrag.querySelectorAll('local-time').forEach(await fixDate);
-						await lazyPageFrag.querySelectorAll('relative-time').forEach(await fixTime); // FIXME: the format for relative times should probably be different.
+						// await lazyPageFrag.querySelectorAll('local-time').forEach(await fixDate);
+						await lazyPageFrag.querySelectorAll('relative-time').forEach(await fixTime);
 					},
 					err => console.warn('There was a problem retrieving the response text', err)
 				),
@@ -91,8 +96,8 @@
 				resp => resp.text().then(
 					async function(html){
 						await deferredPageFrag.replaceChildren(...parser.parseFromString(html, 'text/html').querySelectorAll('body > [data-view-component]'));
-						await deferredPageFrag.querySelectorAll('local-time').forEach(await fixDate);
-						await deferredPageFrag.querySelectorAll('relative-time').forEach(await fixTime); // FIXME: the format for relative times should probably be different.
+						// await deferredPageFrag.querySelectorAll('local-time').forEach(await fixDate);
+						await deferredPageFrag.querySelectorAll('relative-time').forEach(await fixTime);
 					},
 					err => console.warn('There was a problem retrieving the response text', err)
 				),

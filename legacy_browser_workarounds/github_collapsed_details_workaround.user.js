@@ -9,6 +9,7 @@
 // @exclude-match    https://github.com/enterprise*
 // @exclude-match    https://github.com/explore*
 // @exclude-match    https://github.com/features*
+// @exclude-match    https://github.com/github-copilot/*
 // @exclude-match    https://github.com/login/*
 // @exclude-match    https://github.com/marketplace*
 // @exclude-match    https://github.com/new*
