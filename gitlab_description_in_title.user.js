@@ -30,8 +30,8 @@
 		let title = document.title;
 		let description = document.querySelector('meta[name="description"]').content;
 
-		//I've found that Unicode character 0x00B7, "Middle Dot", has led some editors to erroneously interpret the text in encodings other than UTF-8, so let's replace it.
-		title = title.replace(/\u00b7/g, '|');
+		// I've found that Unicode character 0x00B7, "Middle Dot", has led some editors to erroneously interpret the text in encodings other than UTF-8, so let's replace it.
+		title = title.replace(/\u{00B7}/g, '|');
 
 		if (description){
 			title = `${title.trim()} — ${description.trim()}`;

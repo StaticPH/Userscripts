@@ -17,12 +17,12 @@
 // @createdAt        6/19/2020
 // @author           StaticPH
 // @description      Hides the stupid channel leaderboard on Twitch.tv
-// @icon             https://brand.twitch.tv/assets/logos/svg/glitch/purple.svg
 // @license          MIT
 // @updateURL        https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_hide_channel_leaderboard.user.js
 // @downloadURL      https://raw.githubusercontent.com/StaticPH/Userscripts/master/twitch_hide_channel_leaderboard.user.js
 // @homepageURL      https://github.com/StaticPH/UserScripts
 // @supportURL       https://github.com/StaticPH/UserScripts/issues
+// @icon             https://brand.twitch.tv/assets/logos/svg/glitch/purple.svg
 // @grant            GM.addStyle
 // @grant            GM_addStyle
 // @run-at           document-start
@@ -32,10 +32,10 @@
 	'use strict';
 
 	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
-	if (typeof GM == 'undefined'){
+	if (typeof GM === 'undefined'){
 		this.GM = {};
 	}
-	if (typeof GM['addStyle'] == 'undefined'){
+	if (GM['addStyle'] === undefined){
 		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
 		GM['addStyle'] = function(...args){
 			return new Promise((onResolve, onReject) => {
@@ -45,10 +45,9 @@
 		}
 	}
 
-	GM.addStyle ( `
+	GM.addStyle (`
 		div.channel-leaderboard.tw-z-default {
 			display: none;
 		}
-	`
-	);
+	`);
 })();

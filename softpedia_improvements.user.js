@@ -22,7 +22,7 @@
 	"use strict";
 
 	// Replace "outlink"s with their actual link
-	document.querySelectorAll('[data-href]').forEach(e => e.href = e.getAttribute('data-href'));
+	document.querySelectorAll('[data-href]').forEach(e => (e.href = e.getAttribute('data-href')));
 
 	// Hide ads and other clutter
 	let noClutter = document.createElement('style');

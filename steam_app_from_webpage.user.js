@@ -3,7 +3,7 @@
 // @namespace      https://github.com/StaticPH
 // @match          http*://steamcommunity.com/*
 // @match          http*://*.steampowered.com/*
-// @version        1.0
+// @version        1.0.1
 // @createdAt      11/25/2022, 11:25:51 PM
 // @author         StaticPH
 // @description    Another of many scripts attempting to add "Open this in the Steam application" functionality to Steam's webpages. Some CSS borrowed from https://greasyfork.org/en/scripts/454372-open-steam-url
@@ -73,5 +73,5 @@
 		</style>`);
 	}
 
-	window.addEventListener('DOMContentLoaded', inject, {once:true});
+	globalThis.addEventListener('DOMContentLoaded', inject, {once:true});
 })();

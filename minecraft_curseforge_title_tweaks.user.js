@@ -3,7 +3,7 @@
 // @namespace      https://github.com/StaticPH
 // @match          https://www.curseforge.com/minecraft/mc-mods/*
 // @match          https://legacy.curseforge.com/minecraft/mc-mods/*
-// @version        1.1
+// @version        1.1.1
 // @createdAt      4/20/2022, 5:46:34 PM
 // @author         StaticPH
 // @description    Modifies the format of the page title for some of CurseForge's Minecraft pages.
@@ -19,7 +19,7 @@
 
 (function(){
 	"use strict";
-	if (document.location.href.match(/search\?/)){
+	if (document.location.pathname.endsWith('search')){
 		let queryMatches = document.location.search.match(/search=([^&?#]+)(?:[&?#].+)?$/);
 		if (queryMatches && queryMatches[1] !== undefined) {
 			document.title = 'CurseForge Minecraft Mod Search - ' + queryMatches[1];
@@ -48,10 +48,10 @@
 			}
 			document.title += ' - CurseForge Minecraft Mods';
 		}
-		if (document.title.match('Mods - Projects - CurseForge')){
+		if (document.title.includes('Mods - Projects - CurseForge')){
 			document.title = document.title.replace('Mods - Projects - CurseForge', '') + 'CurseForge Minecraft Projects';
 		}
-		else if (document.title.match('Mods - Minecraft - CurseForge')){
+		else if (document.title.includes('Mods - Minecraft - CurseForge')){
 			document.title = document.title.replace('Mods - Minecraft - CurseForge', '') + 'CurseForge Minecraft Mods';
 		}
 	}

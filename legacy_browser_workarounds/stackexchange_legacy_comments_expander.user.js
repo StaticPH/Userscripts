@@ -38,7 +38,7 @@
 		return false;
 	}
 
-	async function replaceChildrenWithFetched(parentEle, rawHtml){
+	function replaceChildrenWithFetched(parentEle, rawHtml){
 		const parser = new DOMParser();
 		const responseHtml = parser.parseFromString(rawHtml, 'text/html');
 		return replaceChildrenWithNodes(parentEle, ...responseHtml.querySelectorAll('li'));
@@ -54,8 +54,9 @@
 	const commentUpvoteSVG = '<svg aria-hidden="true" class="fc-black-400 va-middle w16 svg-icon iconArrowUp" width="18" height="18" viewBox="0 0 18 18"><path d="M1 12h16L9 4z"></path></svg>';
 	const ellipsesSVG = '<svg aria-hidden="true" class="fc-black-400 svg-icon iconEllipsisHorizontal" width="17" height="18" viewBox="0 0 17 18"><path d="M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M12 8.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0"></path></svg>';
 
-	async function buildReplyTemplate(reply, postID){
-		return await `<div id="${reply.id}" itemprop="comment" itemscope="" itemtype="https://schema.org/Comment" role="listitem" data-so-test="reply-parent-comment-0">
+	// oxlint-disable no-unused-vars
+	function buildReplyTemplate(reply, postID){
+		return `<div id="${reply.id}" itemprop="comment" itemscope="" itemtype="https://schema.org/Comment" role="listitem" data-so-test="reply-parent-comment-0">
 			<div class="d-flex fd-column">
 				<div class="d-flex g6">
 					<div class="flex--item w24">
@@ -133,14 +134,14 @@
 			const postID = answer.getAttribute('data-answerid') || answer.getAttribute('data-questionid');
 			const insertInto = answer.querySelector('ul.comments-list');
 			fetch(document.location.origin + '/posts/' + postID + '/comments', {
-			  'headers': {
-				'accept': 'text/html, */*; q=0.01',
-			  },
-			  'referrerPolicy': 'strict-origin-when-cross-origin',
-			  'body': null,
-			  'method': 'GET',
-			  'mode': 'cors',
-			  'credentials': 'include'
+				'headers': {
+					'accept': 'text/html, */*; q=0.01',
+				},
+				'referrerPolicy': 'strict-origin-when-cross-origin',
+				'body': null,
+				'method': 'GET',
+				'mode': 'cors',
+				'credentials': 'include'
 			}).then(resp => resp.text())
 			/*
 			  .then(data => replaceChildrenWithFetched(insertInto, data))
@@ -149,7 +150,8 @@
 				insertInto.setAttribute('data-remaining-comments-count', '0');
 			  });
 			*/
-			  .then(data => replaceChildrenWithFetched(insertInto, data) && evnt.target.parentElement.remove(), insertInto.setAttribute('data-remaining-comments-count', '0'));
+			  .then(data => replaceChildrenWithFetched(insertInto, data) && evnt.target.parentElement.remove())
+			  .catch(insertInto.setAttribute('data-remaining-comments-count', '0'));
 		}
 		else if (evnt.target.matches('.answer button.comments-link:not([data-so-test*="parent-answer"])')){
 			evnt.stopImmediatePropagation();
@@ -164,17 +166,19 @@
 			//}
 
 			fetch(`${document.location.origin}/posts/${postID}/comments`, {
-			  'headers': {
-				'accept': 'text/html, */*; q=0.01',
-			  },
-			  'referrerPolicy': 'strict-origin-when-cross-origin',
-			  'body': null,
-			  'method': 'GET',
-			  'mode': 'cors',
-			  'credentials': 'include'
+				'headers': {
+					'accept': 'text/html, */*; q=0.01',
+				},
+				'referrerPolicy': 'strict-origin-when-cross-origin',
+				'body': null,
+				'method': 'GET',
+				'mode': 'cors',
+				'credentials': 'include'
 			}).then(resp => resp.text())
 			  .then(data => requestAnimationFrame(function(){
-				replaceCommentsListFromFetched(insertInto, data) && evnt.target.parentElement.remove();
+				if (replaceCommentsListFromFetched(insertInto, data)){
+					evnt.target.parentElement.remove();
+				}
 				insertInto.setAttribute('data-remaining-comments-count', '0');
 			}));
 		}

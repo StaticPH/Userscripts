@@ -69,7 +69,7 @@
 	readSettings();
 	saveSettings();
 
-	if (settings.hideSubredditsNamed.length < 1){
+	if (settings.hideSubredditsNamed.length === 0){
 		console.log('No subreddits to hide.');
 		return;
 	}

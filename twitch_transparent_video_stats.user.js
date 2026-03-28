@@ -32,10 +32,10 @@
 	'use strict';
 
 	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
-	if (typeof GM == 'undefined'){
+	if (typeof GM === 'undefined'){
 		this.GM = {};
 	}
-	if (typeof GM['addStyle'] == 'undefined'){
+	if (GM['addStyle'] === undefined){
 		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
 		GM['addStyle'] = function(...args){
 			return new Promise((onResolve, onReject) => {

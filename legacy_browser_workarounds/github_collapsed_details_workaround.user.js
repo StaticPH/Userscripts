@@ -71,7 +71,7 @@
 	}
 
 	/* oxlint-disable-next-line unicorn/prefer-add-event-listener */
-	document.querySelectorAll('.hidden-text-expander > button.ellipsis-expander.js-details-target').forEach(expander => expander.onclick = toggleShowDetails);
+	document.querySelectorAll('.hidden-text-expander > button.ellipsis-expander.js-details-target').forEach(expander => (expander.onclick = toggleShowDetails));
 
 	if (urlRelativeToRepoDefault.startsWith('/wiki')){
 		// Fix collapsed categories on wiki page sidebar.
