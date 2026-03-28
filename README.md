@@ -24,6 +24,7 @@ One example of such a scenario could be opening a Twitch.tv livestream from the 
 
 
 ---
+
 To add a script:
 * Install a script directly from GitHub by clicking on the "install" link in the table below.
 

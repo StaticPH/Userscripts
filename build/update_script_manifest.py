@@ -125,7 +125,7 @@ class VersionString:
 		return (self.major, self.minor, self.patch) > (operand.major, operand.minor, operand.patch)
 
 	def __le__(self, value: Union[str, VersionString]) -> bool:
-		return not self < value
+		return not self > value
 
 	def __ge__(self, value: Union[str, VersionString]) -> bool:
 		return not self < value

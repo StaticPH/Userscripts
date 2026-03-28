@@ -72,6 +72,7 @@ minijinja-cli --format json templates/primary_template.md.j2 - > output.md
 
 6. [ ] Decide on some process to automatically assign an `anchorString`.
     Consider ditching custom anchor strings entirely in favor of just using the name of the script file, sans extension.
+    `pandoc` might be of use here, depending on the exact behavior of [extension: `auto_identifiers`](https://pandoc.org/MANUAL.html#extension-auto_identifiers)
 
 7. [ ] Figure out what part of `getUpdatedScriptData` can be replaced with a call to `dict.update()`.
 
@@ -86,3 +87,5 @@ minijinja-cli --format json templates/primary_template.md.j2 - > output.md
 11. [X] Temporary local branch in which to test repository layout with new automation files included.
 
 12. [X] Finish/fix date parsing and conversion for the non-standard `createdAt` property in script metadata, so that it can be stored *sensibly* in the manifest.
+
+13. [ ] Although I'm not using `pandoc` at this time, apparently it's default markdown variant expects a blank line before headings (other than at the start of the document). Might want to try changing the format of script details in the readme template, which currently has a named anchor on the line before each script's heading. See [`pandoc` markdown extension: `blank_before_header`](https://pandoc.org/MANUAL.html#extension-blank_before_header)
