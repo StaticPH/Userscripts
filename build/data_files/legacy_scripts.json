@@ -7,9 +7,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Jun 29, 2024",
-			"updated": "Mar 23, 2025",
+			"updated": "Apr  5, 2026",
 			"desc": "Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.",
-			"version": "1.0.4"
+			"version": "1.0.5"
 		},
 		{
 			"name": "GitHub Line Hyperlink Workaround",
