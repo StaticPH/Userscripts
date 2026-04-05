@@ -25,7 +25,11 @@
 		Object.defineProperty(String.prototype, 'replaceAll', {
 			writable: true, enumerable: false, configurable: true,
 			value: function replaceAll(searchValue, newValue){
-				return this.replace( RegExp(searchValue, 'g'), newValue );
+				let flags = searchValue.flags || 'g';
+				if (!flags.includes('g')){
+					flags += 'g';
+				}
+				return this.replace( new RegExp(searchValue, flags), newValue );
 			}
 		});
 	}
