@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.6.2
+// @version        1.6.3
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -26,13 +26,13 @@
 		const queryIndex = args.findIndex(s => s.startsWith('q='));
 		args[0] = args[0].replace('search?', `search?${args[queryIndex]}&`);
 		delete args[queryIndex];
-		return args.filter(s => s).join('&');
+		return args.filter(Boolean).join('&');
 	}
 
 	async function cleanURLs(){
-		Array.from(document.links).forEach(async function(link){
+		for(link of document.links){
 			let fixed = null;
-			if (link.href.match(/google\.[^/]+\/url\?.*/)){
+			if (/google\.[^/]+\/url\?.*/.test(link.href)){
 				const url = new URL(link.href);
 				if (url.searchParams.has('url')){
 					fixed = url.searchParams.get('url');
@@ -60,13 +60,13 @@
 					console.warn('Could not find expected "url" or "q" parameter for link: ' + link.href);
 				}
 			}
-			if (link.href.match(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/)){
+			if (/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/.test(link.href)){
 				fixed = link.href.replace(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*/g, '').replace(/[?&]*#/, '#').replace(/[?&]*$/, '');
 				console.log( link.href + ' --> ' + fixed );
 				link.href = fixed;
 			}
 			// if (link.href.match(/google\.[^/]+\/search\?q=.+/)){
-			if (link.href.match(/google\.[^/]+\/search.*?[&?](ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/)){
+			if (/google\.[^/]+\/search.*?[&?](ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/.test(link.href)){
 				// fixed = link.href.replace(/&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
 				// fixed = link.href.replace(/\?([^&#=]+=[^&#]*((&[^&#=]+=[^&#]*)+)?&)(q=[^&?#]*)(.*)/, '?$4&$1$5').replace('&&','&'); // This *CAN'T* be the optimal way to handle scenarios where 'q' isn't the first search parameter...
 				fixed = queryParamFirst(link.href);
@@ -81,13 +81,12 @@
 			}
 			// TODO: AMAZON URLS
 			// On Amazon product pages in particular, you can remove keywords, ref, dchild, pd*, pf*, qid, and sr
-			if (link.href.match(/amazon\.[^/]+\/[^/]+\/dp\/[^/]+\/[^?&]+[?&]/)){
+			if (/amazon\.[^/]+\/[^/]+\/dp\/[^/]+\/[^?&]+[?&]/.test(link.href)){
 				fixed = link.href.replace(/[&?].+$/, '');
 				console.log( link.href + ' --> ' + fixed );
 				link.href = fixed;
 			}
-		});
-		return;
+		}
 	}
 
 	cleanURLs();

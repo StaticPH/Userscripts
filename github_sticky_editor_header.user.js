@@ -3,7 +3,7 @@
 // @namespace      https://github.com/StaticPH
 // @match          http*://github.com/*/*/edit/*
 // include         /https?:\/\/github\.com\/[^\/]+\/[^\/]+\/edit\/.+\.(md|MD|Md|adoc|asciidoc|rst)/
-// @version        1.0
+// @version        1.0.1
 // @createdAt      11/24/2021, 1:50:21 AM
 // @author         StaticPH
 // @description    Makes the header of the (text) file editor on GitHub sticky.
@@ -22,11 +22,20 @@
 (function(){
 	"use strict";
 
-	if (!(GM && GM.addStyle)){
-		console.log('GM.addStyle is not defined. Falling back to GM_addStyle.');
-		GM = GM ? GM : {};
-		GM.addStyle = GM.addStyle ? GM.addStyle : GM_addStyle;
+	// Prefer asychronous Greasemonkey4-API GM.addStyle, but allow use of GM_addStyle as a fallback if necessary.
+	if (typeof GM === 'undefined'){
+		this.GM = {};
 	}
+	if (GM['addStyle'] === undefined){
+		console.log('GM.addStyle is not defined. Falling back to GM_addStyle Promise.');
+		GM['addStyle'] = function(...args){
+			return new Promise((onResolve, onReject) => {
+				try{ onResolve(GM_addStyle.apply(this, args)); }
+				catch(err){ onReject(err); }
+			});
+		}
+	}
+
 	GM.addStyle(`
 		.js-code-editor.container-preview > .file-header {
 			top: 0%;
