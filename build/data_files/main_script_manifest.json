@@ -350,7 +350,7 @@
 			"created": "Aug 10, 2021",
 			"updated": "Apr  5, 2026",
 			"desc": "Scrub various common tracker parameters from URLs. Even if you don't mind being tracked, parameters like these often make URLs rather long; why copy, share, or save a 200 character URL when you could get the exact same content by removing 160 of those characters, without routing traffic through some URL shortening service?<br>\n<br>\nPrimarily targets parameters related to Google, Amazon, and Facebook.<br>\n<br>\n<sub>\nIcon from: <a href=\"https://www.flaticon.com/free-icon/fly-swatter_185441\" title=\"Fly Swatter\">Fly Swatter free icon created by Freepik - Flaticon</a>\n</sub>",
-			"version": "1.6.3"
+			"version": "1.6.4"
 		},
 		{
 			"name": "Old Reddit Hide Posts By Sub",

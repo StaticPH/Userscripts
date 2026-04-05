@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.6.3
+// @version        1.6.4
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -24,21 +24,41 @@
 		// Put the damn query parameter first so it's predictable
 		const args = href.split('&');
 		const queryIndex = args.findIndex(s => s.startsWith('q='));
-		args[0] = args[0].replace('search?', `search?${args[queryIndex]}&`);
+		if (queryIndex === -1){
+			return href;
+		}
+		const argStart = href.indexOf('?');
+		const pathTail = href.slice(href.lastIndexOf('/', argStart), argStart);
+		args[0] = args[0].replace(`${pathTail}?`, `${pathTail}?${args[queryIndex]}&`);
 		delete args[queryIndex];
 		return args.filter(Boolean).join('&');
 	}
 
-	async function cleanURLs(){
-		for(link of document.links){
+	function fixDanglingQuery(href){
+		return href.replace(/[?&]*#/, '#').replace(/[?&]*$/, '');
+	}
+
+	const commonRegex = {
+		stripAll: /[&?].+$/,
+		stripSearch: /[&?][^#]+/,
+		findUniversal: /(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/,
+		stripUniversal: /(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*/g,
+		findGoogleUrlRedir: /google\.[^/]+\/url\?.*/,
+		findGSearchClutter: /google\.[^/]+\/search.*?[&?](ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/,
+		stripGSearchClutter: /&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g,
+		findAmazonProduct: /amazon\.[^/]+\/[^/]+\/dp\/[^/]+\/[^?&]+[?&]/,
+	};
+
+	function cleanURLs(){
+		for (const link of document.links){
 			let fixed = null;
-			if (/google\.[^/]+\/url\?.*/.test(link.href)){
+			if (commonRegex.findGoogleUrlRedir.test(link.href)){
 				const url = new URL(link.href);
 				if (url.searchParams.has('url')){
 					fixed = url.searchParams.get('url');
 					if (!fixed || fixed.length === 0){ console.warn('Found empty "url" parameter in link: ' + link.href); }
 					else{
-						console.log( link.href + ' --> ' + fixed );
+						console.log(`${link.href} --> ${fixed}`);
 						link.href = fixed;
 					}
 				}
@@ -49,7 +69,7 @@
 						if (url.searchParams.has('tbs')){ // This is one of the parameters actually worth keeping, as it controls some of the "advanced" filtering
 							fixed = fixed + '&' + url.searchParams.get('tbs');
 						}
-						console.log( link.href + ' --> ' + fixed );
+						console.log(`${link.href} --> ${fixed}`);
 						link.href = fixed;
 					}
 					else{
@@ -60,30 +80,29 @@
 					console.warn('Could not find expected "url" or "q" parameter for link: ' + link.href);
 				}
 			}
-			if (/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*[&?#]?/.test(link.href)){
-				fixed = link.href.replace(/(?:[?&])(amp;)?(utm_(source|medium|campaign|term|content)|(fb|g)clid)=[^&?#]*/g, '').replace(/[?&]*#/, '#').replace(/[?&]*$/, '');
-				console.log( link.href + ' --> ' + fixed );
+			if (commonRegex.findUniversal.test(link.href)){
+				fixed = fixDanglingQuery(link.href.replace(commonRegex.stripUniversal, ''));
+				console.log(`${link.href} --> ${fixed}`);
 				link.href = fixed;
 			}
-			// if (link.href.match(/google\.[^/]+\/search\?q=.+/)){
-			if (/google\.[^/]+\/search.*?[&?](ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/.test(link.href)){
+			if (commonRegex.findGSearchClutter.test(link.href)){
 				// fixed = link.href.replace(/&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
 				// fixed = link.href.replace(/\?([^&#=]+=[^&#]*((&[^&#=]+=[^&#]*)+)?&)(q=[^&?#]*)(.*)/, '?$4&$1$5').replace('&&','&'); // This *CAN'T* be the optimal way to handle scenarios where 'q' isn't the first search parameter...
 				fixed = queryParamFirst(link.href);
-				fixed = fixed.replace(/&(ei|sa|ved|bi[wh]|spell|oq|gs_lcp|sclient|uact)=[^&?#]*/g, '');
+				fixed = fixed.replace(commonRegex.stripGSearchClutter, '');
 				/* Compare performance against:
 				const oldUrl = new URL(link.href);
 				['ei','sa','ved','biw','bih','spell','oq','gs_lcp','sclient','uact'].forEach(oldUrl.searchParams.delete);
 				fixed = oldUrl.href;
 				*/
-				console.log( link.href + ' --> ' + fixed );
+				console.log(`${link.href} --> ${fixed}`);
 				link.href = fixed;
 			}
-			// TODO: AMAZON URLS
+			// TODO: More AMAZON URLS
 			// On Amazon product pages in particular, you can remove keywords, ref, dchild, pd*, pf*, qid, and sr
-			if (/amazon\.[^/]+\/[^/]+\/dp\/[^/]+\/[^?&]+[?&]/.test(link.href)){
-				fixed = link.href.replace(/[&?].+$/, '');
-				console.log( link.href + ' --> ' + fixed );
+			if (commonRegex.findAmazonProduct.test(link.href)){
+				fixed = link.href.replace(commonRegex.stripAll, '');
+				console.log(`${link.href} --> ${fixed}`);
 				link.href = fixed;
 			}
 		}
