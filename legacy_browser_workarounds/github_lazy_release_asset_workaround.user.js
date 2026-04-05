@@ -40,7 +40,11 @@
 		'method': 'GET',
 		'mode': 'cors'
 	};
-	const timestampPreset = new Intl.DateTimeFormat(navigator.language, { numberingSystem: 'ltn', calendar: 'gregory', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', hour12: true, minute: 'numeric' });
+	const timestampPreset = new Intl.DateTimeFormat(navigator.language, {
+		numberingSystem: 'ltn', calendar: 'gregory',
+		year: 'numeric', month: 'short', day: 'numeric',
+		hour: 'numeric', hour12: true, minute: 'numeric', second: 'numeric'
+	});
 	async function localizeTimestamp(dateObj){
 		return await timestampPreset.format(dateObj);
 	}

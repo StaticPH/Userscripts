@@ -117,9 +117,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov 24, 2021",
-			"updated": "Nov 24, 2021",
+			"updated": "Apr  5, 2026",
 			"desc": "Makes the header of the (text) file editor on GitHub sticky.<br>\nWritten because I got sick and tired of having to move up and down the page to change to and from the preview while editing this README.",
-			"version": "1.0.0"
+			"version": "1.0.1"
 		},
 		{
 			"name": "GitLab Description In Title",
@@ -216,9 +216,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Jul 12, 2023",
-			"updated": "Sep 28, 2024",
+			"updated": "Apr  5, 2026",
 			"desc": "Proof-of-concept: Prevent modifications to the Google search query in the on-page search bar from inserting a bunch of unwanted parameters into the resulting URL.",
-			"version": "1.3.0"
+			"version": "1.3.1"
 		},
 		{
 			"name": "Google Search Footer Privacy",
@@ -293,9 +293,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Apr 20, 2022",
-			"updated": "Jun 18, 2022",
+			"updated": "Apr  5, 2026",
 			"desc": "Modifies the format of the page title for some of CurseForge's Minecraft pages.",
-			"version": "1.1.0"
+			"version": "1.1.1"
 		},
 		{
 			"name": "Another \"Open In Steam\" Button",
@@ -304,9 +304,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov 25, 2022",
-			"updated": "Nov 25, 2022",
+			"updated": "Apr  5, 2026",
 			"desc": "As the name should imply, this is my own version of a script which adds a new button on Steam's steampowered and steamcommunity sites to open the current page in the Steam app.<br>\nSome of the CSS used was borrowed from  https://greasyfork.org/en/scripts/454372-open-steam-url after I spent well over an hour fiddling with my own CSS in the pre-dawn hours, and decided I wasn't going to manage much better.",
-			"version": "1.0.0"
+			"version": "1.0.1"
 		},
 		{
 			"name": "Ubuntu Packages Description In Title",
@@ -348,9 +348,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Aug 10, 2021",
-			"updated": "Jan 28, 2024",
+			"updated": "Apr  5, 2026",
 			"desc": "Scrub various common tracker parameters from URLs. Even if you don't mind being tracked, parameters like these often make URLs rather long; why copy, share, or save a 200 character URL when you could get the exact same content by removing 160 of those characters, without routing traffic through some URL shortening service?<br>\n<br>\nPrimarily targets parameters related to Google, Amazon, and Facebook.<br>\n<br>\n<sub>\nIcon from: <a href=\"https://www.flaticon.com/free-icon/fly-swatter_185441\" title=\"Fly Swatter\">Fly Swatter free icon created by Freepik - Flaticon</a>\n</sub>",
-			"version": "1.6.2"
+			"version": "1.6.3"
 		},
 		{
 			"name": "Old Reddit Hide Posts By Sub",

@@ -51,9 +51,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Oct  8, 2022",
-			"updated": "Mar 12, 2023",
+			"updated": "Apr  5, 2026",
 			"desc": "Multiple fixes related to user-downloadable asset files on GitHub for users of legacy browsers.\n- Fetch asset list for releases, as the code that should already have been responsible for that is too modern, and is thus never even attempted on legacy browsers.\n- Fix the timestamps on the release page(s), most of which are within asset lists.\n- Slightly changes normal behavior by automatically showing __all__ assets for the first release on the page, whether that's two assets or fourty assets.",
-			"version": "1.1.1"
+			"version": "1.1.2"
 		},
 		{
 			"name": "GitHub Show Issue Comments Workaround",
@@ -62,9 +62,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov 10, 2025",
-			"updated": "Mar  1, 2026",
+			"updated": "Apr  5, 2026",
 			"desc": "Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.",
-			"version": "1.1.1"
+			"version": "1.1.2"
 		},
 		{
 			"name": "StackExchange Legacy Comments Expander",
@@ -73,9 +73,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov  6, 2022",
-			"updated": "Nov  2, 2023",
+			"updated": "Apr  5, 2026",
 			"desc": "Replace 'Show X more comments' handler for StackExchange sites to better support older browsers; in particular, this enables showing all comments when using Chromium 72.",
-			"version": "1.1.0"
+			"version": "1.2.0"
 		}
 	]
 }

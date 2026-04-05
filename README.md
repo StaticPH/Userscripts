@@ -22,7 +22,6 @@ If your browsing habit doesn't involve much opening things in new tabs, you'll l
 
 One example of such a scenario could be opening a Twitch.tv livestream from the directory view.
 
-
 ---
 
 To add a script:
@@ -41,7 +40,7 @@ To add a script:
 | [GitHub Repo Network Tab](#GRNT) | [install][raw-GRNT] | N/A | :heavy_check_mark: | MIT | Apr  6, 2020 | Feb 27, 2026 |
 | [Bigger GitHub Network Graph](#BGNG) | [install][raw-BGNG] | N/A | :heavy_check_mark: | MIT | Apr 12, 2020 | Oct 28, 2021 |
 | [GitHub Notification Page Tweaks](#GNPT) | [install][raw-GNPT] | N/A | :heavy_check_mark: | MIT | Oct 22, 2020 | Aug  3, 2021 |
-| [GitHub Sticky Editor Header](#GSEH) | [install][raw-GSEH] | N/A | :heavy_check_mark: | MIT | Nov 24, 2021 | Nov 24, 2021 |
+| [GitHub Sticky Editor Header](#GSEH) | [install][raw-GSEH] | N/A | :heavy_check_mark: | MIT | Nov 24, 2021 | Apr  5, 2026 |
 | [GitLab Description In Title](#GDIT) | [install][raw-GDIT] | N/A | :heavy_check_mark: | MIT | May 22, 2021 | Aug  3, 2021 |
 | [Prettier Lib.rs Preformatted Code](#PLPC) | [install][raw-PLPC] | N/A | :heavy_check_mark: | MIT | Jul  5, 2020 | Mar 30, 2021 |
 | [Lib.rs Description In Title](#LDIT) | [install][raw-LDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | May 11, 2021 |
@@ -50,19 +49,19 @@ To add a script:
 | [Google Meet Ignore Hardware Disabled](#GMIHD) | [install][raw-GMIHD] | N/A | :heavy_check_mark: | MIT | Mar  3, 2023 | Mar  3, 2023 |
 | [Wider Google Form Fields](#WGFF) | [install][raw-WGFF] | N/A | :heavy_check_mark: | MIT | Sep 30, 2021 | Aug 19, 2022 |
 | [Correct Google Form Correctness](#GFCC) | [install][raw-GFCC] | N/A | :heavy_check_mark: | MIT | Nov  9, 2021 | Nov  9, 2021 |
-| [Google Search Lean Query Updates](#GSLQU) | [install][raw-GSLQU] | N/A | :heavy_check_mark: | MIT | Jul 12, 2023 | Sep 28, 2024 |
+| [Google Search Lean Query Updates](#GSLQU) | [install][raw-GSLQU] | N/A | :heavy_check_mark: | MIT | Jul 12, 2023 | Apr  5, 2026 |
 | [Google Search Footer Privacy](#GSFP) | [install][raw-GSFP] | N/A | :heavy_check_mark: | MIT | Dec 30, 2023 | Dec 16, 2025 |
 | [Roll20 Nonscrolling Number Fields](#RNNF) | [install][raw-RNNF] | N/A | :heavy_check_mark: | MIT | Jan 23, 2021 | Apr  5, 2021 |
 | [Bypass Blogspot's Blogger IFrame](#BBBI) | [install][raw-BBBI] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | May  1, 2022 |
 | [Foxaholic Fixes](#FoxF) | [install][raw-FoxF] | N/A | :heavy_check_mark: | MIT | Jun  2, 2021 | Aug 27, 2021 |
 | [Mitigate Target \_blank Risk](#MTBR) | [install][raw-MTBR] | N/A | :heavy_check_mark: | MIT | Aug 27, 2021 | Nov 23, 2021 |
 | [MSYS2 Package Description In Title](#MDIT) | [install][raw-MDIT] | N/A | :heavy_check_mark: | MIT | Apr 28, 2021 | Feb  9, 2026 |
-| [Minecraft CurseForge Title Tweaks](#MCTT) | [install][raw-MCTT] | N/A | :heavy_check_mark: | MIT | Apr 20, 2022 | Jun 18, 2022 |
-| [Another "Open In Steam" Button](#OISB) | [install][raw-OISB] | N/A | :heavy_check_mark: | MIT | Nov 25, 2022 | Nov 25, 2022 |
+| [Minecraft CurseForge Title Tweaks](#MCTT) | [install][raw-MCTT] | N/A | :heavy_check_mark: | MIT | Apr 20, 2022 | Apr  5, 2026 |
+| [Another "Open In Steam" Button](#OISB) | [install][raw-OISB] | N/A | :heavy_check_mark: | MIT | Nov 25, 2022 | Apr  5, 2026 |
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A | :heavy_check_mark: | MIT | May 11, 2023 | May 11, 2023 |
 | [Quietly Reject StackExchange Cookies](#QRSC) | [install][raw-QRSC] | N/A | :heavy_check_mark: | MIT | May 14, 2023 | May 14, 2023 |
 | [PyPI Description In Title](#PDIT) | [install][raw-PDIT] | N/A | :heavy_check_mark: | MIT | May 31, 2023 | Aug 15, 2024 |
-| [Simple URL Tracker Cleaner](#SUTC) | [install][raw-SUTC] | N/A | :heavy_check_mark: | MIT | Aug 10, 2021 | Jan 28, 2024 |
+| [Simple URL Tracker Cleaner](#SUTC) | [install][raw-SUTC] | N/A | :heavy_check_mark: | MIT | Aug 10, 2021 | Apr  5, 2026 |
 | [Old Reddit Hide Posts By Sub](#ORHS) | [install][raw-ORHS] | N/A | :heavy_check_mark: | MIT | Apr  8, 2022 | Jul  2, 2023 |
 | [ScribbleHub Reading List Upgrades](#SRLU) | [install][raw-SRLU] | N/A | :heavy_check_mark: | MIT | Oct  7, 2022 | Jan 19, 2024 |
 | [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |

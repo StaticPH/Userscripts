@@ -2,7 +2,7 @@
 // @name           Google Search Lean Query Updates
 // @namespace      https://github.com/StaticPH
 // @match          https://www.google.com/search
-// @version        1.3.0
+// @version        1.3.1
 // @createdAt      7/12/2023, 2:08:47 PM
 // @author         StaticPH
 // @description    Proof-of-concept: Prevent modifications to the Google search query in the on-page search bar from inserting a bunch of unwanted parameters into the resulting URL.
@@ -24,7 +24,11 @@
 		Object.defineProperty(String.prototype, 'replaceAll', {
 			writable: true, enumerable: false, configurable: true,
 			value: function replaceAll(searchValue, newValue){
-				return this.replace( new RegExp(searchValue, 'g'), newValue );
+				let flags = searchValue.flags || 'g';
+				if (!flags.includes('g')){
+					flags += 'g';
+				}
+				return this.replace( new RegExp(searchValue, flags), newValue );
 			}
 		});
 	}
