@@ -577,7 +577,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 ---
 
 ## Some of the awesome scripts I use from other authors
-<sub>I make no guarantees regarding the availability, maintenance, or browser version support of these scripts<\sub>
+<sub>I make no guarantees regarding the availability, maintenance, or browser version support of these scripts</sub>
 - [Wide GitHub](https://github.com/xthexder/wide-github)
 - [GitHub Code Folding](https://openuserjs.org/scripts/Mottie/GitHub_Code_Folding) <sub>(Note: last working version for Chrome 72 was v1.1.2, although subsequent changes to GitHub's UI have broken parts of that, too)</sub>
 - [GitHub Gist Search Box](https://greasyfork.org/en/scripts/395318-github-gist-search-box)
