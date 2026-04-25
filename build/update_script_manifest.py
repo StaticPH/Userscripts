@@ -1,13 +1,13 @@
 #! python3
 
 from __future__ import annotations
-from typing import Dict, Union, Tuple, List, Any
+from typing import Any, Dict, Iterator, List, Tuple, Union
 
-import json
-import sys
-import itertools
-import os
 import datetime
+import itertools
+import json
+import os
+import sys
 
 JSON_Value_Type = Union[Dict[str, Any], int, List[Any], str, bool]
 
@@ -61,7 +61,8 @@ class VersionString:
 	# TODO: Support optional suffix, such as "experimental", "alpha", "unstable", etc.
 	def __init__(self, value: str):
 		if not isinstance(value, str):
-			errmsg = 'Argument must be a string.'
+			# This may seem redundant, but there's nothing actually preventing value from being a VersionString...
+			errmsg = 'Argument must be a string.' # pyright: ignore[reportUnreachable]
 			raise TypeError(errmsg)
 		if len(value.strip()) == 0: # This could be more thorough, but it's not like I'm going to deliberately put a ZWJ in a version string...
 			errmsg = 'Argument cannot be a blank string.'
@@ -83,7 +84,7 @@ class VersionString:
 		self.minor: int = int(minor, 10)
 		self.patch: int = int(patch, 10) or 0
 		self.originalValue: str = value
-		self.value: str = f'{value}.{self.patch}' if value.count('.') < 2 else value
+		self.value: str = f'{value}.{self.patch}' if value.count('.') < 2 else value #noqa: PLR2004
 
 	def __str__(self) -> str:
 		return self.value
@@ -175,31 +176,38 @@ class DataUpdater:
 		sortedDict.update(meta)
 		return sortedDict
 
-	def getMetaFromScriptFile(self, filepath: str) -> Dict[str, Union[str, bool]]:
-		"""Extract pertinent metadata from a userscript file."""
-
+	@staticmethod
+	def extractScriptFileMetadata(filepath: str) -> Iterator[str]:
+		"""Extract metadata header text from a userscript file."""
 		with open('.' + filepath, 'r', encoding=defaultFileEncoding) as scriptFile:
-			### Get all lines in the metadata block at the start of the script file.
-			fullMetaData = itertools.takewhile(lambda s: s.startswith('//'), scriptFile.readlines())
-			### Trim the first two characters ('//') from the start of each line read, then strip whitespace from both ends.
-			fullMetaData = (line[2:].strip() for line in fullMetaData)
-			### Discard lines without the leading '@', which are ignored by userscript managers when parsing script metadata.
-			fullMetaData = filter(lambda line: line[0] == '@', fullMetaData)
-			### Strip the leading '@', and split each line into a key-value pair.
-			fullMetaData = (line[1:].split(maxsplit=1) for line in fullMetaData)
-			### Generate a dict from the subset of metadata that is pertinent to the template data.
-			metaDict = {metaPair[0]: metaPair[1] for metaPair in fullMetaData if metaPair[0] in self.metadataKeysInTemplateData}
-			### Note whether the script has the information it needs in order to check for and fetch updates.
-			metaDict['autoUpdates'] = bool(metaDict.get('updateURL') and metaDict.get('downloadURL'))
-			metaDict.pop('updateURL') # Discard
-			metaDict.pop('downloadURL') # Discard
-			### Rename keys to match their counterpart in the template data file. FIXME: These really ought to just use the same key... But maybe it's actually fine, since these are keys that aren't mandatory for userscripts...
-			renames = (
-				('created', metaDict.pop('createdAt', self._missingCreatedValue)),
-				('desc', metaDict.pop('description', self._missingDescValue)),
-			)
-			metaDict.update(renames)
-			return metaDict
+			return itertools.takewhile(lambda line: line.startswith('//'), scriptFile.readlines())
+
+	def parseScriptFileMetadata(self, filepath: str) -> Dict[str, Union[str, bool]]:
+		"""Extract pertinent metadata from a userscript file."""
+		### Get all lines in the metadata block at the start of the script file.
+		fullMetaData = self.extractScriptFileMetadata(filepath)
+		### Trim the first two characters ('//') from the start of each line read, then strip whitespace from both ends.
+		fullMetaData = (line[2:].strip() for line in fullMetaData)
+		### Discard lines without the leading '@', which are ignored by userscript managers when parsing script metadata.
+		fullMetaData = filter(lambda line: line[0] == '@', fullMetaData)
+		### Strip the leading '@', and split each line into a key-value pair.
+		fullMetaData = (line[1:].split(maxsplit=1) for line in fullMetaData)
+		### Generate a dict from the subset of metadata that is pertinent to the template data.
+		metaDict: Dict[str, JSON_Value_Type] = {metaPair[0]: metaPair[1] for metaPair in fullMetaData if metaPair[0] in self.metadataKeysInTemplateData}
+		### Note whether the script has the information it needs in order to check for and fetch updates.
+		metaDict['autoUpdates'] = bool(metaDict.get('updateURL') and metaDict.get('downloadURL'))
+
+		### Discard metadata that is no longer needed.
+		metaDict.pop('updateURL') # pyright: ignore[reportUnusedCallResult]
+		metaDict.pop('downloadURL') # pyright: ignore[reportUnusedCallResult]
+
+		### Rename keys to match their counterpart in the template data file. FIXME: These really ought to just use the same key... But maybe it's actually fine, since these are keys that aren't mandatory for userscripts...
+		renames = (
+			('created', metaDict.pop('createdAt', self._missingCreatedValue)),
+			('desc', metaDict.pop('description', self._missingDescValue)),
+		)
+		metaDict.update(renames)
+		return metaDict
 
 	@staticmethod
 	def __needsAttrForDataFile(script: Dict[str, Union[str, bool]], attrName: str) -> bool:
@@ -234,6 +242,7 @@ class DataUpdater:
 			# Get license field from script file's metadata
 			scriptItem['license'] = scriptFileMeta['license'] or self._missingLicenseValue
 		# Unconditionally update the "version" field to match the script's meta block
+		# It is entirely valid for a scriptItem to lack a version when read from the manifest, in which case, a default value (self._missingVersionValue) will be used for the version.
 		scriptItem['version'] = str(VersionString(scriptFileMeta['version'])) or self._missingVersionValue
 		# Unconditionally update the autoUpdates field
 		scriptItem['autoUpdates'] = scriptFileMeta['autoUpdates'] or 'false'
@@ -265,7 +274,7 @@ class DataUpdater:
 			# TODO: verify scriptItem['path'] is a readable file, and raise FileNotFoundError if necessary...or just try reading it and let errors be handled by the interpreter.
 
 			# Read metadata block from scriptFile, saving useful details to scriptFileMeta
-			scriptFileMeta = self.getMetaFromScriptFile(scriptItem['path'])
+			scriptFileMeta = self.parseScriptFileMetadata(scriptItem['path'])
 			# name: <@name>, version: <@version>, desc: <@description | @description:en>, created: <@createdAt>, license: <@license>, ...
 
 			adjusted.append(self.getUpdatedScriptData(scriptFileMeta, scriptItem))
@@ -274,7 +283,7 @@ class DataUpdater:
 
 	def writeNew(self, toFile: str='new_main_manifest.json') -> None:
 		with open(toFile, 'w', encoding=defaultFileEncoding) as outputFile:
-			json.dump(self.dataFileContents, outputFile, indent="\t")
+			json.dump(self.dataFileContents, outputFile, indent='\t')
 
 # TODO: ?Decide on some process to automatically assign an anchorString?
 
@@ -294,11 +303,11 @@ if __name__ == '__main__':
 	updater.findScriptData()
 	if bool(os.getenv('WRITE_FILES')):
 		updater.writeNew(here + '/new_main_manifest.json')
-		print('Go diff main_script_manifest.json and new_main_manifest.json')
+		print('\x1B[33mGo diff main_script_manifest.json and new_main_manifest.json\x1B[m')
 
 	updater.readJSONFile(here + '/data_files/legacy_scripts.json')
 	os.chdir(here + '/..')
 	updater.findScriptData('legacy_scripts')
 	if bool(os.getenv('WRITE_FILES')):
 		updater.writeNew(here + '/new_legacy_manifest.json')
-		print('Go diff legacy_scripts.json and new_legacy_manifest.json')
+		print('\x1B[33mGo diff legacy_scripts.json and new_legacy_manifest.json\x1B[m')
