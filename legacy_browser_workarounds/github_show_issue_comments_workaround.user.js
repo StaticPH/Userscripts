@@ -2,7 +2,7 @@
 // @name           GitHub Issue Comments Legacy Workaround
 // @namespace      https://github.com/StaticPH
 // @match          https://github.com/*/*/issues/*
-// @version        1.1.2
+// @version        1.1.3
 // @createdAt      11/10/2025, 6:17:25 PM
 // @author         StaticPH
 // @description    Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.
@@ -128,6 +128,10 @@
 	// some comments aren't included in ...frontTimelineItems.edges,
 	// and thus cant be inserted by this script. I suspect it's some kind of
 	// limit to an API, but I'm not sure how to go about compensating.
+	// CONFIRMED: for whatever reason, an additionall graphql fetch needs to be send out to retrieve further timeline items.
+	// Dont know why, also don't know how said fetch can know the number of remaining items and the ID of the next item before requesting them, but somehow it is.
+	// Example: https://github.com/uBlockOrigin/uBlock-issues/issues/1572
+	// The request is supposed to be initiated some way through fetch-utilities, which, for reasons that should be easy to guess, isn't loading automatically.
 	const responseNodesData = responses.map(mapResponseToNode);
 
 	const friendlyTimeFormatter = new Intl.DateTimeFormat(navigator.language, {
@@ -192,17 +196,20 @@
 	}
 
 	function fixIssueTimeline(){
-		const commentContainer = document.querySelector('div.react-comments-container > div[class*="IssueViewer-module__commentsContainer"]');
+		const skeleton = document.querySelector('[class*="issue-timeline-loading-module__delaySkeletonLoad__"]'); // 'div.react-comments-container > div[class*="IssueViewer-module__commentsContainer"]';
+		skeleton.setAttribute('data-testid', 'issue-viewer-comments-container');
+		skeleton.className = 'react-comments-container';
+
 		const frag = document.createDocumentFragment();
-		const substContainer = commentContainer.cloneNode();
+		const substContainer = skeleton.cloneNode();
 
 		// fix borked styles
 		substContainer.insertAdjacentHTML('beforeEnd', `<style id="unbork">${fixedStyles}</style>`);
 
-		substContainer.insertAdjacentHTML('beforeEnd', `<h2 class="sr-only">Activity</h2>\n<div data-testid="issue-timeline-container" class="prc-Timeline-Timeline-iQjcc">\n${buildTimelineNodes()}\n</div>`);
+		substContainer.insertAdjacentHTML('beforeEnd', `<div class="IssueViewer-module__commentsContainer__qDkcR"><div><h2 class="sr-only">Activity</h2>\n<div data-testid="issue-timeline-container" class="prc-Timeline-Timeline-iQjcc">\n${buildTimelineNodes()}\n</div></div></div>`);
 		// TODO: figure out if replacing the above with something using generators is more efficient
 		frag.append(substContainer);
-		commentContainer.replaceWith(frag);
+		skeleton.replaceWith(frag);
 	}
 
 	function redoIssueLabelTooltips(){

@@ -563,7 +563,7 @@ Manually display comments on Github issues using the JSON that's already on the 
 <a name="GRLF"></a>
 ### GitHub Repo Layout Legacy Fixes
 
-GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page.
+GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. At the very least, this script tries to keep it navigable, along with a whole bunch of other subsequently broken pages.
 
 [[Install]][raw-GRLF]
 

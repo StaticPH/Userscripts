@@ -62,9 +62,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Nov 10, 2025",
-			"updated": "Apr  5, 2026",
+			"updated": "Jul 14, 2026",
 			"desc": "Manually display comments on Github issues using the JSON that's already on the page, which totally doesn't need React to accomplish.",
-			"version": "1.1.2"
+			"version": "1.1.3"
 		},
 		{
 			"name": "GitHub Repo Layout Legacy Fixes",
@@ -74,7 +74,7 @@
 			"autoUpdates": true,
 			"created": "Mar  7, 2026",
 			"updated": "Jul 14, 2026",
-			"desc": "GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. At the very least, this script tries to keep it navigable, along with a whole bunch of other subsequently broken pages."
+			"desc": "GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. At the very least, this script tries to keep it navigable, along with a whole bunch of other subsequently broken pages.",
 			"version": "1.0.2"
 		},
 		{
