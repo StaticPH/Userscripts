@@ -560,6 +560,15 @@ Manually display comments on Github issues using the JSON that's already on the 
 
 ---
 
+<a name="GRLF"></a>
+### GitHub Repo Layout Legacy Fixes
+
+GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page.
+
+[[Install]][raw-GRLF]
+
+---
+
 <a name="SELCE"></a>
 ### StackExchange Legacy Comments Expander
 
@@ -641,6 +650,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 [raw-GCDW]: /legacy_browser_workarounds/github_collapsed_details_workaround.user.js?raw=1
 [raw-GLRAW]: /legacy_browser_workarounds/github_lazy_release_asset_workaround.user.js?raw=1
 [raw-GSICW]: /legacy_browser_workarounds/github_show_issue_comments_workaround.user.js?raw=1
+[raw-GRLF]: /legacy_browser_workarounds/github_repo_layout_fix.user.js?raw=1
 [raw-SELCE]: /legacy_browser_workarounds/stackexchange_legacy_comments_expander.user.js?raw=1
 
 <!-- General Link References -->

@@ -52,6 +52,6 @@ jq -rs 'reduce .[] as $item ({}; . * $item)' "${dataDir}/general_url_references.
 ################
 ################
 # TODO:
-# 1) Pad the script table such that it still looks decent as markdown, without needing me to align things manually
+# 1) Pad the script table such that it still looks decent as markdown, without needing me to align things manually. Consider https://rumdl.dev/md060/
 ################
 ################
