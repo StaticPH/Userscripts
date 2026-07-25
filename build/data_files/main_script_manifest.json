@@ -461,6 +461,61 @@
 			"updated": "Nov 15, 2025",
 			"desc": "Include userscript descriptions in page titles on Greasy Fork (and Sleazy Fork)",
 			"version": "1.0.0"
+		},
+		{
+			"name": "Multiline BitBucket All Branch Graph Condensed Labels Tooltip",
+			"anchorString": "BABGTBT",
+			"path": "/bitbucket_all_branch_graph_tall_branch_tooltips.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Aug 14, 2024",
+			"updated": "Apr  5, 2026",
+			"desc": "The All Branches Graph plugin collapses long branch names into the tooltip of an element showing the number of branches collapsed. Normally, it separates those branch names in the tooltip with commas, which can be hard on the eyes to follow. This script separates them with newlines instead.",
+			"version": "1.0.0"
+		},
+		{
+			"name": "Bitbucket better file page titles",
+			"anchorString": "BBFPT",
+			"path": "/bitbucket_better_file_page_titles.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Sep 19, 2024",
+			"updated": "Sep 19, 2024",
+			"desc": "Improves browser page titles when browsing repository files on BitBucket",
+			"version": "1.0.0"
+		},
+		{
+			"name": "BitBucket Fix Basic Browser Navigation Keybinds",
+			"anchorString": "BFBBNK",
+			"path": "/bitbucket_fix_basic_browser_navigation_keybinds.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Jan 23, 2024",
+			"updated": "Jan 23, 2024",
+			"desc": "I am sick and tired of BitBucket breaking basic browser keybinds like history navigation! There are some keyboard shortcuts which should not even be possible for a webpage to interfere with under any circumstances.",
+			"version": "1.0.0"
+		},
+		{
+			"name": "Wide BitBucket Diff Toggle",
+			"anchorString": "BWDT",
+			"path": "/bitbucket_wide_diff_toggle.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Aug 13, 2024",
+			"updated": "Aug 13, 2024",
+			"desc": "Adds a button to switch between the typical PR diff view and a version with less UI clutter and better screen space utilization.",
+			"version": "1.0.0"
+		},
+		{
+			"name": "Bitbucket PR Comment Quick Delete Button",
+			"anchorString": "BPCQD",
+			"path": "/bitbucket_pr_comment_quick_delete.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Nov  2, 2023",
+			"updated": "Feb 21, 2024",
+			"desc": "Moves the \"Delete\" button on PR comments out of a submenu, and further allows skipping the confirmation prompt when the shift key is held.",
+			"version": "1.1.0"
 		}
 	]
 }

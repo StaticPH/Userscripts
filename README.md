@@ -72,6 +72,11 @@ To add a script:
 | [Better IzzyOnDroid App Titles](#BIAT) | [install][raw-BIAT] | N/A | :heavy_check_mark: | MIT | May  2, 2024 | May 22, 2025 |
 | [Better F-Droid App Titles](#BFAT) | [install][raw-BFAT] | N/A | :heavy_check_mark: | MIT | Aug 15, 2025 | Aug 15, 2025 |
 | [Better Greasyfork Page Titles](#BGPT) | [install][raw-BGPT] | N/A | :heavy_check_mark: | MIT | Nov 15, 2025 | Nov 15, 2025 |
+| [Multiline BitBucket All Branch Graph Condensed Labels Tooltip](#BABGTBT) | [install][raw-BABGTBT] | N/A | :heavy_check_mark: | MIT | Aug 14, 2024 | Apr  5, 2026 |
+| [Bitbucket better file page titles](#BBFPT) | [install][raw-BBFPT] | N/A | :heavy_check_mark: | MIT | Sep 19, 2024 | Sep 19, 2024 |
+| [BitBucket Fix Basic Browser Navigation Keybinds](#BFBBNK) | [install][raw-BFBBNK] | N/A | :heavy_check_mark: | MIT | Jan 23, 2024 | Jan 23, 2024 |
+| [Wide BitBucket Diff Toggle](#BWDT) | [install][raw-BWDT] | N/A | :heavy_check_mark: | MIT | Aug 13, 2024 | Aug 13, 2024 |
+| [Bitbucket PR Comment Quick Delete Button](#BPCQD) | [install][raw-BPCQD] | N/A | :heavy_check_mark: | MIT | Nov  2, 2023 | Feb 21, 2024 |
 
 
 ---
@@ -496,6 +501,51 @@ Include userscript descriptions in page titles on Greasy Fork (and Sleazy Fork)
 [[Install]][raw-BGPT]
 
 ---
+
+<a name="BABGTBT"></a>
+### Multiline BitBucket All Branch Graph Condensed Labels Tooltip
+
+The All Branches Graph plugin collapses long branch names into the tooltip of an element showing the number of branches collapsed. Normally, it separates those branch names in the tooltip with commas, which can be hard on the eyes to follow. This script separates them with newlines instead.
+
+[[Install]][raw-BABGTBT]
+
+---
+
+<a name="BBFPT"></a>
+### Bitbucket better file page titles
+
+Improves browser page titles when browsing repository files on BitBucket
+
+[[Install]][raw-BBFPT]
+
+---
+
+<a name="BFBBNK"></a>
+### BitBucket Fix Basic Browser Navigation Keybinds
+
+I am sick and tired of BitBucket breaking basic browser keybinds like history navigation! There are some keyboard shortcuts which should not even be possible for a webpage to interfere with under any circumstances.
+
+[[Install]][raw-BFBBNK]
+
+---
+
+<a name="BWDT"></a>
+### Wide BitBucket Diff Toggle
+
+Adds a button to switch between the typical PR diff view and a version with less UI clutter and better screen space utilization.
+
+[[Install]][raw-BWDT]
+
+---
+
+<a name="BPCQD"></a>
+### Bitbucket PR Comment Quick Delete Button
+
+Moves the "Delete" button on PR comments out of a submenu, and further allows skipping the confirmation prompt when the shift key is held.
+
+[[Install]][raw-BPCQD]
+
+---
 ## Legacy Workaround Scripts
 
 These scripts are simple (or painfully convoluted) and clumsy workarounds for behavior that no longer functions correctly in my years-old portable Chromium.
@@ -642,6 +692,11 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 [raw-BIAT]: /izzyondroid_description_in_title.user.js?raw=1
 [raw-BFAT]: /fdroid_app_description_in_title.user.js?raw=1
 [raw-BGPT]: /greasyfork_better_page_titles.user.js?raw=1
+[raw-BABGTBT]: /bitbucket_all_branch_graph_tall_branch_tooltips.user.js?raw=1
+[raw-BBFPT]: /bitbucket_better_file_page_titles.user.js?raw=1
+[raw-BFBBNK]: /bitbucket_fix_basic_browser_navigation_keybinds.user.js?raw=1
+[raw-BWDT]: /bitbucket_wide_diff_toggle.user.js?raw=1
+[raw-BPCQD]: /bitbucket_pr_comment_quick_delete.user.js?raw=1
 
 <!-- Legacy Workaround Scripts -->
 [raw-DFSF]: /legacy_browser_workarounds/discourse_forum_scroll_fixer.user.js?raw=1
