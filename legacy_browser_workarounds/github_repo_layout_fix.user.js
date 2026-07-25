@@ -54,7 +54,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.0.2
+// @version          1.0.3
 // @createdAt        3/7/2026
 // @author           StaticPH
 // @description      GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. They've since broken a bunch more pages, which this script tries to at least keep navigable.
@@ -145,7 +145,95 @@
 	[data-component="buttonContent"] {
 		display: inherit; /*flex*/
 	}
+
+	/*
+	 * Fix topic/tag links being smushed and lacking a "#" prefix
+	 */
+	[class*="prc-TopicTag-TopicTag-"]::before {
+		content: "#";
+	}
+
+	[class*="prc-TopicTag-TopicTag-"]:not(:last-of-type) {
+		padding-inline-end: 1ch;
+	}
 	`;
+
+	/*
+	Improve "Code View Header"; the thing with breadcrumbs, the branch switcher, and the button that's meant to toggle the file tree.
+	*/
+	style.textContent += `
+	/* List of links to ancestor directories (path breadcrumbs, but segmented)*/
+	ol[class*="Breadcrumb-module__list__"] {
+		padding-inline: 0;
+		margin-block: auto;
+		flex-direction: column;
+		/* display: inline-flex; */
+	}
+
+	#repos-header-breadcrumb h2 {/*margin-block: 0;*/}
+
+	/* Current file's name in breadcrumbs */
+	h1#file-name-id { margin-block: auto; }
+
+	/* Immediate-level container for breadcrumbs (#repos-header-breadcrumb) and the button to copy the path */
+	[class*="Breadcrumb-module__container__"].Breadcrumb-module__lg__Rjz0A {/*flex-basis: auto; flex-wrap: wrap; flex-direction: column;*/}
+
+	.react-code-view-header-wrap--narrow {
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+
+	/* Wide-window view: "Go to file" and "More actions" button */
+	.react-code-view-header-element--wide {
+		margin: auto;
+		flex-grow: 2;
+	}
+
+	/* Narrow-window view: "More actions" button */
+	.react-code-view-header-element--narrow {
+		flex-grow: 0;
+		flex-shrink: 1;
+		margin: auto;
+	}
+
+	@media (min-width: 769px) {
+		/* Contains the branch selector button-thing */
+		.mr-2.react-code-view-header-mb--narrow {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+
+	/* Contents of the branch selector button-thing (.mr-2.react-code-view-header-mb--narrow) */
+	/*#ref-picker-repos-header-ref-selector-wide > [class*="prc-Button-ButtonContent-"] { display: flex; }*/
+	[id*="ref-picker-repos-header-ref-selector"] > [class*="prc-Button-ButtonContent-"] { display: flex; }
+
+	/* "Expand file tree" button */
+	h2[class*="use-tree-pane-module__Heading__"] { margin: auto; }
+
+	h2[class*="use-tree-pane-module__Heading__"] > span {
+		max-height: max-content;
+		align-self: center;
+	}
+
+	@media (max-width: 768px) {
+		h2[class*="use-tree-pane-module__Heading__"] {
+			margin: auto;
+			flex-direction: column;
+		}
+		#file-name-id {/*overflow: scroll;*/}
+		ol[class*="Breadcrumb-module__list__"] {/*flex-direction: column; display: inline-flex;*/}
+		[class*="Breadcrumb-module__container__"].Breadcrumb-module__lg__Rjz0A {
+			display: flex;
+			/* flex-direction: column; */
+			overflow-x: scroll;
+		}
+	}
+
+	/* Path portion of breadcrumbs */
+	[class*="Breadcrumb-module__container__"] > #repos-header-breadcrumb,
+	/* File portion of breadcrumbs (parent of h1#file-name-id) */
+	[class*="Breadcrumb-module__container__"] > [class*="Breadcrumb-module__filename__"] { flex-shrink: 1; }`;
 
 	//// Eventually turn this script into one that fixes styles all over the place,
 	//// and then disable the according exclude-match directives in the userscript header.
@@ -578,6 +666,12 @@
 		////["GitHub - "{{OWNER}}/{{REPO}}: {{OVERVIEW}}, "GitHub"]'
 		////["History for "{{PATH}}" - "{{OWNER}}/{{REPO}}, "GitHub"]'
 	// }
+
+	// To use when determining whether to try and recreate the language bar and/or release status
+	// const pathSegments = document.location.pathname.slice(1).split('/');
+	// const isAtExplicitTreeRoot = pathSegments.length === 4 && pathSegments[2] === 'tree';
+	// const isAtRepoRoot = isAtExplicitTreeRoot || Boolean(document.querySelector('meta[name="route-pattern"][content="/:user_id/:repository"], meta[name="analytics-location"][content="/<user-name>/<repo-name>"]'));
+	// https://docs.github.com/en/rest/repos#list-repository-languages
 
 	//// FIXME: not all files shown on https://github.com/msys2/MINGW-packages/commit/626f95a0284135331ed93cfa7454be3d3b28aec8
 	//// FIXME: anchors do not properly scroll into view
