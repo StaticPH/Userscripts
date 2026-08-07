@@ -37,6 +37,6 @@
 		else{
 			setTimeout(wait, 100); // Continue trying every 100ms until success
 		}
-	});
+	}, 0);
 
 })();

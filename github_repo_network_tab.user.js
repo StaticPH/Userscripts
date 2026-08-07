@@ -173,7 +173,7 @@
 					dropdownRetries++;
 					setTimeout(waitmore, (dropdownRetries * 500) + 500);
 				}
-			});
+			}, 0);
 
 			maybeFixHighlightedTab();
 		}
@@ -202,5 +202,5 @@
 			console.log('Waiting 300ms for page to load further.');
 			return setTimeout(wait, 300);
 		}
-	});
+	}, 0);
 })();

@@ -37,6 +37,6 @@
 			setTimeout(wait, 300);
 		}
 		return;
-	});
+	}, 0);
 
 })();

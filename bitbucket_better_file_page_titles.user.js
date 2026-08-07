@@ -21,7 +21,7 @@
 (function(){
 	"use strict";
 
-	if (! document.location.pathname.match(/\/projects\/[^/]+\/repos\/.+/)){ return; }
+	if (! /\/projects\/[^/]+\/repos\/.+/.test(document.location.pathname)){ return; }
 
 	const repo = document.querySelector('.aui-nav-breadcrumbs > .aui-nav-selected'), repoName = repo.textContent;
 	const project = repo.previousElementSibling, projectName = project.textContent;

@@ -17,6 +17,7 @@
 // @noframes
 // ==/UserScript==
 
+/* oxlint-disable require-await */
 (async function(){
 	"use strict";
 
@@ -30,13 +31,14 @@
 					continue;
 				}
 				// node
+				/* oxlint-disable no-unused-expressions */
 				sourceObj && mergeObjects(destinationObj[propKey], sourceObj[propKey]);
 			}
 		}
 		return destinationObj;
 	}
 
-	const [currentProject, currentRepo, currentPR] = document.location.pathname.replace('/projects/','').replace('/repos/', '/').replace('/pull-requests/', '/').split('/').slice(0,3);
+	const [currentProject, currentRepo, currentPR] = document.location.pathname.replace('/projects/', '').replace('/repos/', '/').replace('/pull-requests/', '/').split('/').slice(0, 3);
 
 	const __commentFetchOptionTemplate = {
 		'headers': {
@@ -105,8 +107,8 @@
 				.then(response => response.json())
 				.then(json => json.version);
 			// Send the network request for deletion directly, bypassing confirmation.
-			await fetch(`${__PRComment_addressBuilder(commentID)}?version=${version ? version : 0}`, __deletePRComment_options).then(
-				function onSuccess() { evnt.target.closest('.activity-item').remove(); },
+			await fetch(`${__PRComment_addressBuilder(commentID)}?version=${version || 0}`, __deletePRComment_options).then(
+				function onSuccess() { return evnt.target.closest('.activity-item').remove(); },
 				function onFailure() { commentDeletionNotPermitted(closestBtn); }
 			);
 		}
@@ -136,7 +138,7 @@
 		addQuickDeleteButtons();
 		console.log(__locale.localize('consoleRemindTimerVar'));
 		// Set a timer to check for additional comments every 3 seconds
-		window.newCommentChecker = setInterval(addQuickDeleteButtons, 3000);
+		globalThis.newCommentChecker = setInterval(addQuickDeleteButtons, 3000);
 		// Add a document-scoped event listener to monitor clicks on quick-delete-comment buttons.
 		document.addEventListener('click', onClickQuickDelete);
 // 	}

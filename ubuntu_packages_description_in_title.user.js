@@ -33,5 +33,5 @@
 		else {
 			setTimeout(wait, 500);
 		}
-	});
+	}, 0);
 })();

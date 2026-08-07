@@ -26,7 +26,7 @@
 	let [secondLastSegment, lastSegment] = location.pathname.replace(/\/$/, '').split('/').slice(-2);
 
 	if (secondLastSegment == 'crates' || lastSegment.match(/^[0-9.]+$/)){
-		let versionString = lastSegment.match(/^[0-9.]+$/) ? '/' + lastSegment : '';
+		let versionString = /^[0-9.]+$/.test(lastSegment) ? '/' + lastSegment : '';
 		/*
 			EITHER
 			The second-last component of the URL path is 'crates', which will only occur on the Readme (default) subpage for a crate.
@@ -43,12 +43,12 @@
 			else{
 				setTimeout(wait, 100); // Continue trying every 100ms until success
 			}
-		});
+		}, 0);
 	}
 	else{
 		/* This is currently either the versions, dependencies, or reverse_dependencies subpage for a crate. */
 		let fellBackOnTitle = false;
-		let versionString = secondLastSegment.match(/^[0-9.]+$/) ? '/' + secondLastSegment : '';
+		let versionString = /^[0-9.]+$/.test(secondLastSegment) ? '/' + secondLastSegment : '';
 
 		setTimeout(function wait(){
 			const crateDesc = document.querySelector('div[class*="_description"]');
@@ -65,6 +65,6 @@
 			else{
 				setTimeout(wait, 100); // Continue trying every 100ms until success
 			}
-		});
+		}, 0);
 	}
 })();

@@ -98,11 +98,7 @@
 		);
 	}
 
-	function sleep(ms) {
-		return new Promise(resolve => setTimeout(resolve, ms));
-	}
-
-	async function improveTitle() {
+	function improveTitle() {
 		try{
 			document.title = 'Reading List: "' + document.querySelector('#cssmenu > ul > li.active').textContent + '" - Novel Updates';
 		}
@@ -146,12 +142,13 @@
 
 			this.mainTbl.insertAdjacentElement('beforeBegin', this.hiddenTbl);
 
+			/* oxlint-disable unicorn/prefer-add-event-listener */
 			this.hideCompletedToggleBtn.onclick = updateHidingCompletedState;
 			document.querySelector('.mt_rl').append(this.hideCompletedToggleBtn);
 
 			this.hideCompletedToggleBtn.style.setProperty( // MUST come after append
 				'margin-right',
-				window.getComputedStyle(this.hideCompletedToggleBtn.previousElementSibling).getPropertyValue('margin-right')
+				globalThis.getComputedStyle(this.hideCompletedToggleBtn.previousElementSibling).getPropertyValue('margin-right')
 			);
 
 			console.log(settings);
@@ -194,7 +191,7 @@
 						console.error('Error while attempting to forcibly re-sort table.');
 					}
 					setTimeout(wait, 300);
-				});
+				}, 0);
 			}
 			else {
 				// All rows (matching any active filters) are currently visible

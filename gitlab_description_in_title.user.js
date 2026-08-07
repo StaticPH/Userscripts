@@ -40,6 +40,6 @@
 			setTimeout(wait, attempt * 500);
 		}
 		document.title = title;
-	});
+	}, 0);
 
 })();

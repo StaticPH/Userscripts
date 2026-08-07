@@ -29,19 +29,21 @@
 			// readyForNextNav = false;
 			switch (evnt.key){
 				case "Left":
-				case "ArrowLeft":
+				case "ArrowLeft": {
 					evnt.stopImmediatePropagation();
 					evnt.stopPropagation();
 					evnt.preventDefault();
-					window.history.back();
+					globalThis.history.back();
 					break;
+				}
 				case "Right":
-				case "ArrowRight":
+				case "ArrowRight": {
 					evnt.stopImmediatePropagation();
 					evnt.stopPropagation();
 					evnt.preventDefault();
-					window.history.forward();
+					globalThis.history.forward();
 					break;
+				}
 			}
 			// readyForNextNav = true;
 		}

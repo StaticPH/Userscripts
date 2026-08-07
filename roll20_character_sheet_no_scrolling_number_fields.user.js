@@ -50,7 +50,8 @@
 // 	  return true;
 // 	}
 
-    setInterval(() => {
+	/* oxlint-disable unicorn/prefer-add-event-listener */
+	setInterval(() => {
 		document.querySelectorAll(
 			'div.sheet-hp > input[type="number"] , div.sheet-spell-level > div.sheet-expended > input[type="number"] , ' +
 			'div.sheet-page.sheet-options div.sheet-row > input[type="number"][name="attr_default_critical_range"] , ' +
@@ -63,6 +64,6 @@
 			field.onwheel = ()=>{return false;};
 			console.log(field.name);
 		});
-    }, 3000);
+	}, 3000);
 
 })();

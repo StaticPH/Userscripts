@@ -64,7 +64,7 @@
 			moveMarkAllButtons();
 		}
 		setTimeout(wait, 300); // Continue monitoring, because the button bar is reset by a number of user interactions
-	});
+	}, 0);
 })();
 
 // Cant figure out how to make any of these actually work correctly

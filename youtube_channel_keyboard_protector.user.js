@@ -24,9 +24,10 @@
 	var protectKeyboard = function(e){
 		switch(e.keyCode){
 			case 38: // Arrow Up
-			case 40: // Arrow Down
+			case 40: { // Arrow Down
 				e.stopImmediatePropagation();
 				return;
+			}
 		}
 	};
 

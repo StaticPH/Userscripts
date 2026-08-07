@@ -30,6 +30,7 @@
 		window.scrollTo(null, evnt.target.offsetTop); // worked better than the more intuitive evnt.target.scrollIntoViewIfNeeded(true)
 	}
 
+	/* oxlint-disable no-return-assign, unicorn/prefer-add-event-listener */
 	document.querySelectorAll(
 		'table.js-file-line-container > tbody > tr > td.js-line-number.js-code-nav-line-number:first-child,' + // blobs
 		'table > tbody > tr > td.js-linkable-line-number.js-code-nav-line-number' // pulls and commits

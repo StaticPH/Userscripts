@@ -99,7 +99,7 @@
 
 //	function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
-	async function improveTitle() {
+	function improveTitle() {
 		try{
 			document.title = 'Reading List: "' + document.querySelector('#cssmenu > ul > li.active').textContent + '" - Scribble Hub';
 		}
@@ -114,7 +114,7 @@
 		}
 	}
 
-	async function saveNotesKeybindHandler(evnt){
+	function saveNotesKeybindHandler(evnt){
 		const notesPopup = document.querySelector('#my_popupnotes[aria-hidden="false"]');
 		if (! notesPopup){ return; } // Notes editor is not open, allow normal event processing to occur.
 		else if (evnt.key && evnt.key === 'Enter' && evnt.ctrlKey && !evnt.shiftKey){
@@ -126,7 +126,7 @@
 	}
 
 	function setTitleForFakeButton(elem, includeElemText = false, prefix = '', suffix = ''){
-		if(elem){
+		if (elem){
 			elem.title = includeElemText ? prefix + elem.textContent.trim() + suffix : prefix;
 		}
 	}
@@ -152,6 +152,7 @@
 		init: function init(){
 			this.mainTbl.insertAdjacentElement('beforeBegin', this.hiddenTbl);
 
+			/* oxlint-disable unicorn/prefer-add-event-listener */
 			this.hideCompletedToggleBtn.onclick = updateHidingCompletedState;
 			document.querySelector('.fb_rl').append(this.hideCompletedToggleBtn);
 
