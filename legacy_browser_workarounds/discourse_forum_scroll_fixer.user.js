@@ -9,12 +9,15 @@
 // @match          *://community.retool.com/*
 // @match          *://community.syncromsp.com/*
 // @match          *://discourse.cmake.org/*
+// @match          *://discourse.llvm.org/*
 // @match          *://discuss.dev.twitch.com/*
 // @match          *://discuss.gradle.org/*
+// @match          *://discuss.julialang.org/*
 // @match          *://discuss.python.org/*
 // @match          *://discussions.unity.com/*
 // @match          *://forum.endeavouros.com/*
 // @match          *://forum.f-droid.org/*
+// @match          *://forum.fairphone.com/*
 // @match          *://forum.graphviz.org/*
 // @match          *://forum.kee.pm/*
 // @match          *://forum.manjaro.org/*
@@ -24,7 +27,7 @@
 // @match          *://forum.freecodecamp.org/*
 // @match          *://meta.discourse.org/*
 // @match          *://talk.restarters.net/*
-// @version        1.0.5
+// @version        1.0.6
 // @createdAt      6/29/2024, 6:24:11 PM
 // @author         StaticPH
 // @description    Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.

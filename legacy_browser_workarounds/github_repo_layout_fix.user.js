@@ -54,7 +54,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.0.3
+// @version          1.0.4
 // @createdAt        3/7/2026
 // @author           StaticPH
 // @description      GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. They've since broken a bunch more pages, which this script tries to at least keep navigable.
@@ -96,6 +96,25 @@
 	}
 
 	/*
+	 * Fix repo navigation breadcrumbs
+	 */
+	ol[class*="prc-Breadcrumbs-BreadcrumbsList-"] {
+		list-style: none;
+		display: inline-flex;
+	}
+	ol[class*="prc-Breadcrumbs-BreadcrumbsList-"] > li:before {
+		content: "/";
+	}
+
+	/*
+	 * Hide things
+	 */
+	[class*="prc-src-InternalVisuallyHidden-"],
+	[class*="prc-CounterLabel-CounterLabel-"] {
+		display: none;
+	}
+
+	/*
 	 * Attempt to fix the infuriating tiny little width difference between the file tree and the readme divs.
 	 */
 	@media screen and (min-width: 544px) {
@@ -121,6 +140,14 @@
 		/* justify-content: right; */
 		padding-inline: 0px;
 		display: inline-flex;
+	}
+	/*
+	 * Fix positioning of the "More items" dropdown in the parent of the above ul
+	 */
+	/* nav.OverviewRepoFiles-module__UnderlineNav__QbWWv */
+	nav[class*="OverviewRepoFiles-module__UnderlineNav"] {
+		display: inline-flex;
+		align-items: center;
 	}
 
 	/*
@@ -666,12 +693,6 @@
 		////["GitHub - "{{OWNER}}/{{REPO}}: {{OVERVIEW}}, "GitHub"]'
 		////["History for "{{PATH}}" - "{{OWNER}}/{{REPO}}, "GitHub"]'
 	// }
-
-	// To use when determining whether to try and recreate the language bar and/or release status
-	// const pathSegments = document.location.pathname.slice(1).split('/');
-	// const isAtExplicitTreeRoot = pathSegments.length === 4 && pathSegments[2] === 'tree';
-	// const isAtRepoRoot = isAtExplicitTreeRoot || Boolean(document.querySelector('meta[name="route-pattern"][content="/:user_id/:repository"], meta[name="analytics-location"][content="/<user-name>/<repo-name>"]'));
-	// https://docs.github.com/en/rest/repos#list-repository-languages
 
 	//// FIXME: not all files shown on https://github.com/msys2/MINGW-packages/commit/626f95a0284135331ed93cfa7454be3d3b28aec8
 	//// FIXME: anchors do not properly scroll into view

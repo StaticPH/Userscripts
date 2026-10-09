@@ -26,7 +26,7 @@
 // @exclude-match    https://github.com/topics*
 // @exclude-match    https://github.com/trending*
 // @exclude-match    https://github.com/users/*/projects/*
-// @version          1.8.0
+// @version          1.8.1
 // @createdAt        4/06/2020
 // @author           StaticPH
 // @description      Adds a navigation tab for faster access to the 'Network' page of a repository.
@@ -100,11 +100,11 @@
 
 	function doesNeedModernTabVariant(){
 		// Thanks for making it more annoying to find or work with meaningful elements using CSS selectors, GitHub. /s
-		return document.querySelector('nav[class*="prc-components-UnderlineWrapper"]') !== null;
+		return document.querySelector('nav[class*="prc-components-UnderlineWrapper"]') !== null && !document.querySelector('#bigNetworkTab');
 	}
 
 	function modernUIAddNetworkTab(){
-		const prTabLink = document.querySelector(`li.prc-UnderlineNav-UnderlineNavItem-syRjR > a[href="/${here}/pulls"]`);
+		const prTabLink = document.querySelector(`li.prc-UnderlineNav-UnderlineNavItem-syRjR > a[href="/${here}/pulls" i]`);
 		if (!prTabLink){ return false; } // Not ready yet... or GitHub changed shit again.
 
 		const dataAttrs = 'data-turbo-frame="repo-content-turbo-frame" data-discover="true"';

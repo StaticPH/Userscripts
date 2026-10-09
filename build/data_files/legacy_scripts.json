@@ -7,9 +7,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Jun 29, 2024",
-			"updated": "Apr  5, 2026",
+			"updated": "Oct  9, 2026",
 			"desc": "Fix for Discourse forums breaking the ability to scroll on browsers that are too old or are blocking some script or other.",
-			"version": "1.0.5"
+			"version": "1.0.6"
 		},
 		{
 			"name": "GitHub Line Hyperlink Workaround",
@@ -73,9 +73,9 @@
 			"license": "MIT",
 			"autoUpdates": true,
 			"created": "Mar  7, 2026",
-			"updated": "Jul 25, 2026",
+			"updated": "Oct  9, 2026",
 			"desc": "GitHub broke the 2-column layout of repository home-pages, leaving details like the summary and language lists all the way at the bottom of the page. At the very least, this script tries to keep it navigable, along with a whole bunch of other subsequently broken pages.",
-			"version": "1.0.3"
+			"version": "1.0.4"
 		},
 		{
 			"name": "StackExchange Legacy Comments Expander",
