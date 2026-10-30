@@ -61,7 +61,7 @@ To add a script:
 | [Ubuntu Packages Description In Title](#UPDIT) | [install][raw-UPDIT] | N/A | :heavy_check_mark: | MIT | May 11, 2023 | May 11, 2023 |
 | [Quietly Reject StackExchange Cookies](#QRSC) | [install][raw-QRSC] | N/A | :heavy_check_mark: | MIT | May 14, 2023 | May 14, 2023 |
 | [PyPI Description In Title](#PDIT) | [install][raw-PDIT] | N/A | :heavy_check_mark: | MIT | May 31, 2023 | Aug 15, 2024 |
-| [Simple URL Tracker Cleaner](#SUTC) | [install][raw-SUTC] | N/A | :heavy_check_mark: | MIT | Aug 10, 2021 | Apr  5, 2026 |
+| [Simple URL Tracker Cleaner](#SUTC) | [install][raw-SUTC] | N/A | :heavy_check_mark: | MIT | Aug 10, 2021 | Oct 30, 2026 |
 | [Old Reddit Hide Posts By Sub](#ORHS) | [install][raw-ORHS] | N/A | :heavy_check_mark: | MIT | Apr  8, 2022 | Jul  2, 2023 |
 | [ScribbleHub Reading List Upgrades](#SRLU) | [install][raw-SRLU] | N/A | :heavy_check_mark: | MIT | Oct  7, 2022 | Jan 19, 2024 |
 | [NovelUpdates Reading List Upgrades](#NRLU) | [install][raw-NRLU] | N/A | :heavy_check_mark: | MIT | Jul  8, 2022 | Nov 16, 2022 |

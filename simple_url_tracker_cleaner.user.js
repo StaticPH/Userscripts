@@ -2,7 +2,7 @@
 // @name           Simple URL Tracker Cleaner
 // @namespace      https://github.com/StaticPH
 // @match          *://*/*
-// @version        1.6.4
+// @version        1.6.5
 // @createdAt      8/10/2021
 // @author         StaticPH
 // @description    Scrub various common tracker parameters from URLs.
@@ -57,6 +57,9 @@
 				if (url.searchParams.has('url')){
 					fixed = url.searchParams.get('url');
 					if (!fixed || fixed.length === 0){ console.warn('Found empty "url" parameter in link: ' + link.href); }
+					else if (!fixed.startsWith('http')){
+						console.info('Found "url" parameter that appears to be obfuscated. Skipping remapping.');
+					}
 					else{
 						console.log(`${link.href} --> ${fixed}`);
 						link.href = fixed;
