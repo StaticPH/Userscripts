@@ -78,6 +78,17 @@
 			"version": "1.1.2"
 		},
 		{
+			"name": "Twitch Reduced Video Stats",
+			"anchorString": "TRVS",
+			"path": "/twitch_reduced_video_stats.user.js",
+			"license": "MIT",
+			"autoUpdates": true,
+			"created": "Dec 29, 2025",
+			"updated": "Dec 29, 2025",
+			"desc": "Hides rows that don't really change from the video stats overlay.",
+			"version": "1.0.0"
+		},
+		{
 			"name": "GitHub Repo Network Tab",
 			"anchorString": "GRNT",
 			"path": "/github_repo_network_tab.user.js",

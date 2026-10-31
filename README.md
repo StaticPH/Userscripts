@@ -37,6 +37,7 @@ To add a script:
 | [Twitch Hide Channel Leaderboard](#THCL) | [install][raw-THCL] | N/A | :heavy_check_mark: | MIT | Jun 19, 2020 | Dec 12, 2024 |
 | [Twitch Hide Overlay Ads](#THOA) | [install][raw-THOA] | N/A | :heavy_check_mark: | MIT | Dec 14, 2023 | Dec 12, 2024 |
 | [Twitch Transparent Video Stats](#TTVS) | [install][raw-TTVS] | N/A | :heavy_check_mark: | MIT | May 19, 2021 | Feb  9, 2026 |
+| [Twitch Reduced Video Stats](#TRVS) | [install][raw-TRVS] | N/A | :heavy_check_mark: | MIT | Dec 29, 2025 | Dec 29, 2025 |
 | [GitHub Repo Network Tab](#GRNT) | [install][raw-GRNT] | N/A | :heavy_check_mark: | MIT | Apr  6, 2020 | Oct  9, 2026 |
 | [Bigger GitHub Network Graph](#BGNG) | [install][raw-BGNG] | N/A | :heavy_check_mark: | MIT | Apr 12, 2020 | Oct 28, 2021 |
 | [GitHub Notification Page Tweaks](#GNPT) | [install][raw-GNPT] | N/A | :heavy_check_mark: | MIT | Oct 22, 2020 | Aug  3, 2021 |
@@ -152,6 +153,15 @@ Hides the unacceptable overlay ads on Twitch.tv.
 Makes the video stats overlay on Twitch.tv video player partially transparent, so as to avoid obscuring the stream so much.
 
 [[Install]][raw-TTVS]
+
+---
+
+<a name="TRVS"></a>
+### Twitch Reduced Video Stats
+
+Hides rows that don't really change from the video stats overlay.
+
+[[Install]][raw-TRVS]
 
 ---
 
@@ -657,6 +667,7 @@ Additionally, I do occasionally take requests for simple scripts, so feel free t
 [raw-THCL]: /twitch_hide_channel_leaderboard.user.js?raw=1
 [raw-THOA]: /twitch_hide_overlay_ads.user.js?raw=1
 [raw-TTVS]: /twitch_transparent_video_stats.user.js?raw=1
+[raw-TRVS]: /twitch_reduced_video_stats.user.js?raw=1
 [raw-GRNT]: /github_repo_network_tab.user.js?raw=1
 [raw-BGNG]: /bigger_github_repo_network_graph.user.js?raw=1
 [raw-GNPT]: /github_notification_page_tweaks.user.js?raw=1
